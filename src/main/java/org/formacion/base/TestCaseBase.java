@@ -9,6 +9,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -34,19 +36,39 @@ public class TestCaseBase {
 
     @Parameters
     //Abre el navegador en la web indicada
-    public void irALogin(String url){driver.get(url);}
+    public void irALogin(){driver.get(PropertiesFormacion.RUTA_URL);}
 
     @BeforeMethod
     public void setUp(){
-        //Inicializa el fichero log en caso de no existir previamente
+
+        // Log
         log = new LogManager();
 
-        //Inicializar el driver del navegador y navegar a la web
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.switchTo().window(driver.getWindowHandle());
+        // Leer navegador desde properties
+        String browser = PropertiesFormacion.BROWSER;
 
+        switch (browser.toLowerCase()) {
+
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                break;
+
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+
+            default:
+                throw new RuntimeException("Navegador no soportado: " + browser);
+        }
+
+        driver.manage().window().maximize();
         driver.get(PropertiesFormacion.RUTA_URL);
     }
 

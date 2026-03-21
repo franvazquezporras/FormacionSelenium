@@ -5,6 +5,8 @@ public class PropertiesFormacion {
 
     //Ruta web
     public static final String RUTA_URL = pm.leerPropiedad("ruta.url");
+    //Navegador
+    public static final String BROWSER = pm.leerPropiedad("browser");
 
 
     //Trazas y logs
