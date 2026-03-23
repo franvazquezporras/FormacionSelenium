@@ -29,7 +29,6 @@ public class BasePageObject {
     }
     //</editor-fold>
 
-
     public WebDriver getDriver() {
         return driver;
     }

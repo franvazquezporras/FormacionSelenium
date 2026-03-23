@@ -7,15 +7,25 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPageObject extends BasePageObject {
 
+    // <editor-fold desc="Locators">
     private By txtUsername = By.name("username");
     private By txtPassword = By.name("password");
     private By btnLogin = By.xpath("//button[@type='submit']");
+    //</editor-fold>
+
+    // <editor-fold desc="Constructor">
     public LoginPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
+    //</editor-fold>
 
-    public void esperarSincronizacion(){esperarPagina(txtUsername,"Login");}
+    // <editor-fold desc="Sincronizacion">
+    public void esperarSincronizacion(){
+        esperarPagina(txtUsername,"Login");
+    }
+    //</editor-fold>
 
+    // <editor-fold desc="Funciones de locators">
     public void IntroducirUsuario(String texto){
         esClickeable(txtUsername);
         setText(txtUsername,texto);
@@ -30,4 +40,5 @@ public class LoginPageObject extends BasePageObject {
         esClickeable(btnLogin);
         clickElemento(btnLogin,"Login");
     }
+    //</editor-fold>
 }

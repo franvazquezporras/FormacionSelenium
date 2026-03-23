@@ -1,4 +1,31 @@
 package org.formacion.pageobject.pantallas.Admin.Qualifications.Licenses;
 
-public class AdminQualificationsLicensesPageObject {
+import org.formacion.pageobject.general.BasePageObject;
+import org.formacion.utils.logger.LogManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class AdminQualificationsLicensesPageObject extends BasePageObject {
+
+    // <editor-fold desc="Locators">
+    private By btnAgregar = By.xpath("");
+    private By btnEliminar = By.xpath("");
+    private By btnEliminarSeleccionados = By.xpath("");
+    private By btnEditar = By.xpath("");
+    private By checkPrimerRegistro = By.xpath("");
+    //</editor-fold>
+
+    // <editor-fold desc="Constructor">
+    public AdminQualificationsLicensesPageObject(WebDriver driver, LogManager log, String mainClass){
+        super(driver, log, mainClass);
+    }
+    //</editor-fold>
+
+    // <editor-fold desc="Sincronizacion">
+    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Licenses");}
+    //</editor-fold>
+
+    // <editor-fold desc="Funciones de locators">
+
+    //</editor-fold>
 }

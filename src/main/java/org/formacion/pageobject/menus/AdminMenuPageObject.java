@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AdminMenuPageObject extends BasePageObject {
 
+    // <editor-fold desc="Locators">
     private By btnUserManagment = By.xpath("");
     private By btnUserManagmentUsers = By.xpath("");
 
@@ -42,13 +43,19 @@ public class AdminMenuPageObject extends BasePageObject {
     private By btnConfigurationSocialMediaAuthentication = By.xpath("");
     private By btnConfigurationRegisterOAuthClient = By.xpath("");
     private By btnConfigurationLDAPConfiguration = By.xpath("");
+    //</editor-fold>
 
-
+    // <editor-fold desc="Constructor">
     public AdminMenuPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
+    //</editor-fold>
 
+    // <editor-fold desc="Sincronizacion">
     public void esperarSincronizacion(){esperarPagina(btnUserManagment,"Menu lateral");}
+    //</editor-fold>
 
+    // <editor-fold desc="Funciones de locators">
 
+    //</editor-fold>
 }

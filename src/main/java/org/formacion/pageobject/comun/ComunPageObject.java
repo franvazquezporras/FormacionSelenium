@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class ComunPageObject extends BasePageObject {
 
 
+    // <editor-fold desc="Locators">
     private By txtMenuLateralSearch = By.name("username");
     private By btnMenuLateralAdmin = By.name("password");
     private By btnMenuLateralPIM = By.xpath("");
@@ -31,12 +32,20 @@ public class ComunPageObject extends BasePageObject {
     private By btnBarraSuperiorMenuUsuarioChangePassword = By.xpath("");
     private By btnBarraSuperiorMenuUsuarioLogout = By.xpath("");
     private By btnBarraSuperiorHelp = By.xpath("");
+    //</editor-fold>
 
-
+    // <editor-fold desc="Constructor">
     public ComunPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
+    //</editor-fold>
 
+    // <editor-fold desc="Sincronizacion">
     public void esperarSincronizacion(){esperarPagina(btnMenuLateralShowHide,"Menu lateral");}
+    //</editor-fold>
+
+    // <editor-fold desc="Funciones de locators">
+
+    //</editor-fold>
 
 }
