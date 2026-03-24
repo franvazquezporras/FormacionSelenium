@@ -1,27 +1,26 @@
-package org.formacion.pageobject.pantallas.Maintenance;
+package org.formacion.pageobject.pantallas.Time.ProjectInfo;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class MaintenancePageObject extends BasePageObject {
+public class ProjectActivityPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By txtPassword = By.xpath("");
-    private By btnConfirm = By.xpath("");
+    private By txtName = By.xpath("");
+    private By btnSave = By.xpath("");
     private By btnCancel = By.xpath("");
-
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
-    public MaintenancePageObject(WebDriver driver, LogManager log, String mainClass){
+    public ProjectActivityPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
     //</editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnConfirm,"Pantalla Mantenimiento");}
+    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Add/Edit Project Activity");}
 
     //</editor-fold>
 
