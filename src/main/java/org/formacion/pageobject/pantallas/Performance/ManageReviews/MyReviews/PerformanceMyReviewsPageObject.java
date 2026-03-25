@@ -26,5 +26,28 @@ public class PerformanceMyReviewsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Performance Review del primer registro.
+     * Abre el detalle de la revisión de desempeño.
+     */
+    public void pulsarBotonPerformanceReviewPrimerRegistro(){
+        esClickeable(btnPerformanceReviewPrimerRegistro);
+        clickElemento(btnPerformanceReviewPrimerRegistro, "Pulsar botón Performance Review del primer registro");
+    }
+
+    /**
+     * Realiza clic en el botón Consultar del primer registro.
+     * Abre la vista de consulta de la revisión.
+     */
+    public void pulsarBotonConsultarPrimerRegistro(){
+        esClickeable(btnConsultarPrimerRegistro);
+        clickElemento(btnConsultarPrimerRegistro, "Pulsar botón Consultar del primer registro");
+    }
+
+// </editor-fold>
+
 }

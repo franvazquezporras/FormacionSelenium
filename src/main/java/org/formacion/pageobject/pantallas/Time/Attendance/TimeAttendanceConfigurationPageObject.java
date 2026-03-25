@@ -28,5 +28,47 @@ public class TimeAttendanceConfigurationPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOXES
+// -------------------------
+
+    /**
+     * Selecciona o deselecciona el checkbox Employee can change.
+     */
+    public void pulsarCheckEmployeeCanChange(){
+        esClickeable(checkEmployeecanchange);
+        clickElemento(checkEmployeecanchange, "Seleccionar/Deseleccionar Employee can change");
+    }
+
+    /**
+     * Selecciona o deselecciona el checkbox Employee can edit.
+     */
+    public void pulsarCheckEmployeeCanEdit(){
+        esClickeable(checkEmployeecanedit);
+        clickElemento(checkEmployeecanedit, "Seleccionar/Deseleccionar Employee can edit");
+    }
+
+    /**
+     * Selecciona o deselecciona el checkbox Supervisor can add.
+     */
+    public void pulsarCheckSupervisorCanAdd(){
+        esClickeable(checkSupervisorcanadd);
+        clickElemento(checkSupervisorcanadd, "Seleccionar/Deseleccionar Supervisor can add");
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda la configuración de asistencia.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+// </editor-fold>
+
 }

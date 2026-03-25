@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -107,5 +108,18 @@ public class BasePageObject {
             log.reporta(ERROR_CRITICO,"El elemento cuyo localizado corresponde a: - "+elementosReporte.get(0)+" - no se ha encontrado en la página");
         }
         return false;
+    }
+
+    protected boolean seleccionarOpcion(By by,String opcion){
+    try{
+        WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(40));
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        WebElement box = driver.findElement(by);
+        Select selectBox = new Select(box);
+        selectBox.selectByVisibleText(opcion);
+        return true;
+    }catch (Exception e){
+        return reportaError(opcion,by.toString());
+    }
     }
 }

@@ -27,5 +27,37 @@ public class PIMConfigurationDataImportPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Download.
+     * Descarga la plantilla de importación de datos.
+     */
+    public void pulsarBotonDownload(){
+        esClickeable(btnDownload);
+        clickElemento(btnDownload, "Pulsar botón Download");
+    }
+
+    /**
+     * Realiza clic en el botón Agregar Fichero.
+     * Abre el selector de archivos para subir un fichero CSV.
+     */
+    public void pulsarBotonAgregarFichero(){
+        esClickeable(btnAgregarFichero);
+        clickElemento(btnAgregarFichero, "Pulsar botón Agregar Fichero");
+    }
+
+    /**
+     * Realiza clic en el botón Upload.
+     * Sube el archivo seleccionado para importación.
+     */
+    public void pulsarBotonUpload(){
+        esClickeable(btnUpload);
+        clickElemento(btnUpload, "Pulsar botón Upload");
+    }
+
+// </editor-fold>
+
 }

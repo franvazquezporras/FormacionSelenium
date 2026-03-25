@@ -27,5 +27,46 @@ public class MyLeaveRequestDetailsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Comment.
+     * Abre el popup para agregar un comentario a la solicitud.
+     */
+    public void pulsarBotonAddComment(){
+        esClickeable(btnAddComment);
+        clickElemento(btnAddComment, "Pulsar botón Add Comment");
+    }
+
+    /**
+     * Realiza clic en el botón de acciones del primer registro.
+     * Despliega el menú de acciones disponibles.
+     */
+    public void pulsarBotonAccionesPrimerRegistro(){
+        esClickeable(btnAccionesPrimerRegistro);
+        clickElemento(btnAccionesPrimerRegistro, "Pulsar botón Acciones del primer registro");
+    }
+
+    /**
+     * Realiza clic en el botón Comment.
+     * Abre el popup para agregar o ver comentarios.
+     */
+    public void pulsarBotonComment(){
+        esClickeable(btnComment);
+        clickElemento(btnComment, "Pulsar botón Comment");
+    }
+
+    /**
+     * Realiza clic en el botón Back.
+     * Regresa a la pantalla anterior.
+     */
+    public void pulsarBotonBack(){
+        esClickeable(btnBack);
+        clickElemento(btnBack, "Pulsar botón Back");
+    }
+
+// </editor-fold>
+
 }

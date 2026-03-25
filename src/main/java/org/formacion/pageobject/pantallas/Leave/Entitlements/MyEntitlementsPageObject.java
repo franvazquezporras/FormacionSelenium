@@ -32,5 +32,102 @@ public class MyEntitlementsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Leave Period en la lista.
+     * @param opcion Periodo a seleccionar.
+     */
+    public void seleccionarListaLeavePeriod(String opcion){
+        esClickeable(listaLeavePeriod);
+        seleccionarOpcion(listaLeavePeriod, opcion);
+    }
+
+    /**
+     * Selecciona un Leave Type en la lista.
+     * @param opcion Tipo de permiso a seleccionar.
+     */
+    public void seleccionarListaLeaveType(String opcion){
+        esClickeable(listaLeaveType);
+        seleccionarOpcion(listaLeaveType, opcion);
+    }
+
+// -------------------------
+// BOTONES DE BÚSQUEDA
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda según los filtros ingresados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros de búsqueda.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES CRUD
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar.
+     * Abre la pantalla para crear un nuevo Entitlement.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar.
+     * Elimina el Entitlement seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todos los Entitlements marcados.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Editar.
+     * Abre la pantalla de edición del Entitlement seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+// </editor-fold>
+
 }

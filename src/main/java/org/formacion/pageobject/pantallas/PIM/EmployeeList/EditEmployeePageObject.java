@@ -34,5 +34,90 @@ public class EditEmployeePageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES DE SECCIÓN
+// -------------------------
+
+    /**
+     * Accede a la sección Personal Details.
+     */
+    public void pulsarBotonPersonalDetails(){
+        esClickeable(btnPersonalDetails);
+        clickElemento(btnPersonalDetails, "Pulsar botón Personal Details");
+    }
+
+    /**
+     * Accede a la sección Contact Details.
+     */
+    public void pulsarBotonContactDetails(){
+        esClickeable(btnContactDetails);
+        clickElemento(btnContactDetails, "Pulsar botón Contact Details");
+    }
+
+    /**
+     * Accede a la sección Emergency Contacts.
+     */
+    public void pulsarBotonEmergencyContact(){
+        esClickeable(btnEmergencyContact);
+        clickElemento(btnEmergencyContact, "Pulsar botón Emergency Contacts");
+    }
+
+    /**
+     * Accede a la sección Dependents.
+     */
+    public void pulsarBotonDependents(){
+        esClickeable(btnDependents);
+        clickElemento(btnDependents, "Pulsar botón Dependents");
+    }
+
+    /**
+     * Accede a la sección Immigration.
+     */
+    public void pulsarBotonInmigration(){
+        esClickeable(btnInmigration);
+        clickElemento(btnInmigration, "Pulsar botón Immigration");
+    }
+
+    /**
+     * Accede a la sección Job.
+     */
+    public void pulsarBotonJob(){
+        esClickeable(btnJob);
+        clickElemento(btnJob, "Pulsar botón Job");
+    }
+
+    /**
+     * Accede a la sección Salary.
+     */
+    public void pulsarBotonSalary(){
+        esClickeable(btnSalary);
+        clickElemento(btnSalary, "Pulsar botón Salary");
+    }
+
+    /**
+     * Accede a la sección Report To.
+     */
+    public void pulsarBotonReportTo(){
+        esClickeable(btnReportTo);
+        clickElemento(btnReportTo, "Pulsar botón Report To");
+    }
+
+    /**
+     * Accede a la sección Qualifications.
+     */
+    public void pulsarBotonQualifications(){
+        esClickeable(btnQualifications);
+        clickElemento(btnQualifications, "Pulsar botón Qualifications");
+    }
+
+    /**
+     * Accede a la sección Memberships.
+     */
+    public void pulsarBotonMemberShips(){
+        esClickeable(btnMemberShips);
+        clickElemento(btnMemberShips, "Pulsar botón Memberships");
+    }
+
+// </editor-fold>
+
 }

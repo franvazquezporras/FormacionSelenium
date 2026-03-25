@@ -25,5 +25,15 @@ public class DashboardPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+    /**
+     * Realiza clic en el botón Time at Work.
+     * Abre la sección correspondiente dentro del Dashboard.
+     */
+    public void pulsarBotonTimeAtWork(){
+        esClickeable(btnTimeAtWork);
+        clickElemento(btnTimeAtWork, "Pulsar botón Time At Work");
+    }
+
+    // </editor-fold>
+
 }

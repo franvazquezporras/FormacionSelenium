@@ -27,5 +27,41 @@ public class EmployeeRecordsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la fecha para consultar los registros.
+     * @param texto Fecha.
+     */
+    public void insertarDate(String texto){
+        esClickeable(txtDate);
+        setText(txtDate, texto);
+    }
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View.
+     * Muestra los registros del empleado según los filtros aplicados.
+     */
+    public void pulsarBotonView(){
+        esClickeable(btnView);
+        clickElemento(btnView, "Pulsar botón View");
+    }
+
+// </editor-fold>
+
 }

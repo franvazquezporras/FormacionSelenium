@@ -30,5 +30,75 @@ public class AdminLanguagesPackagesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro de la lista.
+     * Se utiliza para seleccionar o deseleccionar el paquete de idioma.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar.
+     * Abre la pantalla para añadir un nuevo paquete de idioma.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todos los paquetes de idioma marcados en la lista.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Traducir Package.
+     * Abre la pantalla de traducción del paquete seleccionado.
+     */
+    public void pulsarBotonTraducirPackage(){
+        esClickeable(btnTraducirPackage);
+        clickElemento(btnTraducirPackage, "Pulsar botón Traducir Package");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar Package.
+     * Elimina el paquete de idioma actualmente seleccionado.
+     */
+    public void pulsarBotonEliminarPackage(){
+        esClickeable(btnEliminarPackage);
+        clickElemento(btnEliminarPackage, "Pulsar botón Eliminar Package");
+    }
+
+    /**
+     * Realiza clic en el botón Descargar Package.
+     * Descarga el paquete de idioma seleccionado.
+     */
+    public void pulsarBotonDescargarPackage(){
+        esClickeable(btnDescargarPackage);
+        clickElemento(btnDescargarPackage, "Pulsar botón Descargar Package");
+    }
+
+    /**
+     * Realiza clic en el botón Importar Package.
+     * Abre la pantalla para importar un paquete de idioma.
+     */
+    public void pulsarBotonImportarPackage(){
+        esClickeable(btnImportarPackage);
+        clickElemento(btnImportarPackage, "Pulsar botón Importar Package");
+    }
     //</editor-fold>
 }

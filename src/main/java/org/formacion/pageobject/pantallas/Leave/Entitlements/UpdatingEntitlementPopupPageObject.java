@@ -25,5 +25,28 @@ public class UpdatingEntitlementPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Confirm.
+     * Confirma la actualización del Entitlement.
+     */
+    public void pulsarBotonConfirm(){
+        esClickeable(btnConfirm);
+        clickElemento(btnConfirm, "Pulsar botón Confirm");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y cierra el popup.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

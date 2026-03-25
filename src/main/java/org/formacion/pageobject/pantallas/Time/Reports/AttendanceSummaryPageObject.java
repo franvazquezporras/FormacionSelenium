@@ -30,5 +30,81 @@ public class AttendanceSummaryPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta la fecha inicial del reporte.
+     * @param texto Fecha desde.
+     */
+    public void insertarDateFrom(String texto){
+        esClickeable(txtDateFrom);
+        setText(txtDateFrom, texto);
+    }
+
+    /**
+     * Inserta la fecha final del reporte.
+     * @param texto Fecha hasta.
+     */
+    public void insertarDateTo(String texto){
+        esClickeable(txtDateTo);
+        setText(txtDateTo, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Job Title.
+     * @param opcion Título del puesto.
+     */
+    public void seleccionarListaJobTitle(String opcion){
+        esClickeable(listaJobTitle);
+        seleccionarOpcion(listaJobTitle, opcion);
+    }
+
+    /**
+     * Selecciona un Sub Unit.
+     * @param opcion Subunidad.
+     */
+    public void seleccionarListaSubUnit(String opcion){
+        esClickeable(listaSubUnit);
+        seleccionarOpcion(listaSubUnit, opcion);
+    }
+
+    /**
+     * Selecciona un Employment Status.
+     * @param opcion Estado laboral.
+     */
+    public void seleccionarListaEmploymentStatus(String opcion){
+        esClickeable(listaEmploymentStatus);
+        seleccionarOpcion(listaEmploymentStatus, opcion);
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View.
+     * Genera el reporte con los filtros aplicados.
+     */
+    public void pulsarBotonView(){
+        esClickeable(btnView);
+        clickElemento(btnView, "Pulsar botón View");
+    }
+
+// </editor-fold>
+
 }

@@ -36,5 +36,126 @@ public class ProjectInfoEditProjectPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Project.
+     * @param texto Nombre del proyecto.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta el nombre del Customer asociado.
+     * @param texto Nombre del cliente.
+     */
+    public void insertarCustomerName(String texto){
+        esClickeable(txtCustomerName);
+        setText(txtCustomerName, texto);
+    }
+
+    /**
+     * Inserta la descripción del Project.
+     * @param texto Descripción.
+     */
+    public void insertarDescription(String texto){
+        esClickeable(txtDescription);
+        setText(txtDescription, texto);
+    }
+
+    /**
+     * Inserta el Project Admin.
+     * @param texto Nombre del administrador del proyecto.
+     */
+    public void insertarProjectAdmin(String texto){
+        esClickeable(txtProjectaDMIN);
+        setText(txtProjectaDMIN, texto);
+    }
+
+// -------------------------
+// BOTONES PRINCIPALES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Customer.
+     * Abre el popup para agregar un nuevo Customer.
+     */
+    public void pulsarBotonAddCustomer(){
+        esClickeable(btnAddCustomer);
+        clickElemento(btnAddCustomer, "Pulsar botón Add Customer");
+    }
+
+    /**
+     * Realiza clic en el botón Add Project Admin.
+     * Abre el popup para agregar un nuevo Project Admin.
+     */
+    public void pulsarBotonAddProjectAdmin(){
+        esClickeable(btnAddProjectAdmin);
+        clickElemento(btnAddProjectAdmin, "Pulsar botón Add Project Admin");
+    }
+
+    /**
+     * Realiza clic en el botón Copy From.
+     * Permite copiar actividades desde otro proyecto.
+     */
+    public void pulsarBotonCopyFrom(){
+        esClickeable(btnCopyFrom);
+        clickElemento(btnCopyFrom, "Pulsar botón Copy From");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios del Project.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// -------------------------
+// BOTONES DE ACTIVIDADES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Activity.
+     * Abre el popup para agregar una nueva actividad al proyecto.
+     */
+    public void pulsarBotonAddActivity(){
+        esClickeable(btnAddActivity);
+        clickElemento(btnAddActivity, "Pulsar botón Add Activity");
+    }
+
+    /**
+     * Realiza clic en el botón Edit Activity.
+     * Abre el popup para editar la actividad seleccionada.
+     */
+    public void pulsarBotonEditActivity(){
+        esClickeable(btnEditActivity);
+        clickElemento(btnEditActivity, "Pulsar botón Edit Activity");
+    }
+
+    /**
+     * Realiza clic en el botón Delete Activity.
+     * Elimina la actividad seleccionada del proyecto.
+     */
+    public void pulsarBotonDeleteActivity(){
+        esClickeable(btnDeleteActivity);
+        clickElemento(btnDeleteActivity, "Pulsar botón Delete Activity");
+    }
+
+// </editor-fold>
+
 }

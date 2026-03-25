@@ -27,5 +27,50 @@ public class ProjectInfoAddCustomerPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Customer.
+     * @param texto Nombre del cliente.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta la descripción del Customer.
+     * @param texto Descripción.
+     */
+    public void insertarDescription(String texto){
+        esClickeable(txtDescription);
+        setText(txtDescription, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Customer.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

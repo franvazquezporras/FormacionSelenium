@@ -27,5 +27,59 @@ public class AdminPayGradesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro.
+     * Se utiliza para seleccionar o deseleccionar el Pay Grade.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar.
+     * Abre la pantalla para crear un nuevo Pay Grade.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar.
+     * Elimina el Pay Grade actualmente seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todos los Pay Grades marcados en la lista.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Editar.
+     * Abre la pantalla de edición del Pay Grade seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+// </editor-fold>
+
 }

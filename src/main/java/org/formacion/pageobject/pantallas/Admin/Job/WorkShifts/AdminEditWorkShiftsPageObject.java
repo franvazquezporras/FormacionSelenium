@@ -29,5 +29,77 @@ public class AdminEditWorkShiftsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Work Shift.
+     * @param texto Nombre del turno.
+     */
+    public void insertarShiftName(String texto){
+        esClickeable(txtShiftName);
+        setText(txtShiftName, texto);
+    }
+
+    /**
+     * Inserta la hora de inicio del Work Shift.
+     * @param texto Hora de inicio (formato HH:mm).
+     */
+    public void insertarFromHour(String texto){
+        esClickeable(txtFromHour);
+        setText(txtFromHour, texto);
+    }
+
+    /**
+     * Inserta la hora de fin del Work Shift.
+     * @param texto Hora de fin (formato HH:mm).
+     */
+    public void insertarToHour(String texto){
+        esClickeable(txtToHour);
+        setText(txtToHour, texto);
+    }
+
+    /**
+     * Inserta la duración por día del Work Shift.
+     * @param texto Duración total en horas.
+     */
+    public void insertarDurationPerDay(String texto){
+        esClickeable(txtDurationPerDay);
+        setText(txtDurationPerDay, texto);
+    }
+
+    /**
+     * Inserta los empleados asignados al Work Shift.
+     * @param texto Lista de empleados asignados.
+     */
+    public void insertarAssignedEmployees(String texto){
+        esClickeable(txtAssignedEmployees);
+        setText(txtAssignedEmployees, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el Work Shift.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

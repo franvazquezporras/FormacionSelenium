@@ -26,5 +26,32 @@ public class EmployeeTimesheetsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View.
+     * Muestra el timesheet del empleado indicado.
+     */
+    public void pulsarBotonView(){
+        esClickeable(btnView);
+        clickElemento(btnView, "Pulsar botón View");
+    }
+
+// </editor-fold>
+
 }

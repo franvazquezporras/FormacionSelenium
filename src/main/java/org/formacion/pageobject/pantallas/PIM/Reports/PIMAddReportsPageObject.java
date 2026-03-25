@@ -33,5 +33,99 @@ public class PIMAddReportsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el nombre del Report.
+     * @param texto Nombre del reporte.
+     */
+    public void insertarReportName(String texto){
+        esClickeable(txtReportName);
+        setText(txtReportName, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Selection Criteria.
+     * @param opcion Criterio a seleccionar.
+     */
+    public void seleccionarListaSelectionCriteria(String opcion){
+        esClickeable(listaSelectionCriteria);
+        seleccionarOpcion(listaSelectionCriteria, opcion);
+    }
+
+    /**
+     * Selecciona una opción en Include.
+     * @param opcion Opción a seleccionar.
+     */
+    public void seleccionarListaInclude(String opcion){
+        esClickeable(listaInclude);
+        seleccionarOpcion(listaInclude, opcion);
+    }
+
+    /**
+     * Selecciona un Display Field Group.
+     * @param opcion Grupo a seleccionar.
+     */
+    public void seleccionarListaSelectDisplayFieldGroup(String opcion){
+        esClickeable(listaSelectDisplayFieldGroup);
+        seleccionarOpcion(listaSelectDisplayFieldGroup, opcion);
+    }
+
+    /**
+     * Selecciona un Display Field.
+     * @param opcion Campo a seleccionar.
+     */
+    public void seleccionarListaSelectDisplayField(String opcion){
+        esClickeable(listaSelectDisplayField);
+        seleccionarOpcion(listaSelectDisplayField, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Selection Criteria.
+     * Agrega el criterio seleccionado a la lista del reporte.
+     */
+    public void pulsarBotonAddSelectionCriteria(){
+        esClickeable(btnAddSelectionCriteria);
+        clickElemento(btnAddSelectionCriteria, "Pulsar botón Add Selection Criteria");
+    }
+
+    /**
+     * Realiza clic en el botón Add Display Field.
+     * Agrega el campo seleccionado al reporte.
+     */
+    public void pulsarBotonAddSelectDisplayField(){
+        esClickeable(btnAddSelectDisplayField);
+        clickElemento(btnAddSelectDisplayField, "Pulsar botón Add Display Field");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Report.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

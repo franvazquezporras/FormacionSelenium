@@ -27,5 +27,41 @@ public class MaintenancePageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta la contraseña requerida para acceder a la sección de mantenimiento.
+     * @param texto Contraseña del usuario.
+     */
+    public void insertarPassword(String texto){
+        esClickeable(txtPassword);
+        setText(txtPassword, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Confirm.
+     * Confirma la acción e ingresa a la sección de mantenimiento.
+     */
+    public void pulsarBotonConfirm(){
+        esClickeable(btnConfirm);
+        clickElemento(btnConfirm, "Pulsar botón Confirm");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la acción y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

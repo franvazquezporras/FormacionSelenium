@@ -25,5 +25,41 @@ public class BuzzSharePostPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el texto del Post a compartir.
+     * @param texto Contenido del post.
+     */
+    public void insertarPost(String texto){
+        esClickeable(txtPost);
+        setText(txtPost, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Share.
+     * Comparte el post con el contenido ingresado.
+     */
+    public void pulsarBotonShare(){
+        esClickeable(btnShare);
+        clickElemento(btnShare, "Pulsar botón Share");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cierra el popup sin compartir el contenido.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

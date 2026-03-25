@@ -29,5 +29,72 @@ public class ClaimAssignClaimPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta las observaciones del reclamo.
+     * @param texto Observaciones o comentarios.
+     */
+    public void insertarRemarks(String texto){
+        esClickeable(txtRemarks);
+        setText(txtRemarks, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un evento en la lista Event.
+     * @param opcion Evento a seleccionar.
+     */
+    public void seleccionarListaEvent(String opcion){
+        esClickeable(listaEvent);
+        seleccionarOpcion(listaEvent, opcion);
+    }
+
+    /**
+     * Selecciona una moneda en la lista Currency.
+     * @param opcion Moneda a seleccionar.
+     */
+    public void seleccionarListaCurrency(String opcion){
+        esClickeable(listaCurrency);
+        seleccionarOpcion(listaCurrency, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Share.
+     * Comparte o asigna el reclamo según los datos ingresados.
+     */
+    public void pulsarBotonShare(){
+        esClickeable(btnShare);
+        clickElemento(btnShare, "Pulsar botón Share");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

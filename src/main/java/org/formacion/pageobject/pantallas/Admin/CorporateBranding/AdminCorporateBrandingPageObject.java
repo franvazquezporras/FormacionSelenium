@@ -36,5 +36,133 @@ public class AdminCorporateBrandingPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS (IMÁGENES / FICHEROS)
+// -------------------------
+
+    /**
+     * Inserta la ruta del archivo para el Client Logo.
+     * @param texto Ruta completa del archivo.
+     */
+    public void insertarClientLogo(String texto){
+        esClickeable(txtClientLogo);
+        setText(txtClientLogo, texto);
+    }
+
+    /**
+     * Inserta la ruta del archivo para el Client Banner.
+     * @param texto Ruta completa del archivo.
+     */
+    public void insertarClientBanner(String texto){
+        esClickeable(txtClientBanner);
+        setText(txtClientBanner, texto);
+    }
+
+    /**
+     * Inserta la ruta del archivo para el Login Banner.
+     * @param texto Ruta completa del archivo.
+     */
+    public void insertarLoginBanner(String texto){
+        esClickeable(txtLoginBanner);
+        setText(txtLoginBanner, texto);
+    }
+
+// -------------------------
+// BOTONES DE COLOR
+// -------------------------
+
+    /**
+     * Realiza clic en el selector de Primary Color.
+     */
+    public void pulsarBotonPrimaryColor(){
+        esClickeable(btnPrimaryColor);
+        clickElemento(btnPrimaryColor, "Pulsar botón Primary Color");
+    }
+
+    /**
+     * Realiza clic en el selector de Primary Font Color.
+     */
+    public void pulsarBotonPrimaryFontColor(){
+        esClickeable(btnPrimaryFontColor);
+        clickElemento(btnPrimaryFontColor, "Pulsar botón Primary Font Color");
+    }
+
+    /**
+     * Realiza clic en el selector de Primary Gradient Color 1.
+     */
+    public void pulsarBotonPrimaryGradientColor1(){
+        esClickeable(btnPrimaryGradientColor1);
+        clickElemento(btnPrimaryGradientColor1, "Pulsar botón Primary Gradient Color 1");
+    }
+
+    /**
+     * Realiza clic en el selector de Secondary Color.
+     */
+    public void pulsarBotonSecondaryColor(){
+        esClickeable(btnSecondaryColor);
+        clickElemento(btnSecondaryColor, "Pulsar botón Secondary Color");
+    }
+
+    /**
+     * Realiza clic en el selector de Secondary Font Color.
+     */
+    public void pulsarBotonSecondaryFontColor(){
+        esClickeable(btnSecondaryFontColor);
+        clickElemento(btnSecondaryFontColor, "Pulsar botón Secondary Font Color");
+    }
+
+    /**
+     * Realiza clic en el selector de Primary Gradient Color 2.
+     */
+    public void pulsarBotonPrimaryGradientColor2(){
+        esClickeable(btnPrimaryGradientColor2);
+        clickElemento(btnPrimaryGradientColor2, "Pulsar botón Primary Gradient Color 2");
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva la opción Social Media Images.
+     * Controla si se muestran o no las imágenes de redes sociales.
+     */
+    public void pulsarCheckSocialMediaImages(){
+        esClickeable(checkSocialMediaImages);
+        clickElemento(checkSocialMediaImages, "Seleccionar Social Media Images");
+    }
+
+// -------------------------
+// BOTONES PRINCIPALES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Publish.
+     * Publica los cambios de personalización corporativa.
+     */
+    public void pulsarBotonPublish(){
+        esClickeable(btnPublish);
+        clickElemento(btnPublish, "Pulsar botón Publish");
+    }
+
+    /**
+     * Realiza clic en el botón Preview.
+     * Muestra una vista previa de los cambios aplicados.
+     */
+    public void pulsarBotonPreview(){
+        esClickeable(btnPreview);
+        clickElemento(btnPreview, "Pulsar botón Preview");
+    }
+
+    /**
+     * Realiza clic en el botón Reset to Default.
+     * Restaura la configuración de branding a los valores por defecto.
+     */
+    public void pulsarBotonResetToDefault(){
+        esClickeable(btnResetToDefault);
+        clickElemento(btnResetToDefault, "Pulsar botón Reset to Default");
+    }
+
+// </editor-fold>
+
 }

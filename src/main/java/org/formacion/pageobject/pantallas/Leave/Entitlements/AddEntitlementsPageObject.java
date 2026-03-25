@@ -32,5 +32,92 @@ public class AddEntitlementsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOXES
+// -------------------------
+
+    /**
+     * Selecciona la opción "Add to Individual Employee".
+     */
+    public void pulsarCheckAddToIndividualEmployee(){
+        esClickeable(checkAddToIndividualEmployee);
+        clickElemento(checkAddToIndividualEmployee, "Seleccionar Add to Individual Employee");
+    }
+
+    /**
+     * Selecciona la opción "Add to Multiple Employees".
+     */
+    public void pulsarCheckAddToMultipleEmployees(){
+        esClickeable(checkAddToMultipleEmployees);
+        clickElemento(checkAddToMultipleEmployees, "Seleccionar Add to Multiple Employees");
+    }
+
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta el valor del Entitlement.
+     * @param texto Cantidad de días asignados.
+     */
+    public void insertarEntitlement(String texto){
+        esClickeable(txtEntitlement);
+        setText(txtEntitlement, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Leave Type en la lista.
+     * @param opcion Tipo de permiso a seleccionar.
+     */
+    public void seleccionarListaLeaveType(String opcion){
+        esClickeable(listaLeaveType);
+        seleccionarOpcion(listaLeaveType, opcion);
+    }
+
+    /**
+     * Selecciona un Leave Period en la lista.
+     * @param opcion Periodo a seleccionar.
+     */
+    public void seleccionarListaLeavePeriod(String opcion){
+        esClickeable(listaLeavePeriod);
+        seleccionarOpcion(listaLeavePeriod, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Entitlement.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

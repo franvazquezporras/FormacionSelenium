@@ -28,5 +28,59 @@ public class ClaimViewDetailsAddAttachmentsPageObject  extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la ruta o nombre del archivo a adjuntar.
+     * @param texto Archivo a seleccionar.
+     */
+    public void insertarSelectFile(String texto){
+        esClickeable(txtSelectFile);
+        setText(txtSelectFile, texto);
+    }
+
+    /**
+     * Inserta el comentario del adjunto.
+     * @param texto Comentario del adjunto.
+     */
+    public void insertarComment(String texto){
+        esClickeable(txtComment);
+        setText(txtComment, texto);
+    }
+
+    /**
+     * Inserta la nota del adjunto.
+     * @param texto Nota adicional.
+     */
+    public void insertarNote(String texto){
+        esClickeable(txtNote);
+        setText(txtNote, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el adjunto agregado.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y cierra el popup.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

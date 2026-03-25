@@ -30,5 +30,83 @@ public class AddHolidaysPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Holiday.
+     * @param texto Nombre del Holiday.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta la fecha del Holiday.
+     * @param texto Fecha del Holiday.
+     */
+    public void insertarDate(String texto){
+        esClickeable(txtDate);
+        setText(txtDate, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona si el Holiday es Full Day o no.
+     * @param opcion Opción a seleccionar.
+     */
+    public void seleccionarListaFullDay(String opcion){
+        esClickeable(listaFullDay);
+        seleccionarOpcion(listaFullDay, opcion);
+    }
+
+// -------------------------
+// CHECKBOXES
+// -------------------------
+
+    /**
+     * Selecciona la opción "Repeats Annually - Sí".
+     */
+    public void pulsarCheckRepeatsAnnuallySi(){
+        esClickeable(checkRepeatsAnnuallySi);
+        clickElemento(checkRepeatsAnnuallySi, "Seleccionar Repeats Annually Sí");
+    }
+
+    /**
+     * Selecciona la opción "Repeats Annually - No".
+     */
+    public void pulsarCheckRepeatsAnnuallyNo(){
+        esClickeable(checkRepeatsAnnuallyNo);
+        clickElemento(checkRepeatsAnnuallyNo, "Seleccionar Repeats Annually No");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el Holiday creado.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

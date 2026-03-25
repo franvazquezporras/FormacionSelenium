@@ -35,5 +35,131 @@ public class AddEmployeePageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS PRINCIPALES
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre.
+     */
+    public void insertarFirstName(String texto){
+        esClickeable(txtFirstName);
+        setText(txtFirstName, texto);
+    }
+
+    /**
+     * Inserta el segundo nombre del empleado.
+     * @param texto Segundo nombre.
+     */
+    public void insertarMiddleName(String texto){
+        esClickeable(txtMidleName);
+        setText(txtMidleName, texto);
+    }
+
+    /**
+     * Inserta el apellido del empleado.
+     * @param texto Apellido.
+     */
+    public void insertarLastName(String texto){
+        esClickeable(txtLastName);
+        setText(txtLastName, texto);
+    }
+
+    /**
+     * Inserta el Employee ID.
+     * @param texto Identificador del empleado.
+     */
+    public void insertarEmployeeID(String texto){
+        esClickeable(txtEmployeeID);
+        setText(txtEmployeeID, texto);
+    }
+
+// -------------------------
+// CHECKBOX LOGIN DETAILS
+// -------------------------
+
+    /**
+     * Activa o desactiva la opción Login Details.
+     */
+    public void pulsarCheckLoginDetails(){
+        esClickeable(checkLoginDetails);
+        clickElemento(checkLoginDetails, "Seleccionar/Deseleccionar Login Details");
+    }
+
+// -------------------------
+// INPUTS LOGIN DETAILS
+// -------------------------
+
+    /**
+     * Inserta el nombre de usuario para el login.
+     * @param texto Nombre de usuario.
+     */
+    public void insertarUserName(String texto){
+        esClickeable(txtUserName);
+        setText(txtUserName, texto);
+    }
+
+    /**
+     * Inserta la contraseña del usuario.
+     * @param texto Contraseña.
+     */
+    public void insertarPassword(String texto){
+        esClickeable(txtPassword);
+        setText(txtPassword, texto);
+    }
+
+    /**
+     * Inserta la repetición de la contraseña.
+     * @param texto Repetición de contraseña.
+     */
+    public void insertarRepeatPassword(String texto){
+        esClickeable(txtRepeatPassword);
+        setText(txtRepeatPassword, texto);
+    }
+
+// -------------------------
+// CHECKBOX STATUS
+// -------------------------
+
+    /**
+     * Selecciona el estado Enable.
+     */
+    public void pulsarCheckStatusEnable(){
+        esClickeable(checkStatusEnable);
+        clickElemento(checkStatusEnable, "Seleccionar Status Enable");
+    }
+
+    /**
+     * Selecciona el estado Disabled.
+     */
+    public void pulsarCheckStatusDisabled(){
+        esClickeable(checkStatusDisabled);
+        clickElemento(checkStatusDisabled, "Seleccionar Status Disabled");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo empleado.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

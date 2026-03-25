@@ -26,5 +26,41 @@ public class PIMConfigurationEditReportingMethodsPageObject extends BasePageObje
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el nombre del Reporting Method.
+     * @param texto Nombre del método de reporte.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios del Reporting Method.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

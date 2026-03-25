@@ -35,5 +35,60 @@ public class ClaimMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// CONFIGURATION
+// -------------------------
+
+    public void pulsarBotonConfiguration(){
+        esClickeable(btnConfiguration);
+        clickElemento(btnConfiguration, "Pulsar botón Configuration");
+    }
+
+    public void pulsarBotonConfigurationEvents(){
+        esClickeable(btnConfigurationEvents);
+        clickElemento(btnConfigurationEvents, "Pulsar botón Configuration - Events");
+    }
+
+    public void pulsarBotonConfigurationExpensesTypes(){
+        esClickeable(btnConfigurationExpensesTypes);
+        clickElemento(btnConfigurationExpensesTypes, "Pulsar botón Configuration - Expenses Types");
+    }
+
+// -------------------------
+// SUBMIT CLAIM
+// -------------------------
+
+    public void pulsarBotonSubmitClaim(){
+        esClickeable(btnSubmitClaim);
+        clickElemento(btnSubmitClaim, "Pulsar botón Submit Claim");
+    }
+
+// -------------------------
+// MY CLAIMS
+// -------------------------
+
+    public void pulsarBotonMyClaims(){
+        esClickeable(btnMyClaims);
+        clickElemento(btnMyClaims, "Pulsar botón My Claims");
+    }
+
+// -------------------------
+// EMPLOYEE CLAIMS
+// -------------------------
+
+    public void pulsarBotonEmployeeClaims(){
+        esClickeable(btnEmployeeClaims);
+        clickElemento(btnEmployeeClaims, "Pulsar botón Employee Claims");
+    }
+
+// -------------------------
+// ASSIGN CLAIM
+// -------------------------
+
+    public void pulsarBotonAssignClaim(){
+        esClickeable(btnAssignClaim);
+        clickElemento(btnAssignClaim, "Pulsar botón Assign Claim");
+    }
     //</editor-fold>
 }

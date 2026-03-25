@@ -27,5 +27,59 @@ public class AdminOrganizationStructurePageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox Editar.
+     * Permite habilitar o deshabilitar la edición de la estructura organizativa.
+     */
+    public void pulsarCheckEditar(){
+        esClickeable(checkEditar);
+        clickElemento(checkEditar, "Seleccionar/Deseleccionar Editar");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar.
+     * Abre el popup para crear una nueva estructura organizativa.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar Structure.
+     * Elimina la estructura seleccionada.
+     */
+    public void pulsarBotonEliminarStructure(){
+        esClickeable(btnEliminarStructure);
+        clickElemento(btnEliminarStructure, "Pulsar botón Eliminar Structure");
+    }
+
+    /**
+     * Realiza clic en el botón Agregar a Structure.
+     * Permite añadir una subestructura dentro de la estructura seleccionada.
+     */
+    public void pulsarBotonAgregarAStructure(){
+        esClickeable(btnAgregarAStructure);
+        clickElemento(btnAgregarAStructure, "Pulsar botón Agregar a Structure");
+    }
+
+    /**
+     * Realiza clic en el botón Editar Structure.
+     * Abre el popup de edición de la estructura seleccionada.
+     */
+    public void pulsarBotonEditarStructure(){
+        esClickeable(btnEditarStructure);
+        clickElemento(btnEditarStructure, "Pulsar botón Editar Structure");
+    }
+
+// </editor-fold>
+
 }

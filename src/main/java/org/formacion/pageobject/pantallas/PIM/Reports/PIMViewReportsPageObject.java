@@ -23,6 +23,10 @@ public class PIMViewReportsPageObject extends BasePageObject {
 
     //</editor-fold>
 
+    // <editor-fold desc="Getters">
+    public By gettxtAllEmployeeSubUnitHierarchyReport(){return txtAllEmployeeSubUnitHierarchyReport;}
+    //</editor-fold>
+
     // <editor-fold desc="Funciones de locators">
 
     //</editor-fold>

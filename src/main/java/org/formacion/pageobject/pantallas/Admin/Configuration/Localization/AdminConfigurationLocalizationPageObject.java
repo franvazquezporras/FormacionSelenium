@@ -25,5 +25,41 @@ public class AdminConfigurationLocalizationPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS DESPLEGABLES
+// -------------------------
+
+    /**
+     * Selecciona un idioma en la lista desplegable "Language".
+     * @param texto Valor visible que se desea seleccionar.
+     */
+    public void seleccionarLanguage(String texto){
+        esClickeable(listaLanguage);
+        seleccionarOpcion(listaLanguage, texto);
+    }
+
+    /**
+     * Selecciona un formato de fecha en la lista desplegable "Date Format".
+     * @param texto Valor visible que se desea seleccionar.
+     */
+    public void seleccionarDateFormat(String texto){
+        esClickeable(listaDateFormat);
+        seleccionarOpcion(listaDateFormat, texto);
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda la configuración de localización seleccionada.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    // </editor-fold>
+
 }

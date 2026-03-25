@@ -25,6 +25,48 @@ public class AdminConfigurationEditSubscribersPageObject extends BasePageObject 
     //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
+// -------------------------
+// INPUTS
+// -------------------------
 
+    /**
+     * Inserta el correo electrónico del suscriptor.
+     * @param texto Dirección de correo a introducir.
+     */
+    public void insertarEmail(String texto){
+        esClickeable(txtEmail);
+        setText(txtEmail, texto);
+    }
+
+    /**
+     * Inserta el nombre del suscriptor.
+     * @param texto Nombre a introducir.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Cancelar.
+     * Cierra el popup sin guardar los cambios.
+     */
+    public void pulsarBotonCancelar(){
+        esClickeable(btnCancelar);
+        clickElemento(btnCancelar, "Pulsar botón Cancelar");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el suscriptor.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
     //</editor-fold>
 }

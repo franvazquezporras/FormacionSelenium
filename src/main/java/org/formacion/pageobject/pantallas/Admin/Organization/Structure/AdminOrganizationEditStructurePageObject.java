@@ -27,5 +27,59 @@ public class AdminOrganizationEditStructurePageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el Unit ID de la estructura.
+     * @param texto Identificador de la unidad.
+     */
+    public void insertarUnitId(String texto){
+        esClickeable(txtUnitId);
+        setText(txtUnitId, texto);
+    }
+
+    /**
+     * Inserta el nombre de la estructura.
+     * @param texto Nombre de la unidad organizativa.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta la descripción de la estructura.
+     * @param texto Descripción de la unidad.
+     */
+    public void insertarDescription(String texto){
+        esClickeable(txtDescription);
+        setText(txtDescription, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en la estructura organizativa.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y cierra el popup.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

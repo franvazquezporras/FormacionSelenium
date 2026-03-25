@@ -28,5 +28,57 @@ public class AdminConfigurationSubscribersPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro de la lista.
+     * Se utiliza para seleccionar o deseleccionar el suscriptor.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón "Eliminar registros seleccionados".
+     * Elimina todos los suscriptores marcados en la lista.
+     */
+    public void pulsarBotonEliminarRegistrosSeleccionados(){
+        esClickeable(btnEliminarRegistrosSeleccionados);
+        clickElemento(btnEliminarRegistrosSeleccionados, "Pulsar botón Eliminar registros seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón "Eliminar registro".
+     * Elimina el registro actualmente seleccionado.
+     */
+    public void pulsarBotonEliminarRegistro(){
+        esClickeable(btnEliminarRegistro);
+        clickElemento(btnEliminarRegistro, "Pulsar botón Eliminar registro");
+    }
+
+    /**
+     * Realiza clic en el botón "Editar registro".
+     * Abre el popup para editar el suscriptor seleccionado.
+     */
+    public void pulsarBotonEditarRegistro(){
+        esClickeable(btnEditarRegistro);
+        clickElemento(btnEditarRegistro, "Pulsar botón Editar registro");
+    }
+
+    /**
+     * Realiza clic en el botón "Agregar Subscriber".
+     * Abre el popup para añadir un nuevo suscriptor.
+     */
+    public void pulsarBotonAgregarSubscriber(){
+        esClickeable(btnAgregarSubscriber);
+        clickElemento(btnAgregarSubscriber, "Pulsar botón Agregar Subscriber");
+    }
     //</editor-fold>
 }

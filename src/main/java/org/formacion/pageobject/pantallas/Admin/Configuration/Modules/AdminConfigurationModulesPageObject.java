@@ -34,5 +34,122 @@ public class AdminConfigurationModulesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOXES DE MÓDULOS
+// -------------------------
+
+    /**
+     * Activa o desactiva el módulo Admin.
+     * Controla la disponibilidad del módulo de administración.
+     */
+    public void pulsarCheckAdminModule(){
+        esClickeable(checkAdminModule);
+        clickElemento(checkAdminModule, "Seleccionar Admin Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo PIM.
+     * Controla la disponibilidad del módulo de gestión de empleados.
+     */
+    public void pulsarCheckPimModule(){
+        esClickeable(checkPimModule);
+        clickElemento(checkPimModule, "Seleccionar PIM Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Leave.
+     * Controla la disponibilidad del módulo de ausencias.
+     */
+    public void pulsarCheckLeaveModule(){
+        esClickeable(checkLeaveModule);
+        clickElemento(checkLeaveModule, "Seleccionar Leave Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Time.
+     * Controla la disponibilidad del módulo de tiempos.
+     */
+    public void pulsarCheckTimeModule(){
+        esClickeable(checkTimeModule);
+        clickElemento(checkTimeModule, "Seleccionar Time Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Recruitment.
+     * Controla la disponibilidad del módulo de reclutamiento.
+     */
+    public void pulsarCheckRecruitmentModule(){
+        esClickeable(checkRecruitmentModule);
+        clickElemento(checkRecruitmentModule, "Seleccionar Recruitment Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Performance.
+     * Controla la disponibilidad del módulo de desempeño.
+     */
+    public void pulsarCheckPerformanceModule(){
+        esClickeable(checkPerformanceModule);
+        clickElemento(checkPerformanceModule, "Seleccionar Performance Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Directory.
+     * Controla la disponibilidad del directorio de empleados.
+     */
+    public void pulsarCheckDirectoryModule(){
+        esClickeable(checkDirectoryModule);
+        clickElemento(checkDirectoryModule, "Seleccionar Directory Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Maintenance.
+     * Controla la disponibilidad del módulo de mantenimiento.
+     */
+    public void pulsarCheckMaintenanceModule(){
+        esClickeable(checkMaintenanceModule);
+        clickElemento(checkMaintenanceModule, "Seleccionar Maintenance Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Mobile.
+     * Controla la disponibilidad de funcionalidades móviles.
+     */
+    public void pulsarCheckMobile(){
+        esClickeable(checkMobile);
+        clickElemento(checkMobile, "Seleccionar Mobile Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Claim.
+     * Controla la disponibilidad del módulo de reclamaciones.
+     */
+    public void pulsarCheckClaimModule(){
+        esClickeable(checkClaimModule);
+        clickElemento(checkClaimModule, "Seleccionar Claim Module");
+    }
+
+    /**
+     * Activa o desactiva el módulo Buzz.
+     * Controla la disponibilidad del módulo social Buzz.
+     */
+    public void pulsarCheckBuzz(){
+        esClickeable(checkBuzz);
+        clickElemento(checkBuzz, "Seleccionar Buzz Module");
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda la configuración de módulos habilitados o deshabilitados.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    // </editor-fold>
+
 }

@@ -27,5 +27,37 @@ public class EmployeeTimesheetsDetailsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Edit.
+     * Abre la pantalla para editar el timesheet.
+     */
+    public void pulsarBotonEdit(){
+        esClickeable(btnEdit);
+        clickElemento(btnEdit, "Pulsar botón Edit");
+    }
+
+    /**
+     * Realiza clic en el botón Submit.
+     * Envía el timesheet para aprobación.
+     */
+    public void pulsarBotonSubmit(){
+        esClickeable(btnSubmit);
+        clickElemento(btnSubmit, "Pulsar botón Submit");
+    }
+
+    /**
+     * Realiza clic en el botón Create Timesheet.
+     * Crea un nuevo timesheet para el empleado.
+     */
+    public void pulsarBotonCreateTimesheet(){
+        esClickeable(btnCreateTimesheet);
+        clickElemento(btnCreateTimesheet, "Pulsar botón Create Timesheet");
+    }
+
+// </editor-fold>
+
 }

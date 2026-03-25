@@ -26,5 +26,37 @@ public class PIMConfigurationCustomFieldsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add.
+     * Abre la pantalla para agregar un nuevo Custom Field.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Edit del primer registro.
+     * Abre la pantalla de edición del Custom Field seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete del primer registro.
+     * Elimina el Custom Field seleccionado.
+     */
+    public void pulsarBotonBorrar(){
+        esClickeable(btnBorrar);
+        clickElemento(btnBorrar, "Pulsar botón Borrar");
+    }
+
+// </editor-fold>
+
 }

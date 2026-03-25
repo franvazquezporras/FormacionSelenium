@@ -29,5 +29,63 @@ public class AdminConfigurationEditRegisterClientPageObject extends BasePageObje
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del cliente OAuth.
+     * @param texto Nombre del cliente a editar.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta la URL de redirección del cliente OAuth.
+     * @param texto URL de redirección válida.
+     */
+    public void insertarRedirectURL(String texto){
+        esClickeable(txtRedirectURL);
+        setText(txtRedirectURL, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva la opción "Enable Client".
+     * Permite habilitar o deshabilitar el cliente OAuth.
+     */
+    public void pulsarCheckEnableClient(){
+        esClickeable(checkEnableClient);
+        clickElemento(checkEnableClient, "Seleccionar Enable Client");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el cliente OAuth.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

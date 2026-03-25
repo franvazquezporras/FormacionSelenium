@@ -28,5 +28,59 @@ public class AdminNationalitiesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro.
+     * Se utiliza para seleccionar o deseleccionar la Nationality.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar.
+     * Abre la pantalla para crear una nueva Nationality.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar.
+     * Elimina la Nationality actualmente seleccionada.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todas las Nationalities marcadas en la lista.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Editar.
+     * Abre la pantalla de edición de la Nationality seleccionada.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+// </editor-fold>
+
 }

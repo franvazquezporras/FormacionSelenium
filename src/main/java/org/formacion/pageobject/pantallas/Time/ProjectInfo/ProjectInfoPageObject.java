@@ -31,5 +31,86 @@ public class ProjectInfoPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Customer.
+     * @param texto Nombre del cliente.
+     */
+    public void insertarCustomerName(String texto){
+        esClickeable(txtCustomerName);
+        setText(txtCustomerName, texto);
+    }
+
+    /**
+     * Inserta el nombre del Project.
+     * @param texto Nombre del proyecto.
+     */
+    public void insertarProject(String texto){
+        esClickeable(txtProject);
+        setText(txtProject, texto);
+    }
+
+    /**
+     * Inserta el nombre del Project Admin.
+     * @param texto Nombre del administrador del proyecto.
+     */
+    public void insertarProjectAdmin(String texto){
+        esClickeable(txtProjectAdmin);
+        setText(txtProjectAdmin, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add.
+     * Abre la pantalla para agregar un nuevo Project.
+     */
+    public void pulsarBotonAdd(){
+        esClickeable(btnAdd);
+        clickElemento(btnAdd, "Pulsar botón Add");
+    }
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda con los filtros aplicados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros de búsqueda.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+    /**
+     * Realiza clic en el botón Edit del primer registro.
+     * Abre la pantalla de edición del Project seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete del primer registro.
+     * Elimina el Project seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+// </editor-fold>
+
 }

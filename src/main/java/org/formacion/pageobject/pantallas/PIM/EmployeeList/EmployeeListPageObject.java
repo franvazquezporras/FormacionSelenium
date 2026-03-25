@@ -37,5 +37,147 @@ public class EmployeeListPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta el Employee ID.
+     * @param texto Identificador del empleado.
+     */
+    public void insertarEmployeeID(String texto){
+        esClickeable(txtEmployeeID);
+        setText(txtEmployeeID, texto);
+    }
+
+    /**
+     * Inserta el nombre del supervisor.
+     * @param texto Nombre del supervisor.
+     */
+    public void insertarSupervisorName(String texto){
+        esClickeable(txtSupervisorName);
+        setText(txtSupervisorName, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Employment Status.
+     * @param opcion Estado a seleccionar.
+     */
+    public void seleccionarListaEmploymentStatus(String opcion){
+        esClickeable(listaEmplymentStatus);
+        seleccionarOpcion(listaEmplymentStatus, opcion);
+    }
+
+    /**
+     * Selecciona una opción en Include.
+     * @param opcion Opción a seleccionar.
+     */
+    public void seleccionarListaInclude(String opcion){
+        esClickeable(listaInclude);
+        seleccionarOpcion(listaInclude, opcion);
+    }
+
+    /**
+     * Selecciona un Job Title.
+     * @param opcion Título a seleccionar.
+     */
+    public void seleccionarListaJobTitle(String opcion){
+        esClickeable(listaJobTitle);
+        seleccionarOpcion(listaJobTitle, opcion);
+    }
+
+    /**
+     * Selecciona un Sub Unit.
+     * @param opcion Subunidad a seleccionar.
+     */
+    public void seleccionarListaSubUnit(String opcion){
+        esClickeable(listaSubUnit);
+        seleccionarOpcion(listaSubUnit, opcion);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Selecciona o deselecciona el checkbox del primer registro.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar checkbox del primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add.
+     * Abre la pantalla para agregar un nuevo empleado.
+     */
+    public void pulsarBotonAgregar(){
+        esClickeable(btnAgregar);
+        clickElemento(btnAgregar, "Pulsar botón Agregar");
+    }
+
+    /**
+     * Realiza clic en el botón Edit del primer registro.
+     * Abre la pantalla de edición del empleado seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete del primer registro.
+     * Elimina el empleado seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete Selected.
+     * Elimina todos los registros seleccionados.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar Seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda con los filtros aplicados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros de búsqueda.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// </editor-fold>
+
 }

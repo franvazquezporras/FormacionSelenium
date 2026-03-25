@@ -28,5 +28,63 @@ public class EmployeeTimesheetsEditDetailsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del proyecto.
+     * @param texto Nombre del proyecto.
+     */
+    public void insertarProject(String texto){
+        esClickeable(txtProject);
+        setText(txtProject, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona una actividad.
+     * @param opcion Nombre de la actividad.
+     */
+    public void seleccionarListaActivity(String opcion){
+        esClickeable(listaActivity);
+        seleccionarOpcion(listaActivity, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Restablece los valores del formulario.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el timesheet.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

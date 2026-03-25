@@ -26,5 +26,54 @@ public class EditEntitlementsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Leave Period en la lista.
+     * @param opcion Periodo a seleccionar.
+     */
+    public void seleccionarListaLeavePeriod(String opcion){
+        esClickeable(listaLeavePeriod);
+        seleccionarOpcion(listaLeavePeriod, opcion);
+    }
+
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el valor del Entitlement.
+     * @param texto Cantidad de días asignados.
+     */
+    public void insertarEntitlement(String texto){
+        esClickeable(txtEntitlement);
+        setText(txtEntitlement, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el Entitlement.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

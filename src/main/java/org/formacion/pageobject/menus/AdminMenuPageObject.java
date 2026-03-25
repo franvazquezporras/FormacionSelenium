@@ -56,6 +56,177 @@ public class AdminMenuPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
+    // -------------------------
+// USER MANAGEMENT
+// -------------------------
 
+    public void pulsarBotonUserManagment(){
+        esClickeable(btnUserManagment);
+        clickElemento(btnUserManagment, "Pulsar botón User Management");
+    }
+
+    public void pulsarBotonUserManagmentUsers(){
+        esClickeable(btnUserManagmentUsers);
+        clickElemento(btnUserManagmentUsers, "Pulsar botón User Management - Users");
+    }
+
+// -------------------------
+// JOB
+// -------------------------
+
+    public void pulsarBotonJob(){
+        esClickeable(btnJob);
+        clickElemento(btnJob, "Pulsar botón Job");
+    }
+
+    public void pulsarBotonJobJobTitles(){
+        esClickeable(btnJobJobTitles);
+        clickElemento(btnJobJobTitles, "Pulsar botón Job - Job Titles");
+    }
+
+    public void pulsarBotonJobPayGrades(){
+        esClickeable(btnJobPayGrades);
+        clickElemento(btnJobPayGrades, "Pulsar botón Job - Pay Grades");
+    }
+
+    public void pulsarBotonJobEmploymentStatus(){
+        esClickeable(btnJobEmploymentStatus);
+        clickElemento(btnJobEmploymentStatus, "Pulsar botón Job - Employment Status");
+    }
+
+    public void pulsarBotonJobJobCategories(){
+        esClickeable(btnJobJobCategories);
+        clickElemento(btnJobJobCategories, "Pulsar botón Job - Job Categories");
+    }
+
+    public void pulsarBotonJobWorkShifts(){
+        esClickeable(btnJobWorkShifts);
+        clickElemento(btnJobWorkShifts, "Pulsar botón Job - Work Shifts");
+    }
+
+// -------------------------
+// ORGANIZATION
+// -------------------------
+
+    public void pulsarBotonOrganization(){
+        esClickeable(btnOrganization);
+        clickElemento(btnOrganization, "Pulsar botón Organization");
+    }
+
+    public void pulsarBotonOrganizationGeneralInformation(){
+        esClickeable(btnOrganizationGeneralInformation);
+        clickElemento(btnOrganizationGeneralInformation, "Pulsar botón Organization - General Information");
+    }
+
+    public void pulsarBotonOrganizationLocations(){
+        esClickeable(btnOrganizationLocations);
+        clickElemento(btnOrganizationLocations, "Pulsar botón Organization - Locations");
+    }
+
+    public void pulsarBotonOrganizationStructure(){
+        esClickeable(btnOrganizationStructure);
+        clickElemento(btnOrganizationStructure, "Pulsar botón Organization - Structure");
+    }
+
+// -------------------------
+// QUALIFICATIONS
+// -------------------------
+
+    public void pulsarBotonQualifications(){
+        esClickeable(btnQualifications);
+        clickElemento(btnQualifications, "Pulsar botón Qualifications");
+    }
+
+    public void pulsarBotonQualificationsSkills(){
+        esClickeable(btnQualificationsSkills);
+        clickElemento(btnQualificationsSkills, "Pulsar botón Qualifications - Skills");
+    }
+
+    public void pulsarBotonQualificationsEducation(){
+        esClickeable(btnQualificationsEducation);
+        clickElemento(btnQualificationsEducation, "Pulsar botón Qualifications - Education");
+    }
+
+    public void pulsarBotonQualificationsLicenses(){
+        esClickeable(btnQualificationsLicenses);
+        clickElemento(btnQualificationsLicenses, "Pulsar botón Qualifications - Licenses");
+    }
+
+    public void pulsarBotonQualificationsLanguages(){
+        esClickeable(btnQualificationsLanguages);
+        clickElemento(btnQualificationsLanguages, "Pulsar botón Qualifications - Languages");
+    }
+
+    public void pulsarBotonQualificationsMemberships(){
+        esClickeable(btnQualificationsMemberships);
+        clickElemento(btnQualificationsMemberships, "Pulsar botón Qualifications - Memberships");
+    }
+
+// -------------------------
+// NATIONALITIES
+// -------------------------
+
+    public void pulsarBotonNationalities(){
+        esClickeable(btnNationalities);
+        clickElemento(btnNationalities, "Pulsar botón Nationalities");
+    }
+
+// -------------------------
+// CORPORATE BRANDING
+// -------------------------
+
+    public void pulsarBotonCorporateBranding(){
+        esClickeable(btnCorporateBranding);
+        clickElemento(btnCorporateBranding, "Pulsar botón Corporate Branding");
+    }
+
+// -------------------------
+// CONFIGURATION
+// -------------------------
+
+    public void pulsarBotonConfiguration(){
+        esClickeable(btnConfiguration);
+        clickElemento(btnConfiguration, "Pulsar botón Configuration");
+    }
+
+    public void pulsarBotonConfigurationEmailConfiguration(){
+        esClickeable(btnConfigurationEmailConfiguration);
+        clickElemento(btnConfigurationEmailConfiguration, "Pulsar botón Configuration - Email Configuration");
+    }
+
+    public void pulsarBotonConfigurationEmailSubscriptions(){
+        esClickeable(btnConfigurationEmailSubscriptions);
+        clickElemento(btnConfigurationEmailSubscriptions, "Pulsar botón Configuration - Email Subscriptions");
+    }
+
+    public void pulsarBotonConfigurationLocalization(){
+        esClickeable(btnConfigurationLocalization);
+        clickElemento(btnConfigurationLocalization, "Pulsar botón Configuration - Localization");
+    }
+
+    public void pulsarBotonConfigurationLanguagePackages(){
+        esClickeable(btnConfigurationLanguagePackages);
+        clickElemento(btnConfigurationLanguagePackages, "Pulsar botón Configuration - Language Packages");
+    }
+
+    public void pulsarBotonConfigurationModules(){
+        esClickeable(btnConfigurationModules);
+        clickElemento(btnConfigurationModules, "Pulsar botón Configuration - Modules");
+    }
+
+    public void pulsarBotonConfigurationSocialMediaAuthentication(){
+        esClickeable(btnConfigurationSocialMediaAuthentication);
+        clickElemento(btnConfigurationSocialMediaAuthentication, "Pulsar botón Configuration - Social Media Authentication");
+    }
+
+    public void pulsarBotonConfigurationRegisterOAuthClient(){
+        esClickeable(btnConfigurationRegisterOAuthClient);
+        clickElemento(btnConfigurationRegisterOAuthClient, "Pulsar botón Configuration - Register OAuth Client");
+    }
+
+    public void pulsarBotonConfigurationLDAPConfiguration(){
+        esClickeable(btnConfigurationLDAPConfiguration);
+        clickElemento(btnConfigurationLDAPConfiguration, "Pulsar botón Configuration - LDAP Configuration");
+    }
     //</editor-fold>
 }

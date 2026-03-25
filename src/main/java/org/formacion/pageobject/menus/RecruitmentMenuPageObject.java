@@ -26,5 +26,23 @@ public class RecruitmentMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// CANDIDATES
+// -------------------------
+
+    public void pulsarBotonCandidates(){
+        esClickeable(btnCandidates);
+        clickElemento(btnCandidates, "Pulsar botón Candidates");
+    }
+
+// -------------------------
+// VACANCIES
+// -------------------------
+
+    public void pulsarBotonVacancies(){
+        esClickeable(btnVacancies);
+        clickElemento(btnVacancies, "Pulsar botón Vacancies");
+    }
     //</editor-fold>
 }

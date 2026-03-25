@@ -33,5 +33,117 @@ public class AdminOrganizationAddLocationPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre de la Location.
+     * @param texto Nombre de la ubicación.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta la ciudad de la Location.
+     * @param texto Ciudad.
+     */
+    public void insertarCity(String texto){
+        esClickeable(txtCity);
+        setText(txtCity, texto);
+    }
+
+    /**
+     * Inserta la provincia o estado.
+     * @param texto Provincia o estado.
+     */
+    public void insertarProvince(String texto){
+        esClickeable(txtProvince);
+        setText(txtProvince, texto);
+    }
+
+    /**
+     * Inserta el código postal.
+     * @param texto Código postal.
+     */
+    public void insertarPostalCode(String texto){
+        esClickeable(txtPostalCode);
+        setText(txtPostalCode, texto);
+    }
+
+    /**
+     * Inserta el número de teléfono.
+     * @param texto Teléfono de contacto.
+     */
+    public void insertarPhone(String texto){
+        esClickeable(txtPhone);
+        setText(txtPhone, texto);
+    }
+
+    /**
+     * Inserta el número de fax.
+     * @param texto Número de fax.
+     */
+    public void insertarFax(String texto){
+        esClickeable(txtFax);
+        setText(txtFax, texto);
+    }
+
+    /**
+     * Inserta la dirección completa.
+     * @param texto Dirección.
+     */
+    public void insertarAddress(String texto){
+        esClickeable(txtAddress);
+        setText(txtAddress, texto);
+    }
+
+    /**
+     * Inserta notas adicionales.
+     * @param texto Notas.
+     */
+    public void insertarNotes(String texto){
+        esClickeable(txtNotes);
+        setText(txtNotes, texto);
+    }
+
+// -------------------------
+// LISTA
+// -------------------------
+
+    /**
+     * Selecciona un país de la lista Country.
+     * @param texto Nombre del país.
+     */
+    public void seleccionarCountry(String texto){
+        esClickeable(listaCountry);
+        seleccionarOpcion(listaCountry, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda la nueva Location.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

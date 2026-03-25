@@ -35,5 +35,66 @@ public class PerformanceMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// CONFIGURE
+// -------------------------
+
+    public void pulsarBotonConfigure(){
+        esClickeable(btnConfigure);
+        clickElemento(btnConfigure, "Pulsar botón Configure");
+    }
+
+    public void pulsarBotonConfigureKPIs(){
+        esClickeable(btnConfigureKPIs);
+        clickElemento(btnConfigureKPIs, "Pulsar botón Configure - KPIs");
+    }
+
+    public void pulsarBotonConfigureTrackers(){
+        esClickeable(btnConfigureTrackers);
+        clickElemento(btnConfigureTrackers, "Pulsar botón Configure - Trackers");
+    }
+
+// -------------------------
+// MANAGE REVIEWS
+// -------------------------
+
+    public void pulsarBotonManageReviews(){
+        esClickeable(btnManageReviews);
+        clickElemento(btnManageReviews, "Pulsar botón Manage Reviews");
+    }
+
+    public void pulsarBotonManageReviewsManageReviews(){
+        esClickeable(btnManageReviewsManageReviews);
+        clickElemento(btnManageReviewsManageReviews, "Pulsar botón Manage Reviews - Manage Reviews");
+    }
+
+    public void pulsarBotonManageReviewsMyReviews(){
+        esClickeable(btnManageReviewsMyReviews);
+        clickElemento(btnManageReviewsMyReviews, "Pulsar botón Manage Reviews - My Reviews");
+    }
+
+    public void pulsarBotonManageReviewsEmployeeReviews(){
+        esClickeable(btnManageReviewsEmployeeReviews);
+        clickElemento(btnManageReviewsEmployeeReviews, "Pulsar botón Manage Reviews - Employee Reviews");
+    }
+
+// -------------------------
+// MY TRACKERS
+// -------------------------
+
+    public void pulsarBotonMyTrackers(){
+        esClickeable(btnMyTrackers);
+        clickElemento(btnMyTrackers, "Pulsar botón My Trackers");
+    }
+
+// -------------------------
+// EMPLOYEE TRACKERS
+// -------------------------
+
+    public void pulsarBotonEmployeeTrackers(){
+        esClickeable(btnEmployeeTrackers);
+        clickElemento(btnEmployeeTrackers, "Pulsar botón Employee Trackers");
+    }
     //</editor-fold>
 }

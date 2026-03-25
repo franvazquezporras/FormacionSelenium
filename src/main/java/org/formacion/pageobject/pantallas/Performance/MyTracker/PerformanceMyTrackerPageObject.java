@@ -25,5 +25,19 @@ public class PerformanceMyTrackerPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View del primer registro.
+     * Abre el detalle del tracker seleccionado.
+     */
+    public void pulsarBotonViewPrimerRegistro(){
+        esClickeable(btnViewPrimerRegistro);
+        clickElemento(btnViewPrimerRegistro, "Pulsar botón View del primer registro");
+    }
+
+// </editor-fold>
+
 }

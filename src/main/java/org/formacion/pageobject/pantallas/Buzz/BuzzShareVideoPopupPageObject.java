@@ -26,5 +26,50 @@ public class BuzzShareVideoPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el texto del Post.
+     * @param texto Contenido del post.
+     */
+    public void insertarPost(String texto){
+        esClickeable(txtPost);
+        setText(txtPost, texto);
+    }
+
+    /**
+     * Inserta la URL del video a compartir.
+     * @param texto URL del video.
+     */
+    public void insertarURLVideo(String texto){
+        esClickeable(txtURLVideo);
+        setText(txtURLVideo, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Share.
+     * Comparte el post con el video indicado.
+     */
+    public void pulsarBotonShare(){
+        esClickeable(btnShare);
+        clickElemento(btnShare, "Pulsar botón Share");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cierra el popup sin compartir el contenido.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

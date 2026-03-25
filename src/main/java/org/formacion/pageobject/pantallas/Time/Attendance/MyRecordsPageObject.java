@@ -29,5 +29,71 @@ public class MyRecordsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la fecha para consultar los registros.
+     * @param texto Fecha.
+     */
+    public void insertarDate(String texto){
+        esClickeable(txtDate);
+        setText(txtDate, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Selecciona o deselecciona el checkbox del primer registro.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar checkbox del primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View.
+     * Muestra los registros según la fecha indicada.
+     */
+    public void pulsarBotonView(){
+        esClickeable(btnView);
+        clickElemento(btnView, "Pulsar botón View");
+    }
+
+    /**
+     * Realiza clic en el botón Edit del primer registro.
+     * Abre la pantalla de edición del registro seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete del primer registro.
+     * Elimina el registro seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete Selected.
+     * Elimina todos los registros seleccionados.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar Seleccionados");
+    }
+
+// </editor-fold>
+
 }

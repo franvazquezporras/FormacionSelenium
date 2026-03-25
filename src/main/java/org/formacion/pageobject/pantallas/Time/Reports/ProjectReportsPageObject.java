@@ -28,5 +28,62 @@ public class ProjectReportsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del proyecto.
+     * @param texto Nombre del proyecto.
+     */
+    public void insertarProjectName(String texto){
+        esClickeable(txtProjectName);
+        setText(txtProjectName, texto);
+    }
+
+    /**
+     * Inserta la fecha inicial del rango del proyecto.
+     * @param texto Fecha desde.
+     */
+    public void insertarProjectDateRangeFrom(String texto){
+        esClickeable(txtProjectDateRangeFrom);
+        setText(txtProjectDateRangeFrom, texto);
+    }
+
+    /**
+     * Inserta la fecha final del rango del proyecto.
+     * @param texto Fecha hasta.
+     */
+    public void insertarProjectDateRangeTo(String texto){
+        esClickeable(txtProjectDateRangeTo);
+        setText(txtProjectDateRangeTo, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Selecciona o deselecciona el checkbox Only Include Approved Timesheets.
+     */
+    public void pulsarCheckOnlyIncludeApprovedTimesheets(){
+        esClickeable(checkOnlyIncludeApprovedTimesheets);
+        clickElemento(checkOnlyIncludeApprovedTimesheets, "Seleccionar/Deseleccionar Only Include Approved Timesheets");
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón View.
+     * Genera el reporte con los filtros aplicados.
+     */
+    public void pulsarBotonView(){
+        esClickeable(btnView);
+        clickElemento(btnView, "Pulsar botón View");
+    }
+
+// </editor-fold>
+
 }

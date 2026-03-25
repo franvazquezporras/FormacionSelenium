@@ -27,5 +27,37 @@ public class PerformanceMyReviewDetailPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Complete.
+     * Marca la revisión como completada.
+     */
+    public void pulsarBotonComplete(){
+        esClickeable(btnComplete);
+        clickElemento(btnComplete, "Pulsar botón Complete");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en la revisión.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

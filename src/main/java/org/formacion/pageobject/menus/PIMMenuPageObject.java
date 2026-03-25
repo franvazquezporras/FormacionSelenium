@@ -34,5 +34,66 @@ public class PIMMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// CONFIGURATION
+// -------------------------
+
+    public void pulsarBotonConfiguration(){
+        esClickeable(btnConfiguration);
+        clickElemento(btnConfiguration, "Pulsar botón Configuration");
+    }
+
+    public void pulsarBotonConfigurationOptionalFields(){
+        esClickeable(btnConfigurationOptionalFields);
+        clickElemento(btnConfigurationOptionalFields, "Pulsar botón Configuration - Optional Fields");
+    }
+
+    public void pulsarBotonConfigurationCustomFields(){
+        esClickeable(btnConfigurationCustomFields);
+        clickElemento(btnConfigurationCustomFields, "Pulsar botón Configuration - Custom Fields");
+    }
+
+    public void pulsarBotonConfigurationDataImport(){
+        esClickeable(btnConfigurationDataImport);
+        clickElemento(btnConfigurationDataImport, "Pulsar botón Configuration - Data Import");
+    }
+
+    public void pulsarBotonConfigurationReportingMethods(){
+        esClickeable(btnConfigurationReportingMethods);
+        clickElemento(btnConfigurationReportingMethods, "Pulsar botón Configuration - Reporting Methods");
+    }
+
+    public void pulsarBotonConfigurationTerminationReasons(){
+        esClickeable(btnConfigurationTerminationReasons);
+        clickElemento(btnConfigurationTerminationReasons, "Pulsar botón Configuration - Termination Reasons");
+    }
+
+// -------------------------
+// EMPLOYEE LIST
+// -------------------------
+
+    public void pulsarBotonEmployeeList(){
+        esClickeable(btnEmployeeList);
+        clickElemento(btnEmployeeList, "Pulsar botón Employee List");
+    }
+
+// -------------------------
+// ADD EMPLOYEE
+// -------------------------
+
+    public void pulsarBotonAddEmployee(){
+        esClickeable(btnAddEmployee);
+        clickElemento(btnAddEmployee, "Pulsar botón Add Employee");
+    }
+
+// -------------------------
+// REPORTS
+// -------------------------
+
+    public void pulsarBotonReports(){
+        esClickeable(btnReports);
+        clickElemento(btnReports, "Pulsar botón Reports");
+    }
     //</editor-fold>
 }

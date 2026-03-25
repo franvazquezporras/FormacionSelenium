@@ -28,5 +28,50 @@ public class LeavePeriodPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona el mes de inicio del Leave Period.
+     * @param opcion Mes a seleccionar.
+     */
+    public void seleccionarListaStartMonth(String opcion){
+        esClickeable(listaStartMonth);
+        seleccionarOpcion(listaStartMonth, opcion);
+    }
+
+    /**
+     * Selecciona el día de inicio del Leave Period.
+     * @param opcion Día a seleccionar.
+     */
+    public void seleccionarListaStartDate(String opcion){
+        esClickeable(listaStartDate);
+        seleccionarOpcion(listaStartDate, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda la configuración del Leave Period.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Restablece los valores por defecto del formulario.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// </editor-fold>
+
 }

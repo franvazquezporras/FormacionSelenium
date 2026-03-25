@@ -26,5 +26,32 @@ public class MyLeaveEntitlementsUsageReportPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Leave Period en la lista.
+     * @param opcion Periodo a seleccionar.
+     */
+    public void seleccionarListaLeavePeriod(String opcion){
+        esClickeable(listaLeavePeriod);
+        seleccionarOpcion(listaLeavePeriod, opcion);
+    }
+
+// -------------------------
+// BOTÓN
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Generate.
+     * Genera el reporte según el periodo seleccionado.
+     */
+    public void pulsarBotonGenerate(){
+        esClickeable(btnGenerate);
+        clickElemento(btnGenerate, "Pulsar botón Generate");
+    }
+
+// </editor-fold>
+
 }

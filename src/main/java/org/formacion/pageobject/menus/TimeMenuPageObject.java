@@ -41,5 +41,96 @@ public class TimeMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// TIMESHEETS
+// -------------------------
+
+    public void pulsarBotonTimesheets(){
+        esClickeable(btnTimesheets);
+        clickElemento(btnTimesheets, "Pulsar botón Timesheets");
+    }
+
+    public void pulsarBotonTimesheetsMyTimesheets(){
+        esClickeable(btnTimesheetsMyTimesheets);
+        clickElemento(btnTimesheetsMyTimesheets, "Pulsar botón Timesheets - My Timesheets");
+    }
+
+    public void pulsarBotonTimesheetsEmployeeTimesheets(){
+        esClickeable(btnTimesheetsEmployeeTimesheets);
+        clickElemento(btnTimesheetsEmployeeTimesheets, "Pulsar botón Timesheets - Employee Timesheets");
+    }
+
+// -------------------------
+// ATTENDANCE
+// -------------------------
+
+    public void pulsarBotonAttendance(){
+        esClickeable(btnAttendance);
+        clickElemento(btnAttendance, "Pulsar botón Attendance");
+    }
+
+    public void pulsarBotonAttendanceMyRecords(){
+        esClickeable(btnAttendanceMyRecords);
+        clickElemento(btnAttendanceMyRecords, "Pulsar botón Attendance - My Records");
+    }
+
+    public void pulsarBotonAttendancePunchInOut(){
+        esClickeable(btnAttendancePunchInOut);
+        clickElemento(btnAttendancePunchInOut, "Pulsar botón Attendance - Punch In/Out");
+    }
+
+    public void pulsarBotonAttendanceEmployeeRecords(){
+        esClickeable(btnAttendanceEmployeeRecords);
+        clickElemento(btnAttendanceEmployeeRecords, "Pulsar botón Attendance - Employee Records");
+    }
+
+    public void pulsarBotonAttendanceConfiguration(){
+        esClickeable(btnAttendanceConfiguration);
+        clickElemento(btnAttendanceConfiguration, "Pulsar botón Attendance - Configuration");
+    }
+
+// -------------------------
+// REPORTS
+// -------------------------
+
+    public void pulsarBotonReports(){
+        esClickeable(btnReports);
+        clickElemento(btnReports, "Pulsar botón Reports");
+    }
+
+    public void pulsarBotonReportsProjectReports(){
+        esClickeable(btnReportsProjectReports);
+        clickElemento(btnReportsProjectReports, "Pulsar botón Reports - Project Reports");
+    }
+
+    public void pulsarBotonReportsEmployeeReports(){
+        esClickeable(btnReportsEmployeeReports);
+        clickElemento(btnReportsEmployeeReports, "Pulsar botón Reports - Employee Reports");
+    }
+
+    public void pulsarBotonReportsAttendanceSummary(){
+        esClickeable(btnReportsAttendanceSummary);
+        clickElemento(btnReportsAttendanceSummary, "Pulsar botón Reports - Attendance Summary");
+    }
+
+// -------------------------
+// PROJECT INFO
+// -------------------------
+
+    public void pulsarBotonProjectInfo(){
+        esClickeable(btnProjectInfo);
+        clickElemento(btnProjectInfo, "Pulsar botón Project Info");
+    }
+
+    public void pulsarBotonProjectInfoCustomers(){
+        esClickeable(btnProjectInfoCustomers);
+        clickElemento(btnProjectInfoCustomers, "Pulsar botón Project Info - Customers");
+    }
+
+    public void pulsarBotonProjectInfoProjects(){
+        esClickeable(btnProjectInfoProjects);
+        clickElemento(btnProjectInfoProjects, "Pulsar botón Project Info - Projects");
+    }
     //</editor-fold>
 }

@@ -30,5 +30,72 @@ public class ApplyPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Leave Type en la lista.
+     * @param opcion Tipo de permiso a seleccionar.
+     */
+    public void seleccionarListaLeaveType(String opcion){
+        esClickeable(listaLeaveType);
+        seleccionarOpcion(listaLeaveType, opcion);
+    }
+
+    /**
+     * Selecciona una Duration en la lista.
+     * @param opcion Duración a seleccionar.
+     */
+    public void seleccionarListaDuration(String opcion){
+        esClickeable(listaDuration);
+        seleccionarOpcion(listaDuration, opcion);
+    }
+
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la fecha From.
+     * @param texto Fecha inicial.
+     */
+    public void insertarFromDate(String texto){
+        esClickeable(txtFromDate);
+        setText(txtFromDate, texto);
+    }
+
+    /**
+     * Inserta la fecha To.
+     * @param texto Fecha final.
+     */
+    public void insertarToDate(String texto){
+        esClickeable(txtToDate);
+        setText(txtToDate, texto);
+    }
+
+    /**
+     * Inserta los comentarios del permiso.
+     * @param texto Comentarios adicionales.
+     */
+    public void insertarComments(String texto){
+        esClickeable(txtComments);
+        setText(txtComments, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Apply.
+     * Envía la solicitud de permiso.
+     */
+    public void pulsarBotonApply(){
+        esClickeable(btnApply);
+        clickElemento(btnApply, "Pulsar botón Apply");
+    }
+
+// </editor-fold>
+
 }

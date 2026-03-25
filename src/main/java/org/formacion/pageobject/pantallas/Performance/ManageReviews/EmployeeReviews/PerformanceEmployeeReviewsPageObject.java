@@ -33,5 +33,99 @@ public class PerformanceEmployeeReviewsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado en el filtro de búsqueda.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta la fecha From para filtrar.
+     * @param texto Fecha inicial.
+     */
+    public void insertarFromDate(String texto){
+        esClickeable(txtFromDate);
+        setText(txtFromDate, texto);
+    }
+
+    /**
+     * Inserta la fecha To para filtrar.
+     * @param texto Fecha final.
+     */
+    public void insertarToDate(String texto){
+        esClickeable(txtToDate);
+        setText(txtToDate, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Job Title en la lista.
+     * @param opcion Puesto a seleccionar.
+     */
+    public void seleccionarListaJobTitle(String opcion){
+        esClickeable(listaJobTitle);
+        seleccionarOpcion(listaJobTitle, opcion);
+    }
+
+    /**
+     * Selecciona un Sub Unit en la lista.
+     * @param opcion Subunidad a seleccionar.
+     */
+    public void seleccionarListaSubUnit(String opcion){
+        esClickeable(listaSubUnit);
+        seleccionarOpcion(listaSubUnit, opcion);
+    }
+
+    /**
+     * Selecciona una opción en la lista Include.
+     * @param opcion Opción a seleccionar.
+     */
+    public void seleccionarListaInclude(String opcion){
+        esClickeable(listaInclude);
+        seleccionarOpcion(listaInclude, opcion);
+    }
+
+    /**
+     * Selecciona un Review Status en la lista.
+     * @param opcion Estado de revisión.
+     */
+    public void seleccionarListaReviewStatus(String opcion){
+        esClickeable(listaReviewStatus);
+        seleccionarOpcion(listaReviewStatus, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda según los filtros ingresados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros del formulario.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// </editor-fold>
+
 }

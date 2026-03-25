@@ -28,5 +28,59 @@ public class PerformanceConfigureEditTrackerPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Tracker.
+     * @param texto Nombre del tracker.
+     */
+    public void insertarTrackerName(String texto){
+        esClickeable(txtTrackerName);
+        setText(txtTrackerName, texto);
+    }
+
+    /**
+     * Inserta el nombre del empleado asociado al Tracker.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta los reviewers asignados al Tracker.
+     * @param texto Lista de reviewers.
+     */
+    public void insertarReviewers(String texto){
+        esClickeable(txtReviewers);
+        setText(txtReviewers, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el Tracker.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

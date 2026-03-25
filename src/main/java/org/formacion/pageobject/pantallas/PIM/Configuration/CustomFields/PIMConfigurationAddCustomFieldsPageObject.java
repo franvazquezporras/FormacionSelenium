@@ -28,5 +28,63 @@ public class PIMConfigurationAddCustomFieldsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el nombre del Custom Field.
+     * @param texto Nombre del campo personalizado.
+     */
+    public void insertarFieldName(String texto){
+        esClickeable(txtFieldName);
+        setText(txtFieldName, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona una pantalla (Screen) donde se aplicará el Custom Field.
+     * @param opcion Pantalla a seleccionar.
+     */
+    public void seleccionarListaScreen(String opcion){
+        esClickeable(listaScreen);
+        seleccionarOpcion(listaScreen, opcion);
+    }
+
+    /**
+     * Selecciona el tipo de Custom Field.
+     * @param opcion Tipo a seleccionar.
+     */
+    public void seleccionarListaType(String opcion){
+        esClickeable(listaType);
+        seleccionarOpcion(listaType, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Custom Field.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

@@ -44,5 +44,113 @@ public class LeaveMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
+
+// -------------------------
+// APPLY
+// -------------------------
+
+    public void pulsarBotonApply(){
+        esClickeable(btnApply);
+        clickElemento(btnApply, "Pulsar botón Apply");
+    }
+
+// -------------------------
+// MY LEAVE
+// -------------------------
+
+    public void pulsarBotonMyLeave(){
+        esClickeable(btnMyLeave);
+        clickElemento(btnMyLeave, "Pulsar botón My Leave");
+    }
+
+// -------------------------
+// ENTITLEMENTS
+// -------------------------
+
+    public void pulsarBotonEntitlements(){
+        esClickeable(btnEntitlements);
+        clickElemento(btnEntitlements, "Pulsar botón Entitlements");
+    }
+
+    public void pulsarBotonEntitlementsAddEntitlements(){
+        esClickeable(btnEntitlementsAddEntitlements);
+        clickElemento(btnEntitlementsAddEntitlements, "Pulsar botón Entitlements - Add Entitlements");
+    }
+
+    public void pulsarBotonEntitlementsEmployeeEntitlements(){
+        esClickeable(btnEntitlementsEmployeeEntitlements);
+        clickElemento(btnEntitlementsEmployeeEntitlements, "Pulsar botón Entitlements - Employee Entitlements");
+    }
+
+    public void pulsarBotonEntitlementsMyEntitlements(){
+        esClickeable(btnEntitlementsMyEntitlements);
+        clickElemento(btnEntitlementsMyEntitlements, "Pulsar botón Entitlements - My Entitlements");
+    }
+
+// -------------------------
+// REPORTS
+// -------------------------
+
+    public void pulsarBotonReports(){
+        esClickeable(btnReports);
+        clickElemento(btnReports, "Pulsar botón Reports");
+    }
+
+    public void pulsarBotonReportsLeaveEntitlementsUsageReport(){
+        esClickeable(btnReportsLeaveEntitlementsUsageReport);
+        clickElemento(btnReportsLeaveEntitlementsUsageReport, "Pulsar botón Reports - Leave Entitlements Usage Report");
+    }
+
+    public void pulsarBotonReportsMyLeaveEntitlementsUsageReport(){
+        esClickeable(btnReportsMyLeaveEntitlementsUsageReport);
+        clickElemento(btnReportsMyLeaveEntitlementsUsageReport, "Pulsar botón Reports - My Leave Entitlements Usage Report");
+    }
+
+// -------------------------
+// CONFIGURE
+// -------------------------
+
+    public void pulsarBotonConfigure(){
+        esClickeable(btnConfigure);
+        clickElemento(btnConfigure, "Pulsar botón Configure");
+    }
+
+    public void pulsarBotonConfigureLeavePeriod(){
+        esClickeable(btnConfigureLeavePeriod);
+        clickElemento(btnConfigureLeavePeriod, "Pulsar botón Configure - Leave Period");
+    }
+
+    public void pulsarBotonConfigureLeaveTypes(){
+        esClickeable(btnConfigureLeaveTypes);
+        clickElemento(btnConfigureLeaveTypes, "Pulsar botón Configure - Leave Types");
+    }
+
+    public void pulsarBotonConfigureWorkWeek(){
+        esClickeable(btnConfigureWorkWeek);
+        clickElemento(btnConfigureWorkWeek, "Pulsar botón Configure - Work Week");
+    }
+
+    public void pulsarBotonConfigureHolidays(){
+        esClickeable(btnConfigureHolidays);
+        clickElemento(btnConfigureHolidays, "Pulsar botón Configure - Holidays");
+    }
+
+// -------------------------
+// LEAVE LIST
+// -------------------------
+
+    public void pulsarBotonLeaveList(){
+        esClickeable(btnLeaveList);
+        clickElemento(btnLeaveList, "Pulsar botón Leave List");
+    }
+
+// -------------------------
+// ASSIGN LEAVE
+// -------------------------
+
+    public void pulsarBotonAssignLeave(){
+        esClickeable(btnAssignLeave);
+        clickElemento(btnAssignLeave, "Pulsar botón Assign Leave");
+    }
     //</editor-fold>
 }

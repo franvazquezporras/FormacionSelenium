@@ -26,5 +26,50 @@ public class BuzzShareFotoPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el texto del Post.
+     * @param texto Contenido del post.
+     */
+    public void insertarPost(String texto){
+        esClickeable(txtPost);
+        setText(txtPost, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Foto.
+     * Abre el selector para añadir una imagen al post.
+     */
+    public void pulsarBotonAddFoto(){
+        esClickeable(btnAddFoto);
+        clickElemento(btnAddFoto, "Pulsar botón Add Foto");
+    }
+
+    /**
+     * Realiza clic en el botón Share.
+     * Comparte el post con la imagen seleccionada.
+     */
+    public void pulsarBotonShare(){
+        esClickeable(btnShare);
+        clickElemento(btnShare, "Pulsar botón Share");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cierra el popup sin compartir el contenido.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

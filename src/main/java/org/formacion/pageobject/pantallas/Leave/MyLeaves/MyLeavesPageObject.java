@@ -34,5 +34,112 @@ public class MyLeavesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un estado de Leave en la lista.
+     * @param opcion Estado a seleccionar.
+     */
+    public void seleccionarListaShowLeaveStatus(String opcion){
+        esClickeable(listaShowLeaveStatus);
+        seleccionarOpcion(listaShowLeaveStatus, opcion);
+    }
+
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la fecha From para filtrar.
+     * @param texto Fecha inicial.
+     */
+    public void insertarFromDate(String texto){
+        esClickeable(txtFromDate);
+        setText(txtFromDate, texto);
+    }
+
+    /**
+     * Inserta la fecha To para filtrar.
+     * @param texto Fecha final.
+     */
+    public void insertarToDate(String texto){
+        esClickeable(txtToDate);
+        setText(txtToDate, texto);
+    }
+
+// -------------------------
+// BOTONES DE BÚSQUEDA
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda según los filtros ingresados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros del formulario.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// -------------------------
+// BOTONES DE ACCIONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón de acciones del primer registro.
+     * Despliega el menú de acciones disponibles.
+     */
+    public void pulsarBotonAccionesPrimerRegistro(){
+        esClickeable(btnAccionesPrimerRegistro);
+        clickElemento(btnAccionesPrimerRegistro, "Pulsar botón Acciones del primer registro");
+    }
+
+    /**
+     * Realiza clic en el botón Add Comment.
+     * Abre el popup para agregar un comentario.
+     */
+    public void pulsarBotonAddComment(){
+        esClickeable(btnAddComment);
+        clickElemento(btnAddComment, "Pulsar botón Add Comment");
+    }
+
+    /**
+     * Realiza clic en el botón View Leave Details.
+     * Abre la pantalla con los detalles de la solicitud.
+     */
+    public void pulsarBotonViewLeavesDetails(){
+        esClickeable(btnViewLeavesDetails);
+        clickElemento(btnViewLeavesDetails, "Pulsar botón View Leave Details");
+    }
+
+    /**
+     * Realiza clic en el botón View PIM Info.
+     * Abre la información PIM del empleado.
+     */
+    public void pulsarBotonViewPIMInfo(){
+        esClickeable(btnViewPIMInfo);
+        clickElemento(btnViewPIMInfo, "Pulsar botón View PIM Info");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la acción y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

@@ -26,5 +26,37 @@ public class ProjectInfoCustomerPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add.
+     * Abre la pantalla para agregar un nuevo Customer.
+     */
+    public void pulsarBotonAdd(){
+        esClickeable(btnAdd);
+        clickElemento(btnAdd, "Pulsar botón Add");
+    }
+
+    /**
+     * Realiza clic en el botón Edit del primer registro.
+     * Abre la pantalla de edición del Customer seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+    /**
+     * Realiza clic en el botón Delete del primer registro.
+     * Elimina el Customer seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+// </editor-fold>
+
 }

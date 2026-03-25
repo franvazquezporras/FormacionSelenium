@@ -27,5 +27,62 @@ public class ClaimConfigurationEditEventPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del evento.
+     * @param texto Nombre del evento.
+     */
+    public void insertarEventName(String texto){
+        esClickeable(txtEventName);
+        setText(txtEventName, texto);
+    }
+
+    /**
+     * Inserta la descripción del evento.
+     * @param texto Descripción del evento.
+     */
+    public void insertarEventDescription(String texto){
+        esClickeable(txtEventDescription);
+        setText(txtEventDescription, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva la opción Active.
+     */
+    public void pulsarCheckActive(){
+        esClickeable(checkActive);
+        clickElemento(checkActive, "Seleccionar/Deseleccionar Active");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el evento.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

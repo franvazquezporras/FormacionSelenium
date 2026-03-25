@@ -28,5 +28,61 @@ public class AddLeaveTypesPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Leave Type.
+     * @param texto Nombre del Leave Type.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+// -------------------------
+// CHECKBOXES
+// -------------------------
+
+    /**
+     * Selecciona la opción "Is Entitlement Situational - Sí".
+     */
+    public void pulsarCheckIsEntitlementSituationalSi(){
+        esClickeable(checkIsEntitlementSituationalSi);
+        clickElemento(checkIsEntitlementSituationalSi, "Seleccionar Is Entitlement Situational Sí");
+    }
+
+    /**
+     * Selecciona la opción "Is Entitlement Situational - No".
+     */
+    public void pulsarCheckIsEntitlementSituationalNo(){
+        esClickeable(checkIsEntitlementSituationalNo);
+        clickElemento(checkIsEntitlementSituationalNo, "Seleccionar Is Entitlement Situational No");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Leave Type.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

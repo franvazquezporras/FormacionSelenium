@@ -32,5 +32,90 @@ public class MyRecordsEditPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS - PUNCH IN
+// -------------------------
+
+    /**
+     * Inserta la fecha de Punch In.
+     * @param texto Fecha.
+     */
+    public void insertarPunchInDate(String texto){
+        esClickeable(txtPunchInDate);
+        setText(txtPunchInDate, texto);
+    }
+
+    /**
+     * Inserta la hora de Punch In.
+     * @param texto Hora.
+     */
+    public void insertarPunchInTime(String texto){
+        esClickeable(txtPunchInTime);
+        setText(txtPunchInTime, texto);
+    }
+
+    /**
+     * Inserta la nota de Punch In.
+     * @param texto Nota.
+     */
+    public void insertarPunchInNote(String texto){
+        esClickeable(txtPunchInNote);
+        setText(txtPunchInNote, texto);
+    }
+
+// -------------------------
+// INPUTS - PUNCH OUT
+// -------------------------
+
+    /**
+     * Inserta la fecha de Punch Out.
+     * @param texto Fecha.
+     */
+    public void insertarPunchOutDate(String texto){
+        esClickeable(txtPunchOutDate);
+        setText(txtPunchOutDate, texto);
+    }
+
+    /**
+     * Inserta la hora de Punch Out.
+     * @param texto Hora.
+     */
+    public void insertarPunchOutTime(String texto){
+        esClickeable(txtPunchOutTime);
+        setText(txtPunchOutTime, texto);
+    }
+
+    /**
+     * Inserta la nota de Punch Out.
+     * @param texto Nota.
+     */
+    public void insertarPunchOutNote(String texto){
+        esClickeable(txtPunchOutNote);
+        setText(txtPunchOutNote, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios del registro.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

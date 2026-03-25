@@ -28,5 +28,68 @@ public class AdminConfigurationEditProviderListPageObject extends BasePageObject
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del proveedor de autenticación social.
+     * @param texto Nombre del proveedor.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta el Client ID del proveedor.
+     * @param texto Identificador del cliente OAuth.
+     */
+    public void insertarClientID(String texto){
+        esClickeable(txtClientID);
+        setText(txtClientID, texto);
+    }
+
+    /**
+     * Inserta la URL del proveedor.
+     * @param texto URL del servicio de autenticación.
+     */
+    public void insertarProviderURL(String texto){
+        esClickeable(txtProviderURL);
+        setText(txtProviderURL, texto);
+    }
+
+    /**
+     * Inserta el Client Secret del proveedor.
+     * @param texto Secreto del cliente OAuth.
+     */
+    public void insertarClientSecret(String texto){
+        esClickeable(txtClientSecret);
+        setText(txtClientSecret, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el proveedor de autenticación social.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+    // </editor-fold>
+
 }

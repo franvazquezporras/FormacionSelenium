@@ -28,5 +28,63 @@ public class PunchInOutPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta la fecha del Punch.
+     * @param texto Fecha.
+     */
+    public void insertarDate(String texto){
+        esClickeable(txtDate);
+        setText(txtDate, texto);
+    }
+
+    /**
+     * Inserta la hora del Punch.
+     * @param texto Hora.
+     */
+    public void insertarTime(String texto){
+        esClickeable(txtTime);
+        setText(txtTime, texto);
+    }
+
+    /**
+     * Inserta una nota para el Punch.
+     * @param texto Nota.
+     */
+    public void insertarNote(String texto){
+        esClickeable(txtNote);
+        setText(txtNote, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Timezone.
+     * @param opcion Zona horaria.
+     */
+    public void seleccionarListaTimezone(String opcion){
+        esClickeable(listaTimezone);
+        seleccionarOpcion(listaTimezone, opcion);
+    }
+
+// -------------------------
+// BOTÓN PRINCIPAL
+// -------------------------
+
+    /**
+     * Realiza clic en el botón In/Out.
+     * Ejecuta la acción de Punch In o Punch Out según corresponda.
+     */
+    public void pulsarBotonIn(){
+        esClickeable(btnIn);
+        clickElemento(btnIn, "Pulsar botón In/Out");
+    }
+
+// </editor-fold>
+
 }

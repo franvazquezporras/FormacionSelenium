@@ -32,5 +32,102 @@ public class AdminEditUsersPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre de usuario.
+     * @param texto Nombre de usuario.
+     */
+    public void insertarUsername(String texto){
+        esClickeable(txtUsername);
+        setText(txtUsername, texto);
+    }
+
+    /**
+     * Inserta el nombre del empleado.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+    /**
+     * Inserta la contraseña del usuario.
+     * @param texto Contraseña.
+     */
+    public void insertarPassword(String texto){
+        esClickeable(txtPassword);
+        setText(txtPassword, texto);
+    }
+
+    /**
+     * Inserta la repetición de la contraseña.
+     * @param texto Repetición de la contraseña.
+     */
+    public void insertarRepeatPassword(String texto){
+        esClickeable(txtRepeatPassword);
+        setText(txtRepeatPassword, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un rol en la lista de Roles.
+     * @param opcion Rol a seleccionar.
+     */
+    public void seleccionarListaRol(String opcion){
+        esClickeable(listaRol);
+        seleccionarOpcion(listaRol, opcion);
+    }
+
+    /**
+     * Selecciona un estado en la lista de Status.
+     * @param opcion Estado a seleccionar.
+     */
+    public void seleccionarListaStatus(String opcion){
+        esClickeable(listaStatus);
+        seleccionarOpcion(listaStatus, opcion);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva la opción Change Password.
+     */
+    public void pulsarCheckChangePassword(){
+        esClickeable(checkChangePassword);
+        clickElemento(checkChangePassword, "Seleccionar/Deseleccionar Change Password");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda los cambios realizados en el usuario.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la edición y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

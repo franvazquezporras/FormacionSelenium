@@ -23,7 +23,33 @@ public class AdminConfigurationEmailSubscriptionsPageObject extends BasePageObje
     public void esperarSincronizacion(){esperarPagina(btnSelectSubscriberFirstRegister,"Pantalla Configuracion Email");}
     //</editor-fold>
 
+
     // <editor-fold desc="Funciones de locators">
 
+// -------------------------
+// SELECTOR DE REGISTRO
+// -------------------------
+
+    /**
+     * Realiza clic en el botón de selección del primer suscriptor listado.
+     * Permite abrir las acciones disponibles para dicho registro.
+     */
+    public void pulsarBotonSelectSubscriberFirstRegister(){
+        esClickeable(btnSelectSubscriberFirstRegister);
+        clickElemento(btnSelectSubscriberFirstRegister, "Seleccionar primer registro de suscriptor");
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox de estado del primer suscriptor.
+     * Se utiliza para marcar o desmarcar la suscripción como activa.
+     */
+    public void pulsarCheckActiveSubscriberFirstRegister(){
+        esClickeable(checkActiveSubscriberFirstRegister);
+        clickElemento(checkActiveSubscriberFirstRegister, "Activar/Desactivar suscriptor activo");
+    }
     //</editor-fold>
 }

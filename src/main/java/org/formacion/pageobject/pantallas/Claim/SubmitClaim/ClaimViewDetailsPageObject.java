@@ -42,5 +42,164 @@ public class ClaimViewDetailsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS (solo lectura, pero mantenemos el patrón insertarX)
+// -------------------------
+
+    /**
+     * Inserta el Reference ID.
+     * @param texto Reference ID.
+     */
+    public void insertarReferenceID(String texto){
+        esClickeable(txtReferenceID);
+        setText(txtReferenceID, texto);
+    }
+
+    /**
+     * Inserta el Event.
+     * @param texto Evento.
+     */
+    public void insertarEvent(String texto){
+        esClickeable(txtEvent);
+        setText(txtEvent, texto);
+    }
+
+    /**
+     * Inserta el Status.
+     * @param texto Estado.
+     */
+    public void insertarStatus(String texto){
+        esClickeable(txtStatus);
+        setText(txtStatus, texto);
+    }
+
+    /**
+     * Inserta la Currency.
+     * @param texto Moneda.
+     */
+    public void insertarCurrency(String texto){
+        esClickeable(txtCurrency);
+        setText(txtCurrency, texto);
+    }
+
+    /**
+     * Inserta las observaciones del reclamo.
+     * @param texto Observaciones.
+     */
+    public void insertarRemarks(String texto){
+        esClickeable(txtRemarks);
+        setText(txtRemarks, texto);
+    }
+
+// -------------------------
+// EXPENSES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Expense.
+     */
+    public void pulsarBotonAddExpense(){
+        esClickeable(btnAddExpense);
+        clickElemento(btnAddExpense, "Pulsar botón Add Expense");
+    }
+
+    /**
+     * Realiza clic en el botón Edit Expense.
+     */
+    public void pulsarBotonEditarExpense(){
+        esClickeable(btnEditarExpense);
+        clickElemento(btnEditarExpense, "Pulsar botón Edit Expense");
+    }
+
+    /**
+     * Realiza clic en el botón Delete Expense.
+     */
+    public void pulsarBotonBorrarExpense(){
+        esClickeable(btnBorrarExpense);
+        clickElemento(btnBorrarExpense, "Pulsar botón Delete Expense");
+    }
+
+    /**
+     * Activa o desactiva el checkbox del primer registro de Expenses.
+     */
+    public void pulsarCheckPrimerRegistroExpenses(){
+        esClickeable(checkPrimerRegistroExpenses);
+        clickElemento(checkPrimerRegistroExpenses, "Seleccionar/Deseleccionar primer registro de Expenses");
+    }
+
+// -------------------------
+// ATTACHMENTS
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Attachments.
+     */
+    public void pulsarBotonAddAttachments(){
+        esClickeable(btnAddAttachments);
+        clickElemento(btnAddAttachments, "Pulsar botón Add Attachments");
+    }
+
+    /**
+     * Realiza clic en el botón Edit Attachments.
+     */
+    public void pulsarBotonEditarAttachments(){
+        esClickeable(btnEditarAttachments);
+        clickElemento(btnEditarAttachments, "Pulsar botón Edit Attachments");
+    }
+
+    /**
+     * Realiza clic en el botón Delete Attachments.
+     */
+    public void pulsarBotonBorrarAttachments(){
+        esClickeable(btnBorrarAttachments);
+        clickElemento(btnBorrarAttachments, "Pulsar botón Delete Attachments");
+    }
+
+    /**
+     * Realiza clic en el botón Download Attachments.
+     */
+    public void pulsarBotonDescargarAttachments(){
+        esClickeable(btnDescargarAttachments);
+        clickElemento(btnDescargarAttachments, "Pulsar botón Download Attachments");
+    }
+
+    /**
+     * Activa o desactiva el checkbox del primer registro de Attachments.
+     */
+    public void pulsarCheckPrimerRegistroAttachments(){
+        esClickeable(checkPrimerRegistroAttachments);
+        clickElemento(checkPrimerRegistroAttachments, "Seleccionar/Deseleccionar primer registro de Attachments");
+    }
+
+// -------------------------
+// BOTONES FINALES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Back.
+     */
+    public void pulsarBotonBack(){
+        esClickeable(btnBack);
+        clickElemento(btnBack, "Pulsar botón Back");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+    /**
+     * Realiza clic en el botón Submit.
+     * Envía el reclamo para aprobación.
+     */
+    public void pulsarBotonSubmit(){
+        esClickeable(btnSubmit);
+        clickElemento(btnSubmit, "Pulsar botón Submit");
+    }
+
+// </editor-fold>
+
 }

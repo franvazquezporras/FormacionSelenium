@@ -33,5 +33,112 @@ public class AdminOrganizationLocationPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS (FILTROS)
+// -------------------------
+
+    /**
+     * Inserta un valor en el filtro City.
+     * @param texto Ciudad a filtrar.
+     */
+    public void insertarFiltroCity(String texto){
+        esClickeable(txtFiltroCity);
+        setText(txtFiltroCity, texto);
+    }
+
+    /**
+     * Inserta un valor en el filtro Name.
+     * @param texto Nombre a filtrar.
+     */
+    public void insertarFiltroName(String texto){
+        esClickeable(txtFiltroName);
+        setText(txtFiltroName, texto);
+    }
+
+// -------------------------
+// LISTA (FILTRO)
+// -------------------------
+
+    /**
+     * Selecciona un país en el filtro Country.
+     * @param texto Nombre del país.
+     */
+    public void seleccionarFiltroCountry(String texto){
+        esClickeable(listaFiltroCountry);
+        seleccionarOpcion(listaFiltroCountry, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro.
+     * Se utiliza para seleccionar o deseleccionar la Location.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar Location.
+     * Abre la pantalla para crear una nueva Location.
+     */
+    public void pulsarBotonAgregarLocation(){
+        esClickeable(btnAgregarLocation);
+        clickElemento(btnAgregarLocation, "Pulsar botón Agregar Location");
+    }
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda con los filtros aplicados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros aplicados.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar.
+     * Elimina la Location actualmente seleccionada.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todas las Locations marcadas en la lista.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Editar.
+     * Abre la pantalla de edición de la Location seleccionada.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+// </editor-fold>
+
 }

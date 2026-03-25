@@ -31,5 +31,93 @@ public class PerformanceConfigureTrackerPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado en el filtro de búsqueda.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarFiltroEmployeeName(String texto){
+        esClickeable(txtFiltroEmployeeName);
+        setText(txtFiltroEmployeeName, texto);
+    }
+
+// -------------------------
+// CHECKBOX
+// -------------------------
+
+    /**
+     * Activa o desactiva el checkbox del primer registro.
+     */
+    public void pulsarCheckPrimerRegistro(){
+        esClickeable(checkPrimerRegistro);
+        clickElemento(checkPrimerRegistro, "Seleccionar/Deseleccionar primer registro");
+    }
+
+// -------------------------
+// BOTONES DE BÚSQUEDA
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda según los filtros ingresados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia los filtros de búsqueda.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// -------------------------
+// BOTONES CRUD
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Agregar Tracker.
+     * Abre la pantalla para crear un nuevo Tracker.
+     */
+    public void pulsarBotonAgregarTracker(){
+        esClickeable(btnAgregarTracker);
+        clickElemento(btnAgregarTracker, "Pulsar botón Agregar Tracker");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar.
+     * Elimina el Tracker seleccionado.
+     */
+    public void pulsarBotonEliminar(){
+        esClickeable(btnEliminar);
+        clickElemento(btnEliminar, "Pulsar botón Eliminar");
+    }
+
+    /**
+     * Realiza clic en el botón Eliminar seleccionados.
+     * Elimina todos los Trackers marcados.
+     */
+    public void pulsarBotonEliminarSeleccionados(){
+        esClickeable(btnEliminarSeleccionados);
+        clickElemento(btnEliminarSeleccionados, "Pulsar botón Eliminar seleccionados");
+    }
+
+    /**
+     * Realiza clic en el botón Editar.
+     * Abre la pantalla de edición del Tracker seleccionado.
+     */
+    public void pulsarBotonEditar(){
+        esClickeable(btnEditar);
+        clickElemento(btnEditar, "Pulsar botón Editar");
+    }
+
+// </editor-fold>
+
 }

@@ -26,5 +26,46 @@ public class PerformanceMyTrackerDetailsPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Log.
+     * Abre el popup para agregar un nuevo log al tracker.
+     */
+    public void pulsarBotonAddLog(){
+        esClickeable(btnAddLog);
+        clickElemento(btnAddLog, "Pulsar botón Add Log");
+    }
+
+    /**
+     * Realiza clic en el botón Acciones del primer registro.
+     * Despliega el menú de acciones disponibles.
+     */
+    public void pulsarBotonAccionesPrimerRegistro(){
+        esClickeable(btnAccionesPrimerRegistro);
+        clickElemento(btnAccionesPrimerRegistro, "Pulsar botón Acciones del primer registro");
+    }
+
+    /**
+     * Realiza clic en la opción Editar dentro del menú de acciones.
+     * Abre el popup para editar el log seleccionado.
+     */
+    public void pulsarBotonAccionesEditar(){
+        esClickeable(btnAccionesEditar);
+        clickElemento(btnAccionesEditar, "Pulsar botón Editar del menú Acciones");
+    }
+
+    /**
+     * Realiza clic en la opción Borrar dentro del menú de acciones.
+     * Elimina el log seleccionado.
+     */
+    public void pulsarBotonAccionesBorrar(){
+        esClickeable(btnAccionesBorrar);
+        clickElemento(btnAccionesBorrar, "Pulsar botón Borrar del menú Acciones");
+    }
+
+// </editor-fold>
+
 }

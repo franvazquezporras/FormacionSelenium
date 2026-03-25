@@ -28,5 +28,63 @@ public class DirectoryPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del empleado para filtrar.
+     * @param texto Nombre del empleado.
+     */
+    public void insertarEmployeeName(String texto){
+        esClickeable(txtEmployeeName);
+        setText(txtEmployeeName, texto);
+    }
+
+// -------------------------
+// LISTAS
+// -------------------------
+
+    /**
+     * Selecciona un Job Title en la lista.
+     * @param opcion Job Title a seleccionar.
+     */
+    public void seleccionarListaJobTitle(String opcion){
+        esClickeable(listaJobTitle);
+        seleccionarOpcion(listaJobTitle, opcion);
+    }
+
+    /**
+     * Selecciona una Location en la lista.
+     * @param opcion Ubicación a seleccionar.
+     */
+    public void seleccionarListaLocation(String opcion){
+        esClickeable(listaLocation);
+        seleccionarOpcion(listaLocation, opcion);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Search.
+     * Ejecuta la búsqueda según los filtros ingresados.
+     */
+    public void pulsarBotonSearch(){
+        esClickeable(btnSearch);
+        clickElemento(btnSearch, "Pulsar botón Search");
+    }
+
+    /**
+     * Realiza clic en el botón Reset.
+     * Limpia todos los filtros de búsqueda.
+     */
+    public void pulsarBotonReset(){
+        esClickeable(btnReset);
+        clickElemento(btnReset, "Pulsar botón Reset");
+    }
+
+// </editor-fold>
+
 }

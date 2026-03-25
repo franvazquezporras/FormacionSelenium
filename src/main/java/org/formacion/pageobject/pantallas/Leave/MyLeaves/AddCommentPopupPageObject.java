@@ -26,5 +26,41 @@ public class AddCommentPopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUT
+// -------------------------
+
+    /**
+     * Inserta el comentario en el popup.
+     * @param texto Comentario a agregar.
+     */
+    public void insertarComment(String texto){
+        esClickeable(txtComment);
+        setText(txtComment, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Confirm.
+     * Confirma la acción y guarda el comentario.
+     */
+    public void pulsarBotonConfirm(){
+        esClickeable(btnConfirm);
+        clickElemento(btnConfirm, "Pulsar botón Confirm");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la acción y cierra el popup.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

@@ -31,5 +31,86 @@ public class ProjectInfoAddProjectPageObject extends BasePageObject {
 
     // <editor-fold desc="Funciones de locators">
 
-    //</editor-fold>
+// -------------------------
+// INPUTS
+// -------------------------
+
+    /**
+     * Inserta el nombre del Project.
+     * @param texto Nombre del proyecto.
+     */
+    public void insertarName(String texto){
+        esClickeable(txtName);
+        setText(txtName, texto);
+    }
+
+    /**
+     * Inserta el nombre del Customer asociado.
+     * @param texto Nombre del cliente.
+     */
+    public void insertarCustomerName(String texto){
+        esClickeable(txtCustomerName);
+        setText(txtCustomerName, texto);
+    }
+
+    /**
+     * Inserta la descripción del Project.
+     * @param texto Descripción.
+     */
+    public void insertarDescription(String texto){
+        esClickeable(txtDescription);
+        setText(txtDescription, texto);
+    }
+
+    /**
+     * Inserta el Project Admin.
+     * @param texto Nombre del administrador del proyecto.
+     */
+    public void insertarProjectAdmin(String texto){
+        esClickeable(txtProjectaDMIN);
+        setText(txtProjectaDMIN, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Add Customer.
+     * Abre el popup para agregar un nuevo Customer.
+     */
+    public void pulsarBotonAddCustomer(){
+        esClickeable(btnAddCustomer);
+        clickElemento(btnAddCustomer, "Pulsar botón Add Customer");
+    }
+
+    /**
+     * Realiza clic en el botón Add Project Admin.
+     * Abre el popup para agregar un nuevo Project Admin.
+     */
+    public void pulsarBotonAddProjectAdmin(){
+        esClickeable(btnAddProjectAdmin);
+        clickElemento(btnAddProjectAdmin, "Pulsar botón Add Project Admin");
+    }
+
+    /**
+     * Realiza clic en el botón Save.
+     * Guarda el nuevo Project.
+     */
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
+    }
+
+    /**
+     * Realiza clic en el botón Cancel.
+     * Cancela la operación y regresa a la pantalla anterior.
+     */
+    public void pulsarBotonCancel(){
+        esClickeable(btnCancel);
+        clickElemento(btnCancel, "Pulsar botón Cancel");
+    }
+
+// </editor-fold>
+
 }

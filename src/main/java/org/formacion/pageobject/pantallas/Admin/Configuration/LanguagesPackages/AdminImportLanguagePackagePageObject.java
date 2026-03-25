@@ -24,6 +24,39 @@ public class AdminImportLanguagePackagePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
+// -------------------------
+// INPUT FILE
+// -------------------------
 
+    /**
+     * Inserta la ruta del fichero a cargar en el campo de importación.
+     * @param texto Ruta completa del archivo a subir.
+     */
+    public void insertarCargarFichero(String texto){
+        esClickeable(txtCargarFichero);
+        setText(txtCargarFichero, texto);
+    }
+
+// -------------------------
+// BOTONES
+// -------------------------
+
+    /**
+     * Realiza clic en el botón Upload.
+     * Inicia el proceso de carga del paquete de idioma.
+     */
+    public void pulsarBotonUpload(){
+        esClickeable(btnUpload);
+        clickElemento(btnUpload, "Pulsar botón Upload");
+    }
+
+    /**
+     * Realiza clic en el botón Download.
+     * Descarga la plantilla o paquete de idioma disponible.
+     */
+    public void pulsarBotonDownload(){
+        esClickeable(btnDownload);
+        clickElemento(btnDownload, "Pulsar botón Download");
+    }
     //</editor-fold>
 }
