@@ -7,6 +7,12 @@ import java.util.logging.Formatter;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
+/**
+ * Formateador personalizado para los registros del logger.
+ *
+ * Genera líneas de log con fecha, nivel de severidad y mensaje,
+ * usando un formato legible y simplificado.
+ */
 public class FormatoLog extends Formatter {
     private final DateFormat df = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 

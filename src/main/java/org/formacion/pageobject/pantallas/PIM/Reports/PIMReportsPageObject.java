@@ -20,15 +20,32 @@ public class PIMReportsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de gestión de reportes
+     * (Reports) dentro del módulo de PIM.
+     *
+     * Esta vista permite visualizar, buscar y administrar los reportes
+     * configurados en el sistema. Desde esta pantalla también es posible
+     * acceder a la creación de nuevos reportes mediante el botón Agregar.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMReportsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Reports");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Reports esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Reports");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

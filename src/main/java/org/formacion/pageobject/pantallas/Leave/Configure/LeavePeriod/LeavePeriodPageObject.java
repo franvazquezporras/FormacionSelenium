@@ -16,15 +16,30 @@ public class LeavePeriodPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de configuración del período de vacaciones (Leave Period).
+     *
+     * Esta vista permite definir el rango anual que se utilizará para el cálculo
+     * y administración de permisos dentro del módulo de Leave.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public LeavePeriodPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Leave Period");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de configuración del período de vacaciones esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Leave Period");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

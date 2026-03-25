@@ -17,14 +17,28 @@ public class AdminConfigurationSubscribersPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object de la pantalla de listado de suscriptores.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminConfigurationSubscribersPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregarSubscriber,"Pantalla Listado Subscriptores");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de listado de suscriptores esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón para agregar un nuevo suscriptor.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregarSubscriber,"Pantalla Listado Subscriptores");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

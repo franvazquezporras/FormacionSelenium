@@ -16,15 +16,31 @@ public class EditLeaveTypesPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de tipos de permiso (Leave Type).
+     *
+     * Esta vista permite modificar un tipo de ausencia existente dentro del módulo de Leave,
+     * ajustando su nombre, configuración y parámetros asociados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EditLeaveTypesPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Leave Type");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de edición de tipos de permiso esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Leave Type");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

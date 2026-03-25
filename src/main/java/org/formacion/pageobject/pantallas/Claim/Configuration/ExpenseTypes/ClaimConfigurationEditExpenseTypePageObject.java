@@ -16,15 +16,28 @@ public class ClaimConfigurationEditExpenseTypePageObject extends BasePageObject 
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un tipo de gasto.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimConfigurationEditExpenseTypePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Editar Event Type");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de edición de tipo de gasto esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Editar Event Type");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

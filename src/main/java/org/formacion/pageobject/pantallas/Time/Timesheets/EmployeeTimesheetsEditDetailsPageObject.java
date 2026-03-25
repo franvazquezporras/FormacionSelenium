@@ -16,15 +16,28 @@ public class EmployeeTimesheetsEditDetailsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Edit Employee Timesheet.
+     *
+     * Permite modificar los datos de una hoja de tiempo existente.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeTimesheetsEditDetailsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Employee Timesheet");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Edit Employee Timesheet cargue verificando el botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Employee Timesheet");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

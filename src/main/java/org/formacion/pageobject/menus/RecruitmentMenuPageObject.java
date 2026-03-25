@@ -15,22 +15,34 @@ public class RecruitmentMenuPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object del menú Recruitment.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public RecruitmentMenuPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
     //</editor-fold>
 
     // <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que el menú Recruitment esté completamente cargado.
+     */
     public void esperarSincronizacion(){esperarPagina(btnCandidates,"Menu Recruitment");}
     //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 
-
 // -------------------------
 // CANDIDATES
 // -------------------------
 
+    /**
+     * Accede a la sección Candidates.
+     */
     public void pulsarBotonCandidates(){
         esClickeable(btnCandidates);
         clickElemento(btnCandidates, "Pulsar botón Candidates");
@@ -40,6 +52,9 @@ public class RecruitmentMenuPageObject extends BasePageObject {
 // VACANCIES
 // -------------------------
 
+    /**
+     * Accede a la sección Vacancies.
+     */
     public void pulsarBotonVacancies(){
         esClickeable(btnVacancies);
         clickElemento(btnVacancies, "Pulsar botón Vacancies");

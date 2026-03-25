@@ -18,15 +18,30 @@ public class ApplyPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de solicitud de permisos (Apply Leave).
+     *
+     * Esta vista permite al empleado registrar una nueva solicitud de ausencia,
+     * seleccionando el tipo de permiso, fechas y detalles correspondientes.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ApplyPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+    // </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnApply,"Pantalla Apply Leave");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de solicitud de permisos esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Apply.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnApply,"Pantalla Apply Leave");
+    }
+    // </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

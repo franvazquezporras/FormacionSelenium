@@ -20,15 +20,30 @@ public class AddEntitlementsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de asignaciones de permisos (Entitlements).
+     *
+     * Esta vista permite registrar nuevas asignaciones de días de permiso para uno
+     * o varios empleados, definiendo el tipo de ausencia y la cantidad otorgada.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AddEntitlementsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+    // </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Entitlements");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de creación de asignaciones de permisos esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Entitlements");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

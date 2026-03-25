@@ -16,14 +16,28 @@ public class AdminOrganizationEditStructurePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de edición de una Structure.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminOrganizationEditStructurePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Edit Structure");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que el popup de edición de Structure esté completamente cargado.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Popup Edit Structure");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

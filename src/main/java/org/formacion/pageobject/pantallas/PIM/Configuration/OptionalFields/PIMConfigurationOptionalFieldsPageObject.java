@@ -16,15 +16,32 @@ public class PIMConfigurationOptionalFieldsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de configuración de campos opcionales
+     * (Optional Fields) dentro del módulo de PIM.
+     *
+     * Esta vista permite habilitar o deshabilitar campos opcionales relacionados con
+     * la información del empleado, ofreciendo flexibilidad para adaptar el sistema
+     * a los requisitos específicos de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationOptionalFieldsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Optional Fields");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Optional Fields esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Optional Fields");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

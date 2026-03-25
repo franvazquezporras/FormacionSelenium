@@ -18,15 +18,30 @@ public class EditHolidaysPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de días festivos.
+     *
+     * Esta vista permite modificar la información de un feriado existente dentro
+     * del módulo de Leave, incluyendo nombre, fecha y tipo de día festivo.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EditHolidaysPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Holidays");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de edición de días festivos esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Holidays");
+    }
+    // </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

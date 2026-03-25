@@ -22,15 +22,33 @@ public class EditEmployeePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un empleado
+     * (Edit Employee) dentro del módulo de PIM.
+     *
+     * Esta vista permite acceder y modificar la información completa del empleado,
+     * incluyendo datos personales, información laboral, detalles de contacto,
+     * dependientes, asignaciones y cualquier otro apartado disponible en el perfil.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EditEmployeePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnPersonalDetails,"Pantalla Edit Employee");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Employee esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón o pestaña de
+     * Personal Details, que actúa como punto de entrada principal del perfil.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnPersonalDetails,"Pantalla Edit Employee");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

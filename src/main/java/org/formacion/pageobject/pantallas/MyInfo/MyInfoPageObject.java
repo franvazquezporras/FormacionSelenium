@@ -22,15 +22,32 @@ public class MyInfoPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de información personal del empleado
+     * (My Info).
+     *
+     * Esta vista permite acceder y gestionar los datos personales del usuario,
+     * incluyendo información básica, contacto, emergencia, dependientes, documentos
+     * y cualquier otro detalle disponible dentro del módulo de información personal.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public MyInfoPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnPersonalDetails,"Pantalla My Info");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de información personal esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Personal Details.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnPersonalDetails,"Pantalla My Info");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

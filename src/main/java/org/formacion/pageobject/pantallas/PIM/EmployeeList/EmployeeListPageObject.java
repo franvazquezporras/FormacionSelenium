@@ -25,15 +25,32 @@ public class EmployeeListPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de listado de empleados
+     * (Employee List) dentro del módulo de PIM.
+     *
+     * Esta vista permite buscar, filtrar, visualizar y gestionar los registros
+     * de empleados existentes en el sistema. Desde aquí también se puede acceder
+     * a la creación de nuevos empleados mediante el botón Agregar.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeListPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Employee List");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Employee List esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Employee List");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

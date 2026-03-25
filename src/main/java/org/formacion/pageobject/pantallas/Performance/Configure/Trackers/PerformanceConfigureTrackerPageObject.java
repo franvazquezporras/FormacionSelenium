@@ -19,15 +19,32 @@ public class PerformanceConfigureTrackerPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de gestión de Trackers
+     * dentro del módulo de Performance.
+     *
+     * Esta vista permite visualizar, crear y administrar los trackers de desempeño,
+     * incluyendo la asignación de supervisores, empleados y parámetros utilizados
+     * para el seguimiento de actividades o métricas de rendimiento.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceConfigureTrackerPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregarTracker,"Pantalla Trackers");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de gestión de Trackers esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar Tracker.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregarTracker,"Pantalla Trackers");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

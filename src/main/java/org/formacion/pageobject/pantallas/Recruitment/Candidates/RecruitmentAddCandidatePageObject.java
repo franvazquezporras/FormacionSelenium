@@ -25,15 +25,32 @@ public class RecruitmentAddCandidatePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo candidato
+     * (Add Candidate) dentro del módulo de Recruitment.
+     *
+     * Esta vista permite registrar un candidato en el sistema, ingresando información
+     * personal, detalles del puesto al que aplica, adjuntando documentos y completando
+     * cualquier otro dato requerido para iniciar el proceso de selección.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public RecruitmentAddCandidatePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Candidate");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Add Candidate esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Candidate");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

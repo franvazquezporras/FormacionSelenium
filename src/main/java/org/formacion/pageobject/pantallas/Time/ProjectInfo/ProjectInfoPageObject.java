@@ -19,15 +19,28 @@ public class ProjectInfoPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Project Info.
+     *
+     * Permite acceder a la gestión de clientes y proyectos dentro del módulo Time.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ProjectInfoPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAdd,"Pantalla Project Info");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Project Info esté cargada verificando el botón Add.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAdd,"Pantalla Project Info");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

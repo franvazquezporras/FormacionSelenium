@@ -17,13 +17,28 @@ public class ClaimViewDetailsAddExpensePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de agregado de gastos
+     * dentro de la vista de detalles de un reclamo.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimViewDetailsAddExpensePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Add Expense");}
+    /**
+     * Espera a que el popup de agregado de gastos esté completamente cargado.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Popup Add Expense");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 
@@ -95,6 +110,4 @@ public class ClaimViewDetailsAddExpensePageObject extends BasePageObject {
 
 // </editor-fold>
 
-
-    //</editor-fold>
 }

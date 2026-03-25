@@ -17,15 +17,31 @@ public class ClaimSubmitClaimPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de envío de un nuevo reclamo.
+     *
+     * Esta pantalla permite al usuario crear y registrar un reclamo,
+     * completando los datos requeridos antes de enviarlo para su procesamiento.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimSubmitClaimPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnCreate,"Pantalla Submit Claim");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de envío de reclamo esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Create.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnCreate,"Pantalla Submit Claim");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

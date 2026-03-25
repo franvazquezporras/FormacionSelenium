@@ -17,14 +17,28 @@ public class AdminConfigurationRegisterClientPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de gestión de clientes registrados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminConfigurationRegisterClientPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Register Client");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de clientes registrados esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Register Client");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

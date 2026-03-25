@@ -14,15 +14,33 @@ public class ProjectActivityPopupPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de creación o edición de una
+     * actividad de proyecto (Add/Edit Project Activity).
+     *
+     * Este popup permite añadir una nueva actividad asociada a un proyecto o
+     * modificar una existente, incluyendo su nombre, estado y cualquier otro
+     * parámetro configurado dentro del módulo de Time/Projects.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ProjectActivityPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Add/Edit Project Activity");}
-
-    //</editor-fold>
+    /**
+     * Espera a que el popup de Add/Edit Project Activity esté completamente cargado.
+     * Se sincroniza verificando la presencia del botón Save, que confirma que el
+     * popup está listo para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Popup Add/Edit Project Activity");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

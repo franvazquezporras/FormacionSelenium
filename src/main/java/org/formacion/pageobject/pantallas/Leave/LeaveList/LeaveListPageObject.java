@@ -20,15 +20,30 @@ public class LeaveListPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de consulta de permisos (Leave List).
+     *
+     * Esta vista permite buscar, filtrar y visualizar los registros de permisos
+     * solicitados por los empleados dentro del módulo de Leave.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public LeaveListPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSearch,"Pantalla Leave List");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de consulta de permisos esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Search.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSearch,"Pantalla Leave List");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -14,15 +14,34 @@ public class PIMConfigurationAddTerminationsReasonsPageObject extends BasePageOb
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo
+     * motivo de terminación (Add Termination Reasons) dentro del módulo de
+     * configuración de PIM.
+     *
+     * Esta vista permite registrar nuevos motivos de terminación que podrán
+     * ser utilizados al gestionar la finalización de la relación laboral de
+     * un empleado, proporcionando flexibilidad para adaptar el sistema a las
+     * políticas internas de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationAddTerminationsReasonsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Termination Reasons");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Add Termination Reasons esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Termination Reasons");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

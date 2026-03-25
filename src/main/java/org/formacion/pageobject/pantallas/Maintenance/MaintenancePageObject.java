@@ -15,15 +15,32 @@ public class MaintenancePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de mantenimiento
+     * (Maintenance).
+     *
+     * Esta vista permite acceder a las funciones administrativas relacionadas
+     * con la gestión interna del sistema, incluyendo operaciones sensibles que
+     * requieren confirmación previa.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public MaintenancePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnConfirm,"Pantalla Mantenimiento");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de mantenimiento esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Confirm.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnConfirm,"Pantalla Mantenimiento");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

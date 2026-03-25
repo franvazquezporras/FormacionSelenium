@@ -30,15 +30,30 @@ public class ClaimViewDetailsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de visualización de detalles
+     * de un reclamo. Desde esta vista se accede a la información completa del
+     * reclamo, así como a sus adjuntos, gastos y acciones disponibles.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimViewDetailsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtReferenceID,"Pantalla View Details Claim");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de detalles del reclamo esté completamente cargada.
+     * Se sincroniza verificando la presencia del campo Reference ID.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtReferenceID,"Pantalla View Details Claim");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

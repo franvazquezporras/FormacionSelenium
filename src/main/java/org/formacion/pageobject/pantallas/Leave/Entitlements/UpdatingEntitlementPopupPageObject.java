@@ -13,15 +13,31 @@ public class UpdatingEntitlementPopupPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de actualización de asignaciones de permisos
+     * (Updating Entitlement).
+     *
+     * Este popup aparece cuando se realiza una modificación que afecta los días de permiso
+     * asignados, solicitando confirmación antes de aplicar los cambios.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public UpdatingEntitlementPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnConfirm,"Popup Updating Entitlement");}
-
-    //</editor-fold>
+    /**
+     * Espera a que el popup de actualización de asignaciones de permisos esté completamente visible.
+     * Se sincroniza verificando la presencia del botón Confirm.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnConfirm,"Popup Updating Entitlement");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

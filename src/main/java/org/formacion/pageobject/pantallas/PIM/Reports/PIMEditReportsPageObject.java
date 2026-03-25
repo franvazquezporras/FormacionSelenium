@@ -20,15 +20,33 @@ public class PIMEditReportsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un reporte
+     * (Edit Reports) dentro del módulo de PIM.
+     *
+     * Esta vista permite modificar un reporte existente, ajustando su nombre,
+     * criterios de selección, campos incluidos y cualquier otro parámetro
+     * configurado previamente, facilitando la administración de informes
+     * personalizados dentro del sistema.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMEditReportsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Reports");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Reports esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Reports");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

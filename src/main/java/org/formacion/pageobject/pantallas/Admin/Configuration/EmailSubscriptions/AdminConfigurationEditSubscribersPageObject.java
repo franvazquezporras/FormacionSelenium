@@ -15,14 +15,28 @@ public class AdminConfigurationEditSubscribersPageObject extends BasePageObject 
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object del popup para editar suscriptores.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminConfigurationEditSubscribersPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+    // </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Editar Subscriptor");}
-    //</editor-fold>
+    /**
+     * Espera a que el popup de edición de suscriptor esté completamente cargado.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Popup Editar Subscriptor");
+    }
+    // </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 // -------------------------

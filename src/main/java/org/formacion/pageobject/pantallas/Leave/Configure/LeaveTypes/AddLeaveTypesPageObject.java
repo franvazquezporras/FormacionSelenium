@@ -16,15 +16,31 @@ public class AddLeaveTypesPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de tipos de permiso (Leave Type).
+     *
+     * Esta vista permite registrar un nuevo tipo de ausencia dentro del módulo de Leave,
+     * definiendo su nombre, comportamiento y parámetros asociados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AddLeaveTypesPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Leave Type");}
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de creación de tipos de permiso esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Leave Type");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

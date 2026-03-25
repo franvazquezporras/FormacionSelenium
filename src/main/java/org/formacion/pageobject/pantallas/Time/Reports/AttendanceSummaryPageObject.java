@@ -18,15 +18,28 @@ public class AttendanceSummaryPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Attendance Summary.
+     *
+     * Permite consultar el resumen de asistencia de los empleados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AttendanceSummaryPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla Attendance Summary ");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Attendance Summary cargue verificando el botón View.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla Attendance Summary ");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

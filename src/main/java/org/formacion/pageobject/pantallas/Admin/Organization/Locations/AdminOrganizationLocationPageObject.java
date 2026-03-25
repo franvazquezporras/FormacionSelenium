@@ -21,15 +21,28 @@ public class AdminOrganizationLocationPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de listado de Locations.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminOrganizationLocationPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregarLocation,"Pantalla Locations");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de Locations esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar Location.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregarLocation,"Pantalla Locations");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -26,15 +26,33 @@ public class RecruitmentEditVacancyPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de una vacante
+     * (Edit Vacancy) dentro del módulo de Recruitment.
+     *
+     * Esta vista permite modificar una vacante existente, ajustando información
+     * como el puesto, el gerente responsable, el número de posiciones disponibles
+     * y cualquier otro parámetro previamente configurado para el proceso de
+     * contratación asociado.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public RecruitmentEditVacancyPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Vacancy");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Vacancy esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Vacancy");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

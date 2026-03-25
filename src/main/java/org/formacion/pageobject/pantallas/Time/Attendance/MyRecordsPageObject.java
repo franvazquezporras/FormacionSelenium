@@ -17,15 +17,33 @@ public class MyRecordsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de consulta de los registros
+     * personales del usuario (My Records).
+     *
+     * Esta vista permite al empleado visualizar su información registrada en el
+     * sistema, incluyendo datos personales, información laboral, historial y
+     * cualquier otro detalle disponible para consulta.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public MyRecordsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla My Records");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de My Records esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón View, que confirma que
+     * la vista está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla My Records");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

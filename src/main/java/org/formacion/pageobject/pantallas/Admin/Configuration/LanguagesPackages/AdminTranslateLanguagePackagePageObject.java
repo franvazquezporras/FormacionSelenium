@@ -21,15 +21,29 @@ public class AdminTranslateLanguagePackagePageObject extends BasePageObject {
     private By btnSave = By.xpath("");
     //</editor-fold>
 
-    // <editor-fold desc="Constructor">
+// <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de traducción de un Language Package.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminTranslateLanguagePackagePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Tranducir Language");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de traducción del Language Package esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Tranducir Language");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

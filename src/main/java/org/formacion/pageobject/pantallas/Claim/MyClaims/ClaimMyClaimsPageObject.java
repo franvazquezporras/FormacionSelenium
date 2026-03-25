@@ -21,15 +21,29 @@ public class ClaimMyClaimsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla "My Claims",
+     * donde el empleado puede visualizar y gestionar sus propios reclamos.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimMyClaimsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSubmitClaim,"Pantalla My Claims");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla "My Claims" esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Submit Claim.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSubmitClaim,"Pantalla My Claims");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

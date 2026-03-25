@@ -18,14 +18,32 @@ public class PerformanceConfigureAddKPIPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo KPI
+     * dentro del módulo de Performance.
+     *
+     * Esta vista permite registrar un nuevo indicador clave de desempeño (KPI),
+     * definiendo su nombre, descripción, rango de calificación y cualquier otro
+     * parámetro requerido para su uso en evaluaciones de desempeño.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceConfigureAddKPIPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Añadir KPI");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de creación de un nuevo KPI esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Añadir KPI");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -6,17 +6,33 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * Gestor de lectura del fichero de propiedades del framework.
+ *
+ * Permite obtener valores desde el archivo config.properties
+ * y registrar trazas opcionalmente mediante LogManager.
+ */
 public class PropertiesManager {
     private String rutaFicheroProperties;
     private LogManager log;
 
+    /**
+     * Constructor por defecto.
+     *
+     * Inicializa la ruta del fichero de propiedades y desactiva el log.
+     */
     public PropertiesManager(){
         super();
         rutaFicheroProperties = "src/test/resources/config.properties";
         this.log = null;
     }
 
-
+    /**
+     * Lee una propiedad del fichero config.properties.
+     *
+     * @param propiedad Nombre de la propiedad a consultar.
+     * @return Valor asociado a la propiedad, o null si no existe.
+     */
     public String leerPropiedad(String propiedad){
         Properties propiedades = new Properties();
 

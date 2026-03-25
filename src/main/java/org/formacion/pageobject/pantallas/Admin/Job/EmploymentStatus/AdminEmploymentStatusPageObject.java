@@ -16,15 +16,28 @@ public class AdminEmploymentStatusPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de listado de Employment Status.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminEmploymentStatusPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Employment status");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de Employment Status esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Employment status");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

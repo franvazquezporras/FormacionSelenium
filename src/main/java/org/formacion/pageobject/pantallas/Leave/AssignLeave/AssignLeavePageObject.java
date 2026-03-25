@@ -17,16 +17,33 @@ public class AssignLeavePageObject extends BasePageObject {
     private By listaPartialDays = By.xpath("");
     //</editor-fold>
 
-    // <editor-fold desc="Constructor">
+// <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de asignación de permisos (Assign Leave).
+     *
+     * Esta vista permite a un administrador o supervisor asignar un permiso
+     * directamente a un empleado, seleccionando el tipo de ausencia y las fechas
+     * correspondientes.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AssignLeavePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAssign,"Pantalla Assign Leave");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de asignación de permisos esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Assign.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAssign,"Pantalla Assign Leave");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

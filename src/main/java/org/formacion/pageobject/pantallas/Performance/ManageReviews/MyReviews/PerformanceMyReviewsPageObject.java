@@ -14,15 +14,33 @@ public class PerformanceMyReviewsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de revisiones de desempeño
+     * del empleado (My Reviews) dentro del módulo de Performance.
+     *
+     * Esta vista permite al usuario consultar las revisiones de desempeño que
+     * tiene asignadas, incluyendo información sobre evaluadores, fechas,
+     * estados y acceso al detalle de cada revisión.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceMyReviewsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnPerformanceReviewPrimerRegistro,"Pantalla My Reviews");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de My Reviews esté completamente cargada.
+     * Se sincroniza verificando la presencia del primer registro disponible
+     * en la tabla de revisiones.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnPerformanceReviewPrimerRegistro,"Pantalla My Reviews");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

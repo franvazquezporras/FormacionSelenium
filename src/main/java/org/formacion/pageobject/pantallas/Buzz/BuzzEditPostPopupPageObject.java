@@ -15,14 +15,28 @@ public class BuzzEditPostPopupPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de edición de un post en Buzz.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public BuzzEditPostPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtPost,"Popup Edit Post");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que el popup de edición de post esté completamente cargado.
+     * Se sincroniza verificando la presencia del campo de texto del post.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtPost,"Popup Edit Post");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

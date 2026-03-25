@@ -19,14 +19,33 @@ public class PerformanceAddManageReviewsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de una nueva revisión
+     * de desempeño (Add Review) dentro del módulo de Performance.
+     *
+     * Esta vista permite registrar una nueva evaluación de desempeño, definiendo
+     * al empleado evaluado, al evaluador, el período de revisión, la fecha programada
+     * y cualquier otro parámetro requerido para iniciar el proceso de evaluación.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceAddManageReviewsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Review");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de creación de una nueva revisión de desempeño
+     * esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Review");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

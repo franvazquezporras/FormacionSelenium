@@ -16,15 +16,30 @@ public class DirectoryPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla del Directorio.
+     *
+     * Esta vista permite buscar y consultar información de empleados
+     * dentro de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public DirectoryPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSearch,"Pantalla Directory");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla del Directorio esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Search.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSearch,"Pantalla Directory");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

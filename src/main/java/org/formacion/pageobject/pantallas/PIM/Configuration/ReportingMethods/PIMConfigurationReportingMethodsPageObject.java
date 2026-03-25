@@ -16,15 +16,32 @@ public class PIMConfigurationReportingMethodsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de gestión de métodos de reporte
+     * (Reporting Methods) dentro del módulo de configuración de PIM.
+     *
+     * Esta vista permite visualizar, crear y administrar los métodos de reporte
+     * utilizados en distintos procesos del sistema, proporcionando flexibilidad
+     * para adaptar la gestión de información a las necesidades de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationReportingMethodsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla ReportinG Methods");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Reporting Methods esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Reporting Methods");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

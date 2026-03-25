@@ -15,14 +15,32 @@ public class PerformanceMyTrackerDetailsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de detalles del Tracker
+     * (Tracker Details) dentro del módulo de Performance.
+     *
+     * Esta vista permite visualizar la información completa de un tracker asignado
+     * al empleado, incluyendo los registros existentes, supervisores asociados
+     * y la posibilidad de añadir nuevas entradas de seguimiento (logs).
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceMyTrackerDetailsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAddLog,"Pantalla Tracker Details");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Tracker Details esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Add Log.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAddLog,"Pantalla Tracker Details");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

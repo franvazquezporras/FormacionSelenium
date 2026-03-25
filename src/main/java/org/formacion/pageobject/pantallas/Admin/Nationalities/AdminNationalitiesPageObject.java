@@ -14,17 +14,29 @@ public class AdminNationalitiesPageObject extends BasePageObject {
     private By btnEditar = By.xpath("");
     private By checkPrimerRegistro = By.xpath("");
     //</editor-fold>
-
-    // <editor-fold desc="Constructor">
+// <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de listado de Nationalities.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminNationalitiesPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Nationalities");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de Nationalities esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Nationalities");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -24,14 +24,28 @@ public class BuzzPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla principal de Buzz.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public BuzzPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtPost,"Pantalla Buzz");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de Buzz esté completamente cargada.
+     * Se sincroniza verificando la presencia del campo de texto para crear un post.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtPost,"Pantalla Buzz");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 

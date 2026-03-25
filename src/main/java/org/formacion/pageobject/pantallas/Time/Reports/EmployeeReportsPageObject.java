@@ -18,15 +18,28 @@ public class EmployeeReportsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Employee Report.
+     *
+     * Permite consultar los reportes de asistencia por empleado.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeReportsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla Employee Report");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Employee Report cargue verificando el botón View.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla Employee Report");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

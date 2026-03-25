@@ -17,14 +17,33 @@ public class PunchInOutPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de registro de entrada y salida
+     * (Punch In/Out) dentro del módulo de Time.
+     *
+     * Esta vista permite al empleado registrar su hora de entrada o salida,
+     * añadir comentarios opcionales y consultar el estado actual de su jornada.
+     * Es una de las funciones clave del módulo de asistencia.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PunchInOutPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnIn,"Pantalla Punch In Out");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Punch In Out esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón In, que indica que
+     * la vista está lista para registrar la acción correspondiente.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnIn,"Pantalla Punch In Out");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

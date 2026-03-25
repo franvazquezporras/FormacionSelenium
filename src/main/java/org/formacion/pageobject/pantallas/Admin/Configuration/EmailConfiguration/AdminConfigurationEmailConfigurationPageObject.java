@@ -24,14 +24,27 @@ public class AdminConfigurationEmailConfigurationPageObject extends BasePageObje
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object de la pantalla de Configuración de Email.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminConfigurationEmailConfigurationPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+    // </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtMailSentAs,"Pantalla Configuracion Email");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Configuración de Email esté completamente cargada.
+     * Se sincroniza verificando la presencia del campo "Mail Sent As".
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtMailSentAs,"Pantalla Configuracion Email");
+    }
+    // </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

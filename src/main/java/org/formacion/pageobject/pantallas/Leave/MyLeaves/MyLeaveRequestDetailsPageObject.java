@@ -15,15 +15,32 @@ public class MyLeaveRequestDetailsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de detalles de una solicitud de permiso
+     * (My Leave Request Details).
+     *
+     * Esta vista permite al empleado visualizar la información completa de una solicitud
+     * de permiso previamente registrada, incluyendo fechas, tipo de ausencia, estado,
+     * historial y comentarios asociados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public MyLeaveRequestDetailsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnComment,"Pantalla My Leaves Request Details");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de detalles de la solicitud de permiso esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Comment.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnComment,"Pantalla My Leaves Request Details");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

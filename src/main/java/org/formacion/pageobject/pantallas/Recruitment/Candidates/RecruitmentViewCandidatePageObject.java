@@ -33,15 +33,34 @@ public class RecruitmentViewCandidatePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de visualización y edición
+     * de un candidato (View/Edit Candidate) dentro del módulo de Recruitment.
+     *
+     * Esta vista permite consultar la información completa del candidato,
+     * revisar su historial dentro del proceso de selección y acceder a las
+     * acciones disponibles, como editar sus datos o avanzar en el flujo de
+     * reclutamiento.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public RecruitmentViewCandidatePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(checkEdit,"Pantalla Edit Candidate");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Candidate esté completamente cargada.
+     * Se sincroniza verificando la presencia del elemento asociado a la opción
+     * de edición (checkEdit), que confirma que la vista está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(checkEdit,"Pantalla Edit Candidate");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

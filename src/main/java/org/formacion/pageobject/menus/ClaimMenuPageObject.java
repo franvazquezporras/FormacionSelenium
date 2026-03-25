@@ -24,32 +24,50 @@ public class ClaimMenuPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object del menú Claim.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimMenuPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
     //</editor-fold>
 
     // <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que el menú Claim esté completamente cargado.
+     */
     public void esperarSincronizacion(){esperarPagina(btnEmployeeClaims,"Menu Claim");}
     //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 
-
 // -------------------------
 // CONFIGURATION
 // -------------------------
 
+    /**
+     * Abre la sección Configuration del módulo Claim.
+     */
     public void pulsarBotonConfiguration(){
         esClickeable(btnConfiguration);
         clickElemento(btnConfiguration, "Pulsar botón Configuration");
     }
 
+    /**
+     * Accede a la opción Events dentro de Configuration.
+     */
     public void pulsarBotonConfigurationEvents(){
         esClickeable(btnConfigurationEvents);
         clickElemento(btnConfigurationEvents, "Pulsar botón Configuration - Events");
     }
 
+    /**
+     * Accede a la opción Expenses Types dentro de Configuration.
+     */
     public void pulsarBotonConfigurationExpensesTypes(){
         esClickeable(btnConfigurationExpensesTypes);
         clickElemento(btnConfigurationExpensesTypes, "Pulsar botón Configuration - Expenses Types");
@@ -59,6 +77,9 @@ public class ClaimMenuPageObject extends BasePageObject {
 // SUBMIT CLAIM
 // -------------------------
 
+    /**
+     * Accede a la pantalla para enviar un nuevo Claim.
+     */
     public void pulsarBotonSubmitClaim(){
         esClickeable(btnSubmitClaim);
         clickElemento(btnSubmitClaim, "Pulsar botón Submit Claim");
@@ -68,6 +89,9 @@ public class ClaimMenuPageObject extends BasePageObject {
 // MY CLAIMS
 // -------------------------
 
+    /**
+     * Accede a la sección My Claims.
+     */
     public void pulsarBotonMyClaims(){
         esClickeable(btnMyClaims);
         clickElemento(btnMyClaims, "Pulsar botón My Claims");
@@ -77,6 +101,9 @@ public class ClaimMenuPageObject extends BasePageObject {
 // EMPLOYEE CLAIMS
 // -------------------------
 
+    /**
+     * Accede a la sección Employee Claims.
+     */
     public void pulsarBotonEmployeeClaims(){
         esClickeable(btnEmployeeClaims);
         clickElemento(btnEmployeeClaims, "Pulsar botón Employee Claims");
@@ -86,6 +113,9 @@ public class ClaimMenuPageObject extends BasePageObject {
 // ASSIGN CLAIM
 // -------------------------
 
+    /**
+     * Accede a la sección Assign Claim.
+     */
     public void pulsarBotonAssignClaim(){
         esClickeable(btnAssignClaim);
         clickElemento(btnAssignClaim, "Pulsar botón Assign Claim");

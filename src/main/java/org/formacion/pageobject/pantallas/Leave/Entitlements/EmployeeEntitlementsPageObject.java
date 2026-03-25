@@ -21,14 +21,31 @@ public class EmployeeEntitlementsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de asignaciones de permisos por empleado
+     * (Employee Entitlements).
+     *
+     * Esta vista permite consultar y gestionar las asignaciones de días de permiso
+     * correspondientes a un empleado específico dentro del módulo de Leave.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeEntitlementsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAgregar,"Pantalla Employee Entitlements");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de asignaciones de permisos por empleado esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Agregar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAgregar,"Pantalla Employee Entitlements");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

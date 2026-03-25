@@ -16,15 +16,33 @@ public class TimeAttendanceConfigurationPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de configuración de asistencia
+     * (Time Attendance Configuration) dentro del módulo de Time.
+     *
+     * Esta vista permite definir y ajustar parámetros relacionados con el registro
+     * de asistencia, tales como reglas de marcaje, tolerancias, políticas de
+     * redondeo y cualquier otra configuración que afecte al control horario.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public TimeAttendanceConfigurationPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Time Attendance Configuration");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Time Attendance Configuration esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save, que indica que la vista
+     * está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Time Attendance Configuration");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

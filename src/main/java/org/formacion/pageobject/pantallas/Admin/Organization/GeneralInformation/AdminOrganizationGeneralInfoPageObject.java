@@ -27,14 +27,27 @@ public class AdminOrganizationGeneralInfoPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de información general de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminOrganizationGeneralInfoPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(checkEdit,"Pantalla General Info");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de General Info esté completamente cargada.
+     * Se sincroniza verificando la presencia del checkbox de edición.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(checkEdit,"Pantalla General Info");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

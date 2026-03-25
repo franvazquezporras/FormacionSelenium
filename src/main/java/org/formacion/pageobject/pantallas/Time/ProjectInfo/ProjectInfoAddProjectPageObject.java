@@ -19,15 +19,33 @@ public class ProjectInfoAddProjectPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo proyecto
+     * (Add Project) dentro del módulo de Time → Project Info.
+     *
+     * Esta vista permite registrar un proyecto en el sistema, asociarlo a un cliente,
+     * definir su nombre, estado, descripción y cualquier otro parámetro necesario
+     * para su gestión dentro del módulo de proyectos y actividades.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ProjectInfoAddProjectPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Project ");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Add Project esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save, que confirma que
+     * la vista está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Project ");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

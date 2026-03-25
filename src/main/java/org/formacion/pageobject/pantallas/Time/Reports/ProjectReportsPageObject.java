@@ -16,15 +16,28 @@ public class ProjectReportsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Project Report.
+     *
+     * Permite consultar los reportes asociados a proyectos.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ProjectReportsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla Project Report");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Project Report cargue verificando el botón View.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla Project Report");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

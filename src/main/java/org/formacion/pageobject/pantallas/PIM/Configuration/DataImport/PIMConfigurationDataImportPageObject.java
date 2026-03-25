@@ -15,15 +15,32 @@ public class PIMConfigurationDataImportPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de importación de datos
+     * (Data Import) dentro del módulo de configuración de PIM.
+     *
+     * Esta vista permite cargar archivos de importación para registrar o actualizar
+     * información de empleados en bloque, facilitando la administración masiva de datos
+     * mediante plantillas CSV u otros formatos soportados por el sistema.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationDataImportPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnUpload,"Pantalla Data Import");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Data Import esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Upload.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnUpload,"Pantalla Data Import");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

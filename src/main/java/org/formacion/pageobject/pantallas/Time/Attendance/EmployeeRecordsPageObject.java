@@ -15,15 +15,33 @@ public class EmployeeRecordsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de registros de empleados
+     * (Employee Records).
+     *
+     * Esta vista permite visualizar y consultar los registros almacenados
+     * relacionados con empleados, incluyendo información histórica, acciones
+     * realizadas y cualquier dato relevante asociado a los mismos.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeRecordsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla Employee Records");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Employee Records esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón View, que indica que
+     * la vista está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla Employee Records");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

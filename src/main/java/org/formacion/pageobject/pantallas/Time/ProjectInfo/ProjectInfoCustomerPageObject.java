@@ -14,15 +14,33 @@ public class ProjectInfoCustomerPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de gestión de clientes
+     * (Project Info → Customers) dentro del módulo de Time.
+     *
+     * Esta vista permite visualizar, buscar y administrar los clientes
+     * registrados en el sistema. Desde aquí también es posible acceder a la
+     * creación de un nuevo cliente mediante el botón Add.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ProjectInfoCustomerPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnAdd,"Pantalla Project Info Customers");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Project Info Customers esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Add, que confirma que la vista
+     * está lista para interactuar.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnAdd,"Pantalla Project Info Customers");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

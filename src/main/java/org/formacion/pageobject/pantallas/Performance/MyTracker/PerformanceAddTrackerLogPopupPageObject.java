@@ -17,14 +17,32 @@ public class PerformanceAddTrackerLogPopupPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de registro de actividad
+     * de un Tracker (Add Tracker Log) dentro del módulo de Performance.
+     *
+     * Este popup permite añadir una nueva entrada de seguimiento para un tracker,
+     * incluyendo comentarios, fechas y cualquier información relevante asociada
+     * al registro de desempeño del empleado.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PerformanceAddTrackerLogPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Popup Add Tracker Log");}
-    //</editor-fold>
+    /**
+     * Espera a que el popup de Add Tracker Log esté completamente cargado.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Popup Add Tracker Log");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

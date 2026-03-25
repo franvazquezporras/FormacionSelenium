@@ -14,15 +14,28 @@ public class EmployeeTimesheetsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Employee Timesheet.
+     *
+     * Permite consultar las hojas de tiempo de los empleados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public EmployeeTimesheetsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnView,"Pantalla Employee Timesheet");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Employee Timesheet cargue verificando el botón View.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnView,"Pantalla Employee Timesheet");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

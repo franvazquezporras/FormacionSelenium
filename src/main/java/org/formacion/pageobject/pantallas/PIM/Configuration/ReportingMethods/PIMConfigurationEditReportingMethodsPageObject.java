@@ -14,15 +14,31 @@ public class PIMConfigurationEditReportingMethodsPageObject extends BasePageObje
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un método de reporte
+     * (Edit Reporting Method) dentro del módulo de configuración de PIM.
+     *
+     * Esta vista permite modificar un método de reporte existente, ajustando su nombre
+     * u otros atributos configurables utilizados en los procesos de gestión de personal.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationEditReportingMethodsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Reporting Method");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Reporting Method esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Reporting Method");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

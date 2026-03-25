@@ -14,14 +14,28 @@ public class AdminImportLanguagePackagePageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de importación de Language Packages.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminImportLanguagePackagePageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnUpload,"Pantalla Importar Language");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de importación de Language Packages esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Upload.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnUpload,"Pantalla Importar Language");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 // -------------------------

@@ -16,15 +16,28 @@ public class MyTimesheetsEditPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla Edit My Timesheet.
+     *
+     * Permite editar la hoja de tiempo del usuario actual.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public MyTimesheetsEditPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit My Timesheet");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla Edit My Timesheet cargue verificando el botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit My Timesheet");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

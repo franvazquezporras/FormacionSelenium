@@ -20,15 +20,30 @@ public class WorkWeekPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de configuración de la semana laboral (Work Week).
+     *
+     * Esta vista permite definir qué días de la semana son laborables y establecer
+     * la duración correspondiente para cada uno dentro del módulo de Leave.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public WorkWeekPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Work week");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de configuración de la semana laboral esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Work week");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

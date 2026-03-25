@@ -21,15 +21,33 @@ public class LeaveEntitlementsUsageReportPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla del reporte de uso de asignaciones
+     * de permisos (Leave Entitlements Usage Report).
+     *
+     * Esta vista permite generar un informe detallado del uso de los días de permiso
+     * asignados a los empleados, filtrando por período, tipo de ausencia y otros criterios
+     * disponibles dentro del módulo de Leave.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public LeaveEntitlementsUsageReportPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnGenerate,"Pantalla Leave Entitlements Usage Report");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla del reporte de uso de asignaciones de permisos
+     * esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Generate.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnGenerate,"Pantalla Leave Entitlements Usage Report");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

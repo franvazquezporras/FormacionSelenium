@@ -16,15 +16,33 @@ public class PIMConfigurationAddCustomFieldsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo
+     * campo personalizado (Add Custom Field) dentro del módulo de configuración
+     * de PIM.
+     *
+     * Esta vista permite añadir nuevos campos personalizados que pueden ser
+     * utilizados para ampliar la información almacenada sobre los empleados,
+     * permitiendo adaptar el sistema a necesidades específicas de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationAddCustomFieldsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Custom Field");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Add Custom Field esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Custom Field");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

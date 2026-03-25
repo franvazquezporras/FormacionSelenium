@@ -16,15 +16,32 @@ public class PIMConfigurationEditCustomFieldsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un campo
+     * personalizado (Edit Custom Field) dentro del módulo de configuración de PIM.
+     *
+     * Esta vista permite modificar los atributos de un campo personalizado ya
+     * existente, ajustando su etiqueta, tipo, opciones disponibles u otros
+     * parámetros configurables utilizados para ampliar la información de empleados.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationEditCustomFieldsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Custom Field");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Custom Field esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Custom Field");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

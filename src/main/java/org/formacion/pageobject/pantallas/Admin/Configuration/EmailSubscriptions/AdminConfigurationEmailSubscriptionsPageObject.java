@@ -14,14 +14,28 @@ public class AdminConfigurationEmailSubscriptionsPageObject extends BasePageObje
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object de la pantalla de Configuración de Suscripciones de Email.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public AdminConfigurationEmailSubscriptionsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+    // </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSelectSubscriberFirstRegister,"Pantalla Configuracion Email");}
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Configuración de Suscripciones de Email esté completamente cargada.
+     * Se sincroniza verificando la presencia del primer registro seleccionable.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSelectSubscriberFirstRegister,"Pantalla Configuracion Email");
+    }
+    // </editor-fold>
+
 
 
     // <editor-fold desc="Funciones de locators">

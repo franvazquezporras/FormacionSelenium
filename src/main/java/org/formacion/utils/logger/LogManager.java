@@ -13,6 +13,12 @@ import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Gestor centralizado de logs para el framework.
+ *
+ * Configura el logger, crea el fichero de log, aplica el formato personalizado
+ * y expone métodos para registrar mensajes y excepciones.
+ */
 public class LogManager {
     private Logger logger;
     private String nivel;
@@ -20,6 +26,9 @@ public class LogManager {
     private FileHandler handler;
 
 
+    /**
+     * Inicializa el logger, crea el fichero de log y establece el nivel de trazas.
+     */
     public LogManager(){
         try{
             logger = Logger.getLogger(LogManager.class.getName());
@@ -54,6 +63,12 @@ public class LogManager {
             logger.setLevel(Level.OFF);
     }
 
+    /**
+     * Registra un mensaje en el nivel indicado.
+     *
+     * @param nivel    Nivel de log (DEBUG, DETALLE, INFO, ERROR, WARNING…)
+     * @param mensaje  Texto a registrar.
+     */
     public void reporta(String nivel, String mensaje){
         if("DEBUG".equals(nivel))
             this.logger.finest(mensaje+'\n');
@@ -73,7 +88,9 @@ public class LogManager {
     }
 
 
-
+    /**
+     * Cierra el fichero de log y libera recursos.
+     */
     public void cerrarLog(){
         if(this.handler !=null){
             this.handler.close();
@@ -84,6 +101,11 @@ public class LogManager {
         }
     }
 
+    /**
+     * Registra el stack trace completo de una excepción.
+     *
+     * @param e Excepción capturada.
+     */
     public void reportaStackTrace(Exception e){
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
@@ -92,6 +114,10 @@ public class LogManager {
     }
 
 
-
+    /**
+     * Devuelve si existe criticidad configurada.
+     *
+     * @return true si hay criticidad, false en caso contrario.
+     */
     public boolean devuelveCriticidad(){return criticidad;}
 }

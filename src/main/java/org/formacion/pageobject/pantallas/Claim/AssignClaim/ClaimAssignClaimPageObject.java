@@ -17,15 +17,28 @@ public class ClaimAssignClaimPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de asignación de un reclamo.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public ClaimAssignClaimPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtEmployeeName,"Pantalla Assign Claim");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla de asignación de reclamo esté completamente cargada.
+     * Se sincroniza verificando la presencia del campo de nombre del empleado.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtEmployeeName,"Pantalla Assign Claim");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -14,15 +14,33 @@ public class PIMConfigurationEditTerminationsReasonsPageObject extends BasePageO
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de edición de un motivo
+     * de terminación (Edit Termination Reason) dentro del módulo de configuración
+     * de PIM.
+     *
+     * Esta vista permite modificar un motivo de terminación existente, ajustando
+     * su nombre u otros atributos utilizados durante el proceso de finalización
+     * de la relación laboral de un empleado.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMConfigurationEditTerminationsReasonsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Edit Termination Reason");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Edit Termination Reason esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Edit Termination Reason");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

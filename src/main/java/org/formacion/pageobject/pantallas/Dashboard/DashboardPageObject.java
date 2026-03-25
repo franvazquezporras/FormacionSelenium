@@ -13,15 +13,31 @@ public class DashboardPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla principal del Dashboard.
+     *
+     * Esta vista muestra accesos rápidos a los módulos del sistema, así como
+     * información resumida del usuario y sus actividades recientes.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public DashboardPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnTimeAtWork,"Pantalla Dashboard");}
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que la pantalla del Dashboard esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Time At Work.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnTimeAtWork,"Pantalla Dashboard");
+    }
+// </editor-fold>
 
-    //</editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

@@ -21,15 +21,32 @@ public class PIMAddReportsPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para la pantalla de creación de un nuevo reporte
+     * (Add Reports) dentro del módulo de PIM.
+     *
+     * Esta vista permite definir un reporte personalizado, configurando su nombre,
+     * criterios de selección, campos a mostrar y cualquier otro parámetro necesario
+     * para generar informes adaptados a las necesidades de la organización.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public PIMAddReportsPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
     // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(btnSave,"Pantalla Add Reports");}
-
-    //</editor-fold>
+    /**
+     * Espera a que la pantalla de Add Reports esté completamente cargada.
+     * Se sincroniza verificando la presencia del botón Save.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(btnSave,"Pantalla Add Reports");
+    }
+// </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

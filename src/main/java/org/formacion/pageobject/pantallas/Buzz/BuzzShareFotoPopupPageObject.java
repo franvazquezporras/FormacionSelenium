@@ -15,14 +15,28 @@ public class BuzzShareFotoPopupPageObject extends BasePageObject {
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
+    /**
+     * Constructor del Page Object para el popup de compartir una foto en Buzz.
+     *
+     * @param driver    Driver del navegador.
+     * @param log       Gestor de logs.
+     * @param mainClass Clase principal que ejecuta la prueba.
+     */
     public BuzzShareFotoPopupPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-    //</editor-fold>
+// </editor-fold>
 
-    // <editor-fold desc="Sincronizacion">
-    public void esperarSincronizacion(){esperarPagina(txtPost,"Popup Share Foto");}
-    //</editor-fold>
+// <editor-fold desc="Sincronizacion">
+    /**
+     * Espera a que el popup de compartir foto esté completamente cargado.
+     * Se sincroniza verificando la presencia del campo de texto del post.
+     */
+    public void esperarSincronizacion(){
+        esperarPagina(txtPost,"Popup Share Foto");
+    }
+// </editor-fold>
+
 
     // <editor-fold desc="Funciones de locators">
 
