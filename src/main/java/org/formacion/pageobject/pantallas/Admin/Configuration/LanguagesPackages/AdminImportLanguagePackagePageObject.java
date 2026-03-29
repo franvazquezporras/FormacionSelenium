@@ -9,7 +9,7 @@ public class AdminImportLanguagePackagePageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
     private By txtCargarFichero = By.xpath("");
-    private By btnUpload = By.xpath("");
+    private By btnUpload = By.cssSelector("button[type='submit']");
     private By btnDownload = By.xpath("");
     //</editor-fold>
 

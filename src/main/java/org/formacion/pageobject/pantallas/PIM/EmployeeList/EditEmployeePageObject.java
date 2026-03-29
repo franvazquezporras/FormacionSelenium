@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class EditEmployeePageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnPersonalDetails = By.xpath("");
+    private By btnPersonalDetails = By.xpath("//a[contains(@href, '/web/index.php/pim/viewPersonalDetails/empNumber')]");
     private By btnContactDetails = By.xpath("");
     private By btnEmergencyContact = By.xpath("");
     private By btnDependents = By.xpath("");

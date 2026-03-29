@@ -2,25 +2,26 @@ package org.formacion.pageobject.pantallas.Admin.UserManagement;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AdminUsersPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By txtUsername = By.xpath("");
-    private By listaRol = By.xpath("");
-    private By txtEmployeename = By.xpath("");
-    private By listaStatus = By.xpath("");
+    private By txtUsername = By.xpath("//div[div/label[contains(normalize-space(.), '" + LanguageManager.get("admin.user.username.filter") + "')]]/div/input");
+    private By listaRol = By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space'][div/label[normalize-space(.)='" + LanguageManager.get("admin.user.rol.filter") + "']]//div[contains(@class,'oxd-select-text')][i]");
+    private By txtEmployeename = By.xpath("//div[@class='oxd-autocomplete-text-input oxd-autocomplete-text-input--active']/input");
+    private By listaStatus = By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space'][div/label[normalize-space(.)='" + LanguageManager.get("admin.user.status.filter") + "']]//div[contains(@class,'oxd-select-text')][i]");
 
-    private By btnSearch = By.xpath("");
-    private By btnReset = By.xpath("");
+    private By btnSearch = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary[type='submit']");
+    private By btnReset = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
 
-    private By btnAgregar = By.xpath("");
-    private By btnEliminar = By.xpath("");
-    private By btnEliminarSeleccionados = By.xpath("");
-    private By btnEditar = By.xpath("");
-    private By checkPrimerRegistro = By.xpath("");
+    private By btnAgregar = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary[type='button']");
+    private By btnEliminar = By.xpath("//div[1][@class='oxd-table-card']//button[i[@class='oxd-icon bi-trash']]");
+    private By btnEliminarSeleccionados = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-horizontal-margin']");
+    private By btnEditar = By.xpath("//div[1][@class='oxd-table-card']//button[i[@class='oxd-icon bi-pencil-fill']]");
+    private By checkPrimerRegistro = By.xpath("//div[@class='oxd-table-card']//input[@type='checkbox']");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

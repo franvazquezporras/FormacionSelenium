@@ -9,7 +9,7 @@ public class AdminAddLanguagePackagePageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
     private By listaName = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
 
     //</editor-fold>

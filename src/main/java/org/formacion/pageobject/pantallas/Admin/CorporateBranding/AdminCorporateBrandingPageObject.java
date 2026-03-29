@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class AdminCorporateBrandingPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnPublish = By.xpath("");
+    private By btnPublish = By.xpath("button[type='submit']");
     private By btnPreview = By.xpath("");
     private By btnResetToDefault = By.xpath("");
     private By txtClientLogo = By.xpath("");

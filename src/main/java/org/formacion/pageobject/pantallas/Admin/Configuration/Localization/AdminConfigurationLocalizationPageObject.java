@@ -2,15 +2,16 @@ package org.formacion.pageobject.pantallas.Admin.Configuration.Localization;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AdminConfigurationLocalizationPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSave = By.xpath("");
-    private By listaLanguage = By.xpath("");
-    private By listaDateFormat = By.xpath("");
+    private By btnSave = By.xpath("button[type='submit']");
+    private By listaLanguage = By.xpath("//div[div/label[contains(text(),'" + LanguageManager.get("language.selector") + "')]]//div[@class='oxd-select-text--after']");
+    private By listaDateFormat = By.xpath("//div[div/label[contains(text(),'" + LanguageManager.get("date.format.selector") + "')]]//div[@class='oxd-select-text--after']");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
@@ -35,7 +36,6 @@ public class AdminConfigurationLocalizationPageObject extends BasePageObject {
         esperarPagina(btnSave,"Pantalla LDAP Configuracion");
     }
     // </editor-fold>
-
 
     // <editor-fold desc="Funciones de locators">
 

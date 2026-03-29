@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class AdminAddJobTitlesPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
     private By txtJobTitle = By.xpath("");
     private By txtJobDescription = By.xpath("");

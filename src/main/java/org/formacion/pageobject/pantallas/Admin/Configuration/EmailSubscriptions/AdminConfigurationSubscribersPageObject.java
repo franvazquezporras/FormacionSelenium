@@ -12,7 +12,7 @@ public class AdminConfigurationSubscribersPageObject extends BasePageObject {
     private By btnEliminarRegistrosSeleccionados = By.xpath("");
     private By btnEliminarRegistro = By.xpath("");
     private By btnEditarRegistro = By.xpath("");
-    private By btnAgregarSubscriber = By.xpath("");
+    private By btnAgregarSubscriber = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary");
 
     //</editor-fold>
 

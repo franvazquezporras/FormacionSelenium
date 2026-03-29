@@ -2,24 +2,25 @@ package org.formacion.pageobject.menus;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PIMMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnConfiguration = By.xpath("");
-    private By btnConfigurationOptionalFields = By.xpath("");
-    private By btnConfigurationCustomFields = By.xpath("");
-    private By btnConfigurationDataImport = By.xpath("");
-    private By btnConfigurationReportingMethods = By.xpath("");
-    private By btnConfigurationTerminationReasons = By.xpath("");
+    private By btnConfiguration = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration") + "')]]");
+    private By btnConfigurationOptionalFields = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration.optionalFields") + "')]");
+    private By btnConfigurationCustomFields = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration.customFields") + "')]");
+    private By btnConfigurationDataImport = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration.dataImport") + "')]");
+    private By btnConfigurationReportingMethods = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration.reportingMethods") + "')]");
+    private By btnConfigurationTerminationReasons = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.configuration.terminationReasons") + "')]");
 
-    private By btnEmployeeList = By.xpath("");
+    private By btnEmployeeList = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.employeeList") + "')]");
 
-    private By btnAddEmployee = By.xpath("");
+    private By btnAddEmployee = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.addEmployee") + "')]");
 
-    private By btnReports = By.xpath("");
+    private By btnReports = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("pim.menu.reports") + "')]");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

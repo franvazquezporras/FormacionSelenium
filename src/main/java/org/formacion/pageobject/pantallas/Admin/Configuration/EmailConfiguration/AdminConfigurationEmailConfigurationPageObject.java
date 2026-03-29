@@ -19,8 +19,8 @@ public class AdminConfigurationEmailConfigurationPageObject extends BasePageObje
     private By checkTLS = By.xpath("");
     private By checkSendTestMail = By.xpath("");
 
-    private By btnSave = By.xpath("");
-    private By btnReset = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
+    private By btnReset = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
@@ -42,7 +42,7 @@ public class AdminConfigurationEmailConfigurationPageObject extends BasePageObje
      * Se sincroniza verificando la presencia del campo "Mail Sent As".
      */
     public void esperarSincronizacion(){
-        esperarPagina(txtMailSentAs,"Pantalla Configuracion Email");
+        esperarPagina(btnSave,"Pantalla Configuracion Email");
     }
     // </editor-fold>
 

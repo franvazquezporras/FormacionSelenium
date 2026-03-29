@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class AdminQualificationsEditSkillPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
     private By txtName = By.xpath("");
     private By txtDescription = By.xpath("");
@@ -27,7 +27,7 @@ public class AdminQualificationsEditSkillPageObject extends BasePageObject {
     }
 // </editor-fold>
 
-// <editor-fold desc="Sincronizacion">
+    // <editor-fold desc="Sincronizacion">
     /**
      * Espera a que la pantalla de edición de Skill esté completamente cargada.
      * Se sincroniza verificando la presencia del botón Save.

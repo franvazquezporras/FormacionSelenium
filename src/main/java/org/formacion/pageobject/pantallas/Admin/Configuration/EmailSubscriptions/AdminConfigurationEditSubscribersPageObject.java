@@ -10,8 +10,8 @@ public class AdminConfigurationEditSubscribersPageObject extends BasePageObject 
     // <editor-fold desc="Locators">
     private By txtEmail = By.xpath("");
     private By txtName = By.xpath("");
-    private By btnCancelar = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnCancelar = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
+    private By btnSave = By.cssSelector("button[type='submit']");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

@@ -2,30 +2,31 @@ package org.formacion.pageobject.menus;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TimeMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnTimesheets = By.xpath("");
-    private By btnTimesheetsMyTimesheets = By.xpath("");
-    private By btnTimesheetsEmployeeTimesheets = By.xpath("");
+    private By btnTimesheets = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("time.menu.timesheets") + "')]]");
+    private By btnTimesheetsMyTimesheets = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.timesheets.myTimesheets") + "')]");
+    private By btnTimesheetsEmployeeTimesheets = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.timesheets.employeeTimesheets") + "')]");
 
-    private By btnAttendance = By.xpath("");
-    private By btnAttendanceMyRecords = By.xpath("");
-    private By btnAttendancePunchInOut = By.xpath("");
-    private By btnAttendanceEmployeeRecords = By.xpath("");
-    private By btnAttendanceConfiguration = By.xpath("");
+    private By btnAttendance = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("time.menu.attendance") + "')]]");
+    private By btnAttendanceMyRecords = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.attendance.myRecords") + "')]");
+    private By btnAttendancePunchInOut = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.attendance.punchInOut") + "')]");
+    private By btnAttendanceEmployeeRecords = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.attendance.employeeRecords") + "')]");
+    private By btnAttendanceConfiguration = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.attendance.configuration") + "')]");
 
-    private By btnReports = By.xpath("");
-    private By btnReportsProjectReports = By.xpath("");
-    private By btnReportsEmployeeReports = By.xpath("");
-    private By btnReportsAttendanceSummary = By.xpath("");
+    private By btnReports = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("time.menu.reports") + "')]]");
+    private By btnReportsProjectReports = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.reports.projectReports") + "')]");
+    private By btnReportsEmployeeReports = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.reports.employeeReports") + "')]");
+    private By btnReportsAttendanceSummary = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.reports.attendanceSummary") + "')]");
 
-    private By btnProjectInfo = By.xpath("");
-    private By btnProjectInfoCustomers = By.xpath("");
-    private By btnProjectInfoProjects = By.xpath("");
+    private By btnProjectInfo = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("time.menu.projectInfo") + "')]]");
+    private By btnProjectInfoCustomers = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.projectInfo.customers") + "')]");
+    private By btnProjectInfoProjects = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("time.menu.projectInfo.projects") + "')]");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

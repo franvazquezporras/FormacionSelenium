@@ -2,47 +2,48 @@ package org.formacion.pageobject.menus;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AdminMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnUserManagment = By.xpath("");
-    private By btnUserManagmentUsers = By.xpath("");
+    private By btnUserManagment =  By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("admin.menu.userManagement") + "')]]");
+    private By btnUserManagmentUsers = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.userManagement.user") + "')]");
 
-    private By btnJob = By.xpath("");
-    private By btnJobJobTitles = By.xpath("");
-    private By btnJobPayGrades = By.xpath("");
-    private By btnJobEmploymentStatus = By.xpath("");
-    private By btnJobJobCategories = By.xpath("");
-    private By btnJobWorkShifts = By.xpath("");
+    private By btnJob = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job") + "')]]");
+    private By btnJobJobTitles = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job.jobTitle") + "')]");
+    private By btnJobPayGrades = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job.payGrades") + "')]");
+    private By btnJobEmploymentStatus = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job.employeeStatus") + "')]");
+    private By btnJobJobCategories = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job.jobCategories") + "')]");
+    private By btnJobWorkShifts = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.job.workShifts") + "')]");
 
-    private By btnOrganization = By.xpath("");
-    private By btnOrganizationGeneralInformation = By.xpath("");
-    private By btnOrganizationLocations = By.xpath("");
-    private By btnOrganizationStructure = By.xpath("");
+    private By btnOrganization = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("admin.menu.organization") + "')]]");
+    private By btnOrganizationGeneralInformation = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.organization.generalInformation") + "')]");
+    private By btnOrganizationLocations = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.organization.locations") + "')]");
+    private By btnOrganizationStructure = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.organization.structure") + "')]");
 
-    private By btnQualifications = By.xpath("");
-    private By btnQualificationsSkills = By.xpath("");
-    private By btnQualificationsEducation = By.xpath("");
-    private By btnQualificationsLicenses = By.xpath("");
-    private By btnQualificationsLanguages = By.xpath("");
-    private By btnQualificationsMemberships = By.xpath("");
+    private By btnQualifications = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications") + "')]]");
+    private By btnQualificationsSkills = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications.skills") + "')]");
+    private By btnQualificationsEducation = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications.education") + "')]");
+    private By btnQualificationsLicenses = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications.licenses") + "')]");
+    private By btnQualificationsLanguages = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications.languages") + "')]");
+    private By btnQualificationsMemberships = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.qualifications.membership") + "')]");
 
-    private By btnNationalities = By.xpath("");
+    private By btnNationalities = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.nationalities") + "')]");
 
-    private By btnCorporateBranding = By.xpath("");
+    private By btnCorporateBranding = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.corporateBranding") + "')]");
 
-    private By btnConfiguration = By.xpath("");
-    private By btnConfigurationEmailConfiguration = By.xpath("");
-    private By btnConfigurationEmailSubscriptions = By.xpath("");
-    private By btnConfigurationLocalization = By.xpath("");
-    private By btnConfigurationLanguagePackages = By.xpath("");
-    private By btnConfigurationModules = By.xpath("");
-    private By btnConfigurationSocialMediaAuthentication = By.xpath("");
-    private By btnConfigurationRegisterOAuthClient = By.xpath("");
-    private By btnConfigurationLDAPConfiguration = By.xpath("");
+    private By btnConfiguration = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration") + "')]]");
+    private By btnConfigurationEmailConfiguration = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.emailConfiguration") + "')]");
+    private By btnConfigurationEmailSubscriptions = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.emailSubscription") + "')]");
+    private By btnConfigurationLocalization = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.localization") + "')]");
+    private By btnConfigurationLanguagePackages = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.languagePackage") + "')]");
+    private By btnConfigurationModules = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.modules") + "')]");
+    private By btnConfigurationSocialMediaAuthentication = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.socialMediaAuthentication") + "')]");
+    private By btnConfigurationRegisterOAuthClient = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.registerOauthClient") + "')]");
+    private By btnConfigurationLDAPConfiguration = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("admin.menu.configuration.LDAPConfiguration") + "')]");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

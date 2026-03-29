@@ -17,7 +17,7 @@ public class AdminOrganizationEditLocationPageObject extends BasePageObject {
     private By txtFax = By.xpath("");
     private By txtAddress = By.xpath("");
     private By txtNotes = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
     //</editor-fold>
 

@@ -18,7 +18,7 @@ public class AdminTranslateLanguagePackagePageObject extends BasePageObject {
 
 
     private By btnCancel = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     //</editor-fold>
 
 // <editor-fold desc="Constructor">

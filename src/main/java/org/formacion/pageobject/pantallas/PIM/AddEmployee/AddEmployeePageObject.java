@@ -2,24 +2,25 @@ package org.formacion.pageobject.pantallas.PIM.AddEmployee;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AddEmployeePageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By txtFirstName = By.xpath("");
-    private By txtMidleName = By.xpath("");
-    private By txtLastName = By.xpath("");
+    private By txtFirstName = By.cssSelector("input.orangehrm-firstname");
+    private By txtMidleName = By.cssSelector("input.orangehrm-middlename");
+    private By txtLastName = By.cssSelector("input.orangehrm-lastname");
     private By txtEmployeeID = By.xpath("");
-    private By checkLoginDetails = By.xpath("");
-    private By txtUserName = By.xpath("");
-    private By txtPassword = By.xpath("");
-    private By txtRepeatPassword = By.xpath("");
+    private By checkLoginDetails = By.cssSelector("div.oxd-switch-wrapper");
+    private By txtUserName = By.xpath("//div[div/label[contains(normalize-space(.), '" + LanguageManager.get("admin.user.username.filter") + "')]]/div/input");
+    private By txtPassword = By.xpath("//div[div/label[text()='" + LanguageManager.get("employee.user.password") + "']]/div/input");
+    private By txtRepeatPassword = By.xpath("//div[div/label[text()='" + LanguageManager.get("employee.user.repeat.password") + "']]/div/input");
     private By checkStatusEnable = By.xpath("");
     private By checkStatusDisabled = By.xpath("");
-    private By btnSave = By.xpath("");
-    private By btnCancel = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
+    private By btnCancel = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

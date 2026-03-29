@@ -32,8 +32,8 @@ public class AdminConfigurationLDAPPageObject extends BasePageObject {
     private By checkMergeLDAPUsers = By.xpath("");
     private By txtSyncInterval = By.xpath("");
 
-    private By btnSave = By.xpath("");
-    private By btnTestConnection = By.xpath("");
+    private By btnSave = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space");
+    private By btnTestConnection = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--ghost");
 
     //</editor-fold>
 

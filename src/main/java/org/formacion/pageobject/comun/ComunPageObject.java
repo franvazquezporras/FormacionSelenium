@@ -13,29 +13,29 @@ public class ComunPageObject extends BasePageObject {
 
 
     // <editor-fold desc="Locators">
-    private By txtMenuLateralSearch = By.xpath("");
-    private By btnMenuLateralAdmin = By.xpath("");
-    private By btnMenuLateralPIM = By.xpath("");
-    private By btnMenuLateralLeave = By.xpath("");
-    private By btnMenuLateralTime = By.xpath("");
-    private By btnMenuLateralRecruitment = By.xpath("");
-    private By btnMenuLateralMyInfo = By.xpath("");
-    private By btnMenuLateralPerformance = By.xpath("");
-    private By btnMenuLateralDashboard = By.xpath("");
-    private By btnMenuLateralDirectory = By.xpath("");
-    private By btnMenuLateralMaintenance = By.xpath("");
-    private By btnMenuLateralClaim = By.xpath("");
-    private By btnMenuLateralBuzz = By.xpath("");
-    private By btnMenuLateralShowHide = By.xpath("");
+    private By txtMenuLateralSearch = By.xpath("//aside[@class='oxd-sidepanel']//div[@class='oxd-main-menu-search']/input");
+    private By btnMenuLateralAdmin = By.xpath("//a[@href='/web/index.php/admin/viewAdminModule']");
+    private By btnMenuLateralPIM = By.xpath("//a[@href='/web/index.php/pim/viewPimModule']");
+    private By btnMenuLateralLeave = By.xpath("//a[@href='/web/index.php/leave/viewLeaveModule']");
+    private By btnMenuLateralTime = By.xpath("//a[@href='/web/index.php/time/viewTimeModule']");
+    private By btnMenuLateralRecruitment = By.xpath("//a[@href='/web/index.php/recruitment/viewRecruitmentModule']");
+    private By btnMenuLateralMyInfo = By.xpath("//a[@href='/web/index.php/pim/viewMyDetails']");
+    private By btnMenuLateralPerformance = By.xpath("//a[@href='/web/index.php/performance/viewPerformanceModule']");
+    private By btnMenuLateralDashboard = By.xpath("//a[@href='/web/index.php/dashboard/index']");
+    private By btnMenuLateralDirectory = By.xpath("//a[@href='/web/index.php/directory/viewDirectory']");
+    private By btnMenuLateralMaintenance = By.xpath("//a[@href='/web/index.php/maintenance/viewMaintenanceModule']");
+    private By btnMenuLateralClaim = By.xpath("//a[@href='/web/index.php/claim/viewClaimModule']");
+    private By btnMenuLateralBuzz = By.xpath("//a[@href='/web/index.php/buzz/viewBuzz']");
+    private By btnMenuLateralShowHide = By.xpath("//aside//button");
 
-    private By txtBarraSuperiorNameScreen = By.xpath("");
-    private By btnBarraSuperiorUpgrade = By.xpath("");
-    private By btnBarraSuperiorMenuUsuario = By.xpath("");
-    private By btnBarraSuperiorMenuUsuarioAbout = By.xpath("");
-    private By btnBarraSuperiorMenuUsuarioSupport = By.xpath("");
-    private By btnBarraSuperiorMenuUsuarioChangePassword = By.xpath("");
-    private By btnBarraSuperiorMenuUsuarioLogout = By.xpath("");
-    private By btnBarraSuperiorHelp = By.xpath("");
+    private By txtBarraSuperiorNameScreen = By.xpath("//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']");
+    private By btnBarraSuperiorUpgrade = By.xpath("//a[@href='https://orangehrm.com/open-source/upgrade-to-advanced']/button");
+    private By btnBarraSuperiorMenuUsuario = By.xpath("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']");
+    private By btnBarraSuperiorMenuUsuarioAbout = By.xpath("//a[@href='#']");
+    private By btnBarraSuperiorMenuUsuarioSupport = By.xpath("//a[@href='/web/index.php/help/support']");
+    private By btnBarraSuperiorMenuUsuarioChangePassword = By.xpath("//a[@href='/web/index.php/pim/updatePassword']");
+    private By btnBarraSuperiorMenuUsuarioLogout = By.xpath("//a[@href='/web/index.php/auth/logout']");
+    private By btnBarraSuperiorHelp = By.xpath("//button[@title='Help']");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

@@ -110,16 +110,37 @@ public class BasePageObject {
         return false;
     }
 
-    protected boolean seleccionarOpcion(By by,String opcion){
-    try{
-        WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(40));
-        wait.until(ExpectedConditions.elementToBeClickable(by));
-        WebElement box = driver.findElement(by);
-        Select selectBox = new Select(box);
-        selectBox.selectByVisibleText(opcion);
-        return true;
-    }catch (Exception e){
-        return reportaError(opcion,by.toString());
-    }
+//    protected boolean seleccionarOpcion(By by,String opcion){
+//    try{
+//        WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(40));
+//        wait.until(ExpectedConditions.elementToBeClickable(by));
+//        WebElement box = driver.findElement(by);
+//        Select selectBox = new Select(box);
+//        selectBox.selectByVisibleText(opcion);
+//        return true;
+//    }catch (Exception e){
+//        return reportaError(opcion,by.toString());
+//    }
+//    }
+
+    protected boolean seleccionarOpcion(By by, String opcion){
+        try{
+            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(40));
+
+            // 1. Abrir el desplegable
+            WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(by));
+            dropdown.click();
+
+            // 2. Localizar la opción por texto
+            By opcionBy = By.xpath("//div[contains(@class,'oxd-select-option')][normalize-space(.)='" + opcion + "']");
+
+            WebElement option = wait.until(ExpectedConditions.elementToBeClickable(opcionBy));
+            option.click();
+
+            return true;
+
+        }catch(Exception e){
+            return reportaError(opcion, by.toString());
+        }
     }
 }

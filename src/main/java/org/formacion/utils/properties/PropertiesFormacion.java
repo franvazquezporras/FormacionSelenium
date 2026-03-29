@@ -18,4 +18,12 @@ public class PropertiesFormacion {
     //datos usuarios
     public static final String USERNAME = pm.leerPropiedad("username");
     public static final String PASSWORD = pm.leerPropiedad("password");
+
+    //Datos para agregar empleado
+    public static final String FIRSTNAME = pm.leerPropiedad("firstname");
+    public static final String MIDNAME = pm.leerPropiedad("midname");
+    public static final String LASTNAME = pm.leerPropiedad("lastname");
+    public static final String USERID = pm.leerPropiedad("user");
+    public static final String PASS = pm.leerPropiedad("pass");
+
 }

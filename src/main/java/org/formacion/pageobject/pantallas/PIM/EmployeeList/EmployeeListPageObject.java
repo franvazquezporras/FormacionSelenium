@@ -2,20 +2,21 @@ package org.formacion.pageobject.pantallas.PIM.EmployeeList;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class EmployeeListPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnAgregar = By.xpath("");
-    private By btnEliminar = By.xpath("");
+    private By btnAgregar = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary[type='button']");
+    private By btnEliminar = By.xpath("//div[1][@class='oxd-table-card']//button[i[@class='oxd-icon bi-trash']]");
     private By btnEliminarSeleccionados = By.xpath("");
     private By btnEditar = By.xpath("");
     private By checkPrimerRegistro = By.xpath("");
-    private By btnSearch = By.xpath("");
+    private By btnSearch = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary[type='submit']");
     private By btnReset = By.xpath("");
-    private By txtEmployeeName = By.xpath("");
+    private By txtEmployeeName = By.xpath("//div[div/label[contains(normalize-space(.), '" + LanguageManager.get("employeelist.name.employee") + "')]]//div/input");
     private By txtEmployeeID = By.xpath("");
     private By listaEmplymentStatus = By.xpath("");
     private By listaInclude = By.xpath("");

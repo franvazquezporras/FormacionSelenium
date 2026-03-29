@@ -8,9 +8,8 @@ import org.openqa.selenium.WebDriver;
 public class AdminEditPayGradesPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSavePayGrade = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancelPayGrade = By.xpath("");
-    private By btnSaveCurrency = By.xpath("");
     private By btnCancelCurrency = By.xpath("");
     private By btnAgregarCurrency = By.xpath("");
     private By btnBorrarSeleccionadosCurrency = By.xpath("");
@@ -41,7 +40,7 @@ public class AdminEditPayGradesPageObject extends BasePageObject {
      * Se sincroniza verificando la presencia del botón Save.
      */
     public void esperarSincronizacion(){
-        esperarPagina(btnSavePayGrade,"Pantalla Editar Pay Grade");
+        esperarPagina(btnSave,"Pantalla Editar Pay Grade");
     }
 // </editor-fold>
 
@@ -104,9 +103,9 @@ public class AdminEditPayGradesPageObject extends BasePageObject {
      * Realiza clic en el botón Save del Pay Grade.
      * Guarda los cambios generales del Pay Grade.
      */
-    public void pulsarBotonSavePayGrade(){
-        esClickeable(btnSavePayGrade);
-        clickElemento(btnSavePayGrade, "Pulsar botón Save Pay Grade");
+    public void pulsarBotonSave(){
+        esClickeable(btnSave);
+        clickElemento(btnSave, "Pulsar botón Save");
     }
 
     /**
@@ -121,15 +120,6 @@ public class AdminEditPayGradesPageObject extends BasePageObject {
 // -------------------------
 // BOTONES CURRENCY
 // -------------------------
-
-    /**
-     * Realiza clic en el botón Save de Currency.
-     * Guarda los valores de salario mínimo y máximo para la moneda seleccionada.
-     */
-    public void pulsarBotonSaveCurrency(){
-        esClickeable(btnSaveCurrency);
-        clickElemento(btnSaveCurrency, "Pulsar botón Save Currency");
-    }
 
     /**
      * Realiza clic en el botón Cancel de Currency.

@@ -2,15 +2,16 @@ package org.formacion.pageobject.menus;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RecruitmentMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnCandidates = By.xpath("");
+    private By btnCandidates = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("recruitment.menu.candidates") + "')]");
 
-    private By btnVacancies = By.xpath("");
+    private By btnVacancies = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("recruitment.menu.vacancies") + "')]");
 
     //</editor-fold>
 

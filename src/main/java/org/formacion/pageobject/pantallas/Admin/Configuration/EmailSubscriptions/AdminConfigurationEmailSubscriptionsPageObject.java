@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 public class AdminConfigurationEmailSubscriptionsPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSelectSubscriberFirstRegister = By.xpath("");
-    private By checkActiveSubscriberFirstRegister = By.xpath("");
+    private By btnSelectSubscriberFirstRegister = By.xpath("//div[@class='oxd-table-card'][1]//button");
+    private By checkActiveSubscriberFirstRegister = By.xpath("//div[@class='oxd-table-card'][1]//input");
 
     //</editor-fold>
 

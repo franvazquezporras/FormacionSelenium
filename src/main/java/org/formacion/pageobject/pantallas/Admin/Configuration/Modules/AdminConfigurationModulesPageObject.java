@@ -2,24 +2,25 @@ package org.formacion.pageobject.pantallas.Admin.Configuration.Modules;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AdminConfigurationModulesPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnSave = By.xpath("");
-    private By checkAdminModule = By.xpath("");
-    private By checkPimModule = By.xpath("");
-    private By checkLeaveModule = By.xpath("");
-    private By checkTimeModule = By.xpath("");
-    private By checkRecruitmentModule = By.xpath("");
-    private By checkPerformanceModule = By.xpath("");
-    private By checkDirectoryModule = By.xpath("");
-    private By checkMaintenanceModule = By.xpath("");
-    private By checkMobile = By.xpath("");
-    private By checkClaimModule = By.xpath("");
-    private By checkBuzz = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
+    private By checkAdminModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.admin.module") + "')]]//input");
+    private By checkPimModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.pim.module") + "')]]//input");
+    private By checkLeaveModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.leave.module") + "')]]//input");
+    private By checkTimeModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.time.module") + "')]]//input");
+    private By checkRecruitmentModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.recruitment.module") + "')]]//input");
+    private By checkPerformanceModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.performance.module") + "')]]//input");
+    private By checkDirectoryModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.directory.module") + "')]]//input");
+    private By checkMaintenanceModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.maintenance.module") + "')]]//input");
+    private By checkMobile = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.mobile") + "')]]//input");
+    private By checkClaimModule = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.claim.module") + "')]]//input");
+    private By checkBuzz = By.xpath("//div[p[contains(normalize-space(.), '" + LanguageManager.get("check.buzz.module") + "')]]//input");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
@@ -35,7 +36,7 @@ public class AdminConfigurationModulesPageObject extends BasePageObject {
     }
 // </editor-fold>
 
-// <editor-fold desc="Sincronizacion">
+    // <editor-fold desc="Sincronizacion">
     /**
      * Espera a que la pantalla de configuración de módulos esté completamente cargada.
      * Se sincroniza verificando la presencia del botón Save.
@@ -44,7 +45,6 @@ public class AdminConfigurationModulesPageObject extends BasePageObject {
         esperarPagina(btnSave,"Pantalla LDAP Configuracion");
     }
 // </editor-fold>
-
 
     // <editor-fold desc="Funciones de locators">
 

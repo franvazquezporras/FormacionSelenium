@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class AdminLanguagesPackagesPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnAgregar = By.xpath("");
+    private By btnAgregar = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary");
 
     private By checkPrimerRegistro = By.xpath("");
     private By btnEliminarSeleccionados = By.xpath("");

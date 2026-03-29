@@ -15,7 +15,7 @@ public class AdminEditUsersPageObject extends BasePageObject {
     private By checkChangePassword = By.xpath("");
     private By txtPassword = By.xpath("");
     private By txtRepeatPassword = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
     //</editor-fold>
 

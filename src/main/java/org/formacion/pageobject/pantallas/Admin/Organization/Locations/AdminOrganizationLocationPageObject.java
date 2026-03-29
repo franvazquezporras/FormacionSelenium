@@ -9,7 +9,7 @@ public class AdminOrganizationLocationPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
     private By btnAgregarLocation = By.xpath("");
-    private By btnSearch = By.xpath("");
+    private By btnSearch = By.cssSelector("button[type='submit']");
     private By btnReset = By.xpath("");
     private By btnEliminar = By.xpath("");
     private By btnEliminarSeleccionados = By.xpath("");

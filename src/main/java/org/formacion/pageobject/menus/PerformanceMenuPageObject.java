@@ -2,24 +2,25 @@ package org.formacion.pageobject.menus;
 
 import org.formacion.pageobject.general.BasePageObject;
 import org.formacion.utils.logger.LogManager;
+import org.formacion.utils.properties.LanguageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PerformanceMenuPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnConfigure = By.xpath("");
-    private By btnConfigureKPIs = By.xpath("");
-    private By btnConfigureTrackers = By.xpath("");
+    private By btnConfigure = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("performance.menu.configure") + "')]]");
+    private By btnConfigureKPIs = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.configure.kpis") + "')]");
+    private By btnConfigureTrackers = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.configure.trackers") + "')]");
 
-    private By btnManageReviews = By.xpath("");
-    private By btnManageReviewsManageReviews = By.xpath("");
-    private By btnManageReviewsMyReviews = By.xpath("");
-    private By btnManageReviewsEmployeeReviews = By.xpath("");
+    private By btnManageReviews = By.xpath("//li[span[contains(normalize-space(),'" + LanguageManager.get("performance.menu.manageReviews") + "')]]");
+    private By btnManageReviewsManageReviews = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.manageReviews.manageReviews") + "')]");
+    private By btnManageReviewsMyReviews = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.manageReviews.myReviews") + "')]");
+    private By btnManageReviewsEmployeeReviews = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.manageReviews.employeeReviews") + "')]");
 
-    private By btnMyTrackers = By.xpath("");
+    private By btnMyTrackers = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.myTrackers") + "')]");
 
-    private By btnEmployeeTrackers = By.xpath("");
+    private By btnEmployeeTrackers = By.xpath("//a[contains(normalize-space(),'" + LanguageManager.get("performance.menu.employeeTrackers") + "')]");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">

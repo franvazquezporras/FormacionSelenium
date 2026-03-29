@@ -14,7 +14,7 @@ public class AdminAddUsersPageObject extends BasePageObject {
     private By listaStatus = By.xpath("");
     private By txtPassword = By.xpath("");
     private By txtRepeatPassword = By.xpath("");
-    private By btnSave = By.xpath("");
+    private By btnSave = By.cssSelector("button[type='submit']");
     private By btnCancel = By.xpath("");
 
 
@@ -31,9 +31,9 @@ public class AdminAddUsersPageObject extends BasePageObject {
     public AdminAddUsersPageObject(WebDriver driver, LogManager log, String mainClass){
         super(driver, log, mainClass);
     }
-// </editor-fold>
+    // </editor-fold>
 
-// <editor-fold desc="Sincronizacion">
+    // <editor-fold desc="Sincronizacion">
     /**
      * Espera a que la pantalla de creación de usuario esté completamente cargada.
      * Se sincroniza verificando la presencia del botón Save.
@@ -41,8 +41,7 @@ public class AdminAddUsersPageObject extends BasePageObject {
     public void esperarSincronizacion(){
         esperarPagina(btnSave,"Pantalla Agregar Usuario");
     }
-// </editor-fold>
-
+    // </editor-fold>
 
     // <editor-fold desc="Funciones de locators">
 

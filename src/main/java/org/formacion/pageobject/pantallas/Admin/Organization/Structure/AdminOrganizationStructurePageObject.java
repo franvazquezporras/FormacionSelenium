@@ -8,8 +8,8 @@ import org.openqa.selenium.WebDriver;
 public class AdminOrganizationStructurePageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By checkEditar = By.xpath("");
-    private By btnAgregar = By.xpath("");
+    private By checkEditar = By.cssSelector("input[type='checkbox']");
+    private By btnAgregar = By.cssSelector("button.oxd-button.oxd-button--medium.oxd-button--secondary");
     private By btnEliminarStructure = By.xpath("");
     private By btnAgregarAStructure = By.xpath("");
     private By btnEditarStructure = By.xpath("");

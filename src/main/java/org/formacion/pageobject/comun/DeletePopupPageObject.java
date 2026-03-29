@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 public class DeletePopupPageObject extends BasePageObject {
 
     // <editor-fold desc="Locators">
-    private By btnYes = By.xpath("");
-    private By btnNo = By.xpath("");
-    private By txtDescription = By.xpath("");
+    private By btnYes = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--ghost orangehrm-button-margin']");
+    private By btnNo = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']");
+    private By txtDescription = By.xpath("//p[@class='oxd-text oxd-text--p oxd-text--card-body']");
     //</editor-fold>
 
     // <editor-fold desc="Constructor">
@@ -33,7 +33,14 @@ public class DeletePopupPageObject extends BasePageObject {
      */
     public void esperarSincronizacion(){esperarPagina(txtDescription,"Popup Eliminar");}
     //</editor-fold>
-
+// <editor-fold desc="Getters">
+    /**
+     * Devuelve el locator de la descripcion del popup de eliminar.
+     *
+     * @return Locator dela descripcion del popup de eliminar.
+     */
+    public By gettxtDescription(){return txtDescription;}
+    //</editor-fold>
     // <editor-fold desc="Funciones de locators">
 
 // -------------------------
