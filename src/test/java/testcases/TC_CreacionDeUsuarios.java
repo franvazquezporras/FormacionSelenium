@@ -1,5 +1,6 @@
 package testcases;
 
+import io.qameta.allure.*;
 import org.formacion.base.TestCaseBase;
 import org.formacion.pageobject.acceso.LoginPageObject;
 import org.formacion.pageobject.comun.ComunPageObject;
@@ -9,15 +10,24 @@ import org.formacion.pageobject.pantallas.Admin.UserManagement.AdminUsersPageObj
 import org.formacion.pageobject.pantallas.PIM.AddEmployee.AddEmployeePageObject;
 import org.formacion.pageobject.pantallas.PIM.EmployeeList.EditEmployeePageObject;
 import org.formacion.pageobject.pantallas.PIM.EmployeeList.EmployeeListPageObject;
+import org.formacion.utils.allure.AllureListener;
 import org.formacion.utils.properties.PropertiesFormacion;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
+@Epic("PIM")
+@Feature(("Creacion de Empleados"))
+@Severity(SeverityLevel.CRITICAL)
+@Story("Crear un empleado correctamente")
+
+@Listeners({AllureListener.class})
 public class TC_CreacionDeUsuarios extends TestCaseBase {
 
-    @Override
+    @Test
+    @Description("Crear un empleado correctamente")
     public void test() throws MalformedURLException, InterruptedException{
         // <editor-fold desc="Configuración Test">
         String mainClass = this.getClass().getSimpleName();
@@ -72,6 +82,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     }
 
     // <editor-fold desc="Step1">
+    @Step("Step1: Login")
     public void LoginUsuario(LoginPageObject login){
         log.reporta("INFO","Step1: Login");
         login.esperarSincronizacion();
@@ -82,6 +93,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step2">
+    @Step("Step2: Navegar a EmployeeList")
     public void NavegarAlistaEmpleados(ComunPageObject comun){
         log.reporta("INFO","Step2: Navegar a EmployeeList");
         comun.esperarSincronizacion();
@@ -90,14 +102,18 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step3">
+    @Step("Step3: Navegar a AddEmployee")
     public void NavegarAAgregarEmpleado(PIMMenuPageObject pim){
         log.reporta("INFO","Step3: Navegar a AddEmployee");
+        Allure.step("Step3: Navegar a AddEmployee");
+
         pim.esperarSincronizacion();
         pim.pulsarBotonAddEmployee();
     }
     // </editor-fold>
 
     // <editor-fold desc="Step4">
+    @Step("Step4: Agregar Empleado")
     public void CrearEmpleado(AddEmployeePageObject addEmployee) throws InterruptedException {
         log.reporta("INFO","Step4: Agregar Empleado");
         addEmployee.esperarSincronizacion();
@@ -114,6 +130,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step5">
+    @Step("Step5: Navegar a Admin Users")
     public void NavegarAUsers(EditEmployeePageObject editEmployee,ComunPageObject comun,AdminMenuPageObject admin){
         log.reporta("INFO","Step5: Navegar a Admin Users");
         editEmployee.esperarSincronizacion();
@@ -125,6 +142,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step6">
+    @Step("Step6: Buscar Usuario")
     public void BuscarUsuario(AdminUsersPageObject adminUser){
         log.reporta("INFO","Step6: Buscar Usuario");
         adminUser.esperarSincronizacion();
@@ -134,6 +152,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step7">
+    @Step("Step7: Eliminar Usuario")
     public void EliminarUsuario(AdminUsersPageObject adminUser, DeletePopupPageObject delete){
         log.reporta("INFO","Step7: Eliminar Usuario");
         adminUser.pulsarBotonEliminar();
@@ -143,6 +162,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step8">
+    @Step("Step8: Buscar Empleado")
     public void BuscarEmpleado(ComunPageObject comun,PIMMenuPageObject pim,EmployeeListPageObject listEmployee){
         log.reporta("INFO","Step8: Buscar Empleado");
         comun.pulsarBotonMenuLateralPIM();
@@ -155,6 +175,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step9">
+    @Step("Step9: Eliminar Empleado")
     public void EliminarEmpleado(EmployeeListPageObject listEmployee,DeletePopupPageObject delete){
         log.reporta("INFO","Step9: Eliminar Empleado");
         listEmployee.pulsarBotonEliminar();
@@ -164,6 +185,7 @@ public class TC_CreacionDeUsuarios extends TestCaseBase {
     // </editor-fold>
 
     // <editor-fold desc="Step10">
+    @Step("Step10: Cerrar Sesion")
     public void CerrarSesion(ComunPageObject comun) throws InterruptedException {
         log.reporta("INFO","Step10: Cerrar Sesion");
         comun.pulsarBotonBarraSuperiorMenuUsuario();

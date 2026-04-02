@@ -6,12 +6,13 @@ import org.formacion.pageobject.comun.ComunPageObject;
 import org.formacion.utils.properties.PropertiesFormacion;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
 public class TC_AED_MemberShip extends TestCaseBase {
 
-    @Override
+    @Test
     public void test() throws MalformedURLException, InterruptedException{
         // <editor-fold desc="Configuración Test">
         String mainClass = this.getClass().getSimpleName();

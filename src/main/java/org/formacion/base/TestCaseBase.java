@@ -1,6 +1,7 @@
 package org.formacion.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.formacion.utils.logger.LogManager;
 import org.formacion.utils.properties.PropertiesFormacion;
@@ -11,11 +12,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -35,17 +38,7 @@ public class TestCaseBase {
     /** Logger para registrar la ejecución de los casos de prueba. */
     protected LogManager log;
 
-    /**
-     * Método de prueba genérico.
-     * Es sobrescrito por cada caso de prueba específico.
-     *
-     * @throws InterruptedException si ocurre un error en la ejecución.
-     * @throws IOException si ocurre un error al manejar archivos.
-     */
-    @Test
-    public void test() throws InterruptedException, IOException{
-        //metodo sobreescrito por cada caso de prueba
-    }
+
 
     /**
      * Abre la URL definida en el archivo de propiedades.
